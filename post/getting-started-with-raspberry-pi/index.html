@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.25.1" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/getting-started-with-raspberry-pi/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Getting started with Raspberry Pi" />
+<meta property="og:description" content="If you are using raspberry pi for the first time; then this post might be helpful to setup the device.
+In this post I&rsquo;ll cover
+ installing raspbian/ubuntu on the sd card for raspberry pi. configuring ssh. configuring wifi to connect to the network automatically.  Installing Raspbian/Ubuntu on the SD card First of all download the image of the os you want to install on the SD card from raspberrypi." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/getting-started-with-raspberry-pi/" />
+
+
+
+<meta property="article:published_time" content="2017-04-12T16:42:34&#43;05:30"/>
+<meta property="article:modified_time" content="2017-04-12T16:42:34&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Getting started with Raspberry Pi"/>
+<meta name="twitter:title" content="Getting started with Raspberry Pi"/>
+<meta name="twitter:description" content="If you are using raspberry pi for the first time; then this post might be helpful to setup the device.
+In this post I&rsquo;ll cover
+ installing raspbian/ubuntu on the sd card for raspberry pi. configuring ssh. configuring wifi to connect to the network automatically.  Installing Raspbian/Ubuntu on the SD card First of all download the image of the os you want to install on the SD card from raspberrypi."/>
+
+
+
+
+<meta itemprop="name" content="Getting started with Raspberry Pi">
+<meta itemprop="description" content="If you are using raspberry pi for the first time; then this post might be helpful to setup the device.
+In this post I&rsquo;ll cover
+ installing raspbian/ubuntu on the sd card for raspberry pi. configuring ssh. configuring wifi to connect to the network automatically.  Installing Raspbian/Ubuntu on the SD card First of all download the image of the os you want to install on the SD card from raspberrypi.">
+
+
+<meta itemprop="dateModified" content="2017-04-12T16:42:34&#43;05:30" />
+<meta itemprop="wordCount" content="497">
+
+
+
+<meta itemprop="keywords" content="RaspberryPi,101,installation," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '113630432', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Getting started with Raspberry Pi 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Getting started with Raspberry Pi </h1>
+    <div class="content"> 
+
+<p>If you are using raspberry pi for the first time; then this post might be helpful to setup the device.</p>
+
+<p>In this post I&rsquo;ll cover</p>
+
+<ul>
+<li>installing raspbian/ubuntu on the sd card for raspberry pi.</li>
+<li>configuring ssh.</li>
+<li>configuring wifi to connect to the network automatically.</li>
+</ul>
+
+<h2 id="installing-raspbian-ubuntu-on-the-sd-card">Installing Raspbian/Ubuntu on the SD card</h2>
+
+<p>First of all download the image of the os you want to install on the SD card
+from <a href="https://www.raspberrypi.org/downloads/">raspberrypi.org/downloads</a>.</p>
+
+<p>If the file that you have downloaded is a zip file; then extract the contents
+of that file and find the .img file in it. this is the file we are going to
+install on the SD card.</p>
+
+<p>Run following command to get the <a href="https://en.wikipedia.org/wiki/Device_file#Block_devices">block device</a> for SD card.</p>
+
+<pre><code class="language-bash">$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev             4032932        0   4032932   0% /dev
+/dev/sda5       39240312 19431624  17792332  53% /
+/dev/sda6       78611376 73607668    987376  99% /home
+/dev/mmcblk0    15542944        8  15542936   1% /media/x-dev/3CAC-7C20
+</code></pre>
+
+<p>Here in the last line it says <strong>/dev/mmcblk0</strong> this is the device file for SD card.</p>
+
+<p>You will see that this device is mounted at /media/user/some-directory if you are working on ubuntu</p>
+
+<p>or at /run/media/user/some-directory if you are working on Fedora.</p>
+
+<p>You need to unmount these partitions before you proceed by running:</p>
+
+<pre><code class="language-bash"># umount &lt;/path/to/device&gt;
+
+# for example on ubuntu you have to run
+$ umount /media/x-dev/3CAC-7C20
+
+# on fedora the command will be something like
+$ umount /run/media/&lt;user&gt;/partition
+</code></pre>
+
+<p>Now you can install the .img that you have downloaded on to the SD card by using:</p>
+
+<pre><code class="language-bash">$ sudo dd bs=4M if=&quot;OS-Image-file.img&quot; of=/dev/mmcblk0 status=progress
+</code></pre>
+
+<p><a href="https://en.wikipedia.org/wiki/Dd_(Unix)"><strong>dd</strong></a> stands for data duplicator. There is an alternative for this tool. It&rsquo;s <a href="http://dcfldd.sourceforge.net/"><strong>dcfldd</strong></a></p>
+
+<p>The <strong>dd</strong> command will take a while to complete. Once it is done you can insert the SD card in RaspberryPi and start using it.</p>
+
+<p>However if you don&rsquo;t have a monitor you will need to configure the ssh and wifi connection to use the device.</p>
+
+<h2 id="connecting-the-device-to-wifi-network">Connecting the device to wifi network</h2>
+
+<p>Keep the memory card inserted; make sure that the partitions are mounted.</p>
+
+<p>also keep in mind whatever changes we are making should be on the files in <strong>/etc</strong> in the memory card and not in the files in <strong>/etc</strong> on your computer.</p>
+
+<pre><code class="language-bash">$ cd /media/user/root-of-rpi-os
+
+$ vim etc/network/interfaces
+</code></pre>
+
+<p>add the following code to this file under wlan0 block</p>
+
+<pre><code>auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-ssid &quot;your-ssid&quot;
+    wpa-psk &quot;your-password&quot;
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+
+<p>after this your device should connect to the wifi network automatically once it is started.</p>
+
+<h2 id="enable-ssh-on-the-raspberry-pi">Enable ssh on the raspberry pi</h2>
+
+<pre><code class="language-bash">$ cd /media/user/root-of-rpi-os
+$ touch etc/SSHFLAG
+$ vim etc/rc.local
+</code></pre>
+
+<p>Now add the following code just before <strong>exit 0</strong> line</p>
+
+<pre><code>if [ -e /etc/SSHFLAG ]; then  
+  /usr/sbin/update-rc.d -f ssh defaults
+  /bin/rm /etc/SSHFLAG
+  /sbin/shutdown -r now
+fi
+  
+sudo /etc/init.d/ssh start
+</code></pre>
+
+<p>this will enable the ssh on your raspberry pi.</p>
+
+<p>Now insert the SD card in to raspberry pi and you are good to go.</p>
+
+<p>you can check the ip address of your raspberry pi in the router&rsquo;s connected device and start using Raspberry pi over ssh.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/RaspberryPi">#RaspberryPi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/101">#101</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/installation">#installation</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Apr 12, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+

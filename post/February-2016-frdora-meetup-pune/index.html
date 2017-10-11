@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.19" />
+
+<link rel="canonical" href="/post/February-2016-frdora-meetup-pune/">
+<base href="/" />
+<meta property="og:title" content="February 2016 frdora meetup pune" />
+<meta property="og:description" content="February 2016 Fedora meetup pune - event report." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/February-2016-frdora-meetup-pune/" />
+
+
+
+<meta property="article:published_time" content="2016-02-11T12:13:27&#43;05:30"/>
+<meta property="article:modified_time" content="2016-02-11T12:13:27&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="February 2016 frdora meetup pune"/>
+<meta name="twitter:title" content="February 2016 frdora meetup pune"/>
+<meta name="twitter:description" content="February 2016 Fedora meetup pune - event report."/>
+
+
+
+
+<meta itemprop="name" content="February 2016 frdora meetup pune">
+<meta itemprop="description" content="February 2016 Fedora meetup pune - event report.">
+
+
+<meta itemprop="dateModified" content="2016-02-11T12:13:27&#43;05:30" />
+<meta itemprop="wordCount" content="564">
+
+
+
+<meta itemprop="keywords" content="about-me,bio,event-report,hack,iot,orangepi,package,python,raspberrypi,tutorial,101,about-me,adc,coding,fedora,fingerprint,installation,integer-overflow,iot,ltc6802,meetup,module,orangepi,programming,python,r305,raspberrypi,spi,ubuntu," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '113630432', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     February 2016 frdora meetup pune 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> February 2016 frdora meetup pune </h1>
+    <div class="content"> <p>On 6-Feb-2016 it was third Fedora meetup at pune at the same venue as
+earlier meetups &ldquo;K 104, Jasminium, Magarpatta City Pune&rdquo;. Event host was
+<a href="https://kushaldas.in/">Kushal Das</a>.</p>
+
+<p>For this meetup the ajenda was &ldquo;Debugging bugs in different applications
+written in C/Python in Fedora&rdquo;. But after last meetup Amol and me had
+discussed about writing a tool like &ldquo;<a href="http://ipmsg.org/index.html.en">Ip
+messenger</a>&rdquo; (our purpose was for file
+transfer) for linux which will be a nautilus plugin; so we decided that
+in this meetup we will do it.</p>
+
+<p>As always <a href="http://siddhesh.in/">Siddhesh</a> and Kushal was there to
+mentor us. When we spoke to them about our idea of writing nautilus
+extension, Kushal suggested that instead of writing the whole tool from
+the scratch we should get an existing tool
+&ldquo;<a href="http://dcplusplus.sourceforge.net/">DC++</a>&rdquo; working on fedora. I
+also liked that idea. since long time &ldquo;DC++&rdquo; wasn&rsquo;t packaged for fedora.
+The last working package of DC++ for Fedora was for Fedora 16 and
+currently I&rsquo;m using Fedora 23. So we (me and Amol) started searching for
+DC++ source code.</p>
+
+<p>Mean while Kushal found a bug from bugzilla which was &ldquo;Integer overflow&rdquo;
+in some GPU program and discussion about this bug started.</p>
+
+<p>Siddhesh elaborated &ldquo;Integer overflow&rdquo; in a very very simple way. He
+explained very fundamental and very crutial concepts at this point.</p>
+
+<ul>
+<li>&ldquo;What is an Integer?&rdquo;</li>
+<li>&ldquo;Difference between signed and unsigned Integers&rdquo;</li>
+<li>&ldquo;What happens when a signed integer exceeds the limit of 31
+bits?&rdquo;</li>
+<li>and Finally &ldquo;Different standards of representing Integers and
+Floats&rdquo;</li>
+</ul>
+
+<p>By this time I had found the source code for DC++
+<a href="https://sourceforge.net/projects/dcplusplus/files/latest/download?source=files">here</a>
+and I already had started compiling it.</p>
+
+<p>the problem was it was for windows. It is using
+<a href="http://www.boost.org/">Boost</a> (portable C++ source libraries) and
+<a href="http://mingw-w64.org">Mingw-w64</a> (GCC for Windows 64 &amp; 32 bits). As
+both boost and Mingw works on linux; so initially I didn&rsquo;t face any
+problem. But later on the compilation failed.</p>
+
+<p>Then I realised that the source code wasn&rsquo;t for linux. I found another
+fork of DC++
+&ldquo;<a href="https://sourceforge.net/projects/linuxdcpp.berlios/">LinuxDC++</a>&ldquo;
+for linux.</p>
+
+<p>LinuxDC++ also had same dependencies as DC++ (for windows) so I already
+had installed everything requied to compile it.</p>
+
+<p>I started compilation and withing no time it was done. I got the
+executable. Everything worked just fine.</p>
+
+<p>Now I had got LinuxDC++ running on Fedora 23 the next step is to package
+it for fedora. Currently I&rsquo;m looking into that. As I&rsquo;ve never done rpm
+packaging before it&rsquo;s taking me a while to do that.</p>
+
+<p>I&rsquo;m very happy as from this meetup I had learnt about few totally new
+concepts and tools.</p>
+
+<p>Since we had decided to make somthing like IP messenger. I thought once
+I should see the source code for IP messanger. So I downloaded the
+source code for &ldquo;g2ipmesg&rdquo; which is a clone of Ip messenger for gnome
+enviornment. Last time it was packeged for ubuntu 11.</p>
+
+<p>It is written in c and for GUI Gtk is used. After a couple of days of
+digging into the code, finally I got it running on Ubuntu14.04.</p>
+
+<p>For this I had to disable the gnome panel applet (the system tray) and
+remove the build dependency on libpanel-applet2-dev.</p>
+
+<p>you can find it on <a href="https://github.com/girish946/g2ipmsg">github</a>.</p>
+
+<p>All of this was possible because of Fedora meetup. Thank you Sayan,
+Kushal and Praveen Kumar for organizing the meetup. Also thank you
+Siddhesh for giving more and more insites of C and how stuff works at
+the lower level in the computer.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/Fedora">#Fedora</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/Ubuntu">#Ubuntu</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/Meetup">#Meetup</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/Integer%20Overflow">#Integer Overflow</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Feb 11, 2016 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+

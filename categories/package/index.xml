@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Package on girishjoshi.io</title>
+    <link>http://girishjoshi.io/categories/package/</link>
+    <description>Recent content in Package on girishjoshi.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
+    <lastBuildDate>Mon, 19 Jun 2017 21:55:23 +0530</lastBuildDate>
+    
+	<atom:link href="http://girishjoshi.io/categories/package/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R305 fingerprint module &#43; python</title>
+      <link>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</link>
+      <pubDate>Mon, 19 Jun 2017 21:55:23 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</guid>
+      <description>This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&amp;rsquo;t find a python API that covers all of the functionality provided by the module.</description>
+    </item>
+    
+  </channel>
+</rss>

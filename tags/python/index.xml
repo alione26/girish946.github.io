@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on girishjoshi.io</title>
+    <link>http://girishjoshi.io/tags/python/</link>
+    <description>Recent content in Python on girishjoshi.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
+    <lastBuildDate>Mon, 19 Jun 2017 21:55:23 +0530</lastBuildDate>
+    
+	<atom:link href="http://girishjoshi.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R305 fingerprint module &#43; python</title>
+      <link>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</link>
+      <pubDate>Mon, 19 Jun 2017 21:55:23 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</guid>
+      <description>This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&amp;rsquo;t find a python API that covers all of the functionality provided by the module.</description>
+    </item>
+    
+    <item>
+      <title>Interfacing LTC6802-2 with OrangePi using Python.</title>
+      <link>http://girishjoshi.io/post/ltc6802-2-python/</link>
+      <pubDate>Mon, 05 Jun 2017 17:31:50 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/ltc6802-2-python/</guid>
+      <description>LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.</description>
+    </item>
+    
+    <item>
+      <title>Plotting live serial input from arduino/microcontroller using python matplotlib</title>
+      <link>http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/</link>
+      <pubDate>Tue, 30 Aug 2016 20:23:25 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/</guid>
+      <description>Plotcat Hello all, I&amp;rsquo;m writing once again after almost six months. As the title of this post suggests I&amp;rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.
+The reason I am writing this post is during past three or four months I did few small projects for Slightgen.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Python</title>
+      <link>http://girishjoshi.io/post/introduction_to_python/</link>
+      <pubDate>Fri, 18 Dec 2015 13:34:16 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/introduction_to_python/</guid>
+      <description>Python What is Python? Python is probably one of the few programming languages which is both simple and powerful.
+It is a general purpose Language.
+Features of Python:
+Simple:
+Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.
+Free and Open Source:
+Python is an example of a FLOSS (Free/Libré and Open Source Software).</description>
+    </item>
+    
+    <item>
+      <title>let the hacking begin</title>
+      <link>http://girishjoshi.io/post/let-the-hacking-begin/</link>
+      <pubDate>Thu, 17 Dec 2015 17:14:28 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/let-the-hacking-begin/</guid>
+      <description>Hello, this is my first blog post. Let me Introduce myself.
+My name is girish joshi. I&amp;rsquo;m a software developer. Usually I work with python.
+I&amp;rsquo;ll be posting about Python, Raspberry-Pi, Internet Of Things and stuff like that.</description>
+    </item>
+    
+  </channel>
+</rss>

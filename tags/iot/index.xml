@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iot on girishjoshi.io</title>
+    <link>http://girishjoshi.io/tags/iot/</link>
+    <description>Recent content in Iot on girishjoshi.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
+    <lastBuildDate>Thu, 17 Dec 2015 17:14:28 +0530</lastBuildDate>
+    
+	<atom:link href="http://girishjoshi.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>let the hacking begin</title>
+      <link>http://girishjoshi.io/post/let-the-hacking-begin/</link>
+      <pubDate>Thu, 17 Dec 2015 17:14:28 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/let-the-hacking-begin/</guid>
+      <description>Hello, this is my first blog post. Let me Introduce myself.
+My name is girish joshi. I&amp;rsquo;m a software developer. Usually I work with python.
+I&amp;rsquo;ll be posting about Python, Raspberry-Pi, Internet Of Things and stuff like that.</description>
+    </item>
+    
+  </channel>
+</rss>

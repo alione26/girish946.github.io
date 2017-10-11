@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.19" />
+
+<link rel="canonical" href="/post/R305-fingerprint-module-with-python/">
+<base href="/" />
+<meta property="og:title" content="R305 fingerprint module &#43; python" />
+<meta property="og:description" content="This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/R305-fingerprint-module-with-python/" />
+
+
+
+<meta property="article:published_time" content="2017-06-19T21:55:23&#43;05:30"/>
+<meta property="article:modified_time" content="2017-06-19T21:55:23&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="R305 fingerprint module &#43; python"/>
+<meta name="twitter:title" content="R305 fingerprint module &#43; python"/>
+<meta name="twitter:description" content="This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module."/>
+
+
+
+
+<meta itemprop="name" content="R305 fingerprint module &#43; python">
+<meta itemprop="description" content="This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module.">
+
+
+<meta itemprop="dateModified" content="2017-06-19T21:55:23&#43;05:30" />
+<meta itemprop="wordCount" content="593">
+
+
+
+<meta itemprop="keywords" content="about-me,bio,event-report,hack,iot,orangepi,package,python,raspberrypi,tutorial,101,about-me,adc,coding,fedora,fingerprint,installation,integer-overflow,iot,ltc6802,meetup,module,orangepi,programming,python,r305,raspberrypi,spi,ubuntu," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '113630432', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     R305 fingerprint module &#43; python 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> R305 fingerprint module &#43; python </h1>
+    <div class="content"> 
+
+<p>This is the post regarding the <a href="https://github.com/girish946/python-R305"><strong>Python-R305</strong></a> package.</p>
+
+<p>R305 is a very common finger print sensor. It is quite cheap, has a storage
+capacity of 250 fingerprints.</p>
+
+<p><img src="/images/R305.jpg" height="250"></p>
+
+<p>I came across this module about one and a half year ago. I had to use it in a small
+project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers
+all of the functionality provided by the module.</p>
+
+<p>So I started implementing the instructions from R305&rsquo;s datasheet one by one
+in python.</p>
+
+<p>For almost a year this project had a whole lot of crappy code and a lot of
+people who were trying to use it had a really bad time with it, but now
+everything is good; the code is okay (not very good, but understandable) and the
+documentation is also in place.</p>
+
+<p>So let me give you a quick introduction to R305 and Python-R305 package.</p>
+
+<p>The R305 module operates over UART or in other words a <em>Serial</em> port.
+To perform any operation with R305 you have to put a frame of bytes
+(command packet) on the serial port and in response to that you get another
+frame of bytes (response packet) from the module which contains the status of
+whether the command is executed successfully or not and few other things.</p>
+
+<h2 id="command-packet">Command Packet</h2>
+
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Addr</th>
+<th>Package Identifire</th>
+<th>Package Length</th>
+<th>Package Content</th>
+<th>Checksum</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2 bytes</td>
+<td>4 bytes</td>
+<td>1 byte</td>
+<td>2bytes</td>
+<td>Data</td>
+<td>2 bytes</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="response-packet">Response Packet</h2>
+
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Addr</th>
+<th>Package Identifire</th>
+<th>Package Length</th>
+<th>Confirmation Code</th>
+<th>Response Data</th>
+<th>Checksum</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2 bytes</td>
+<td>4 bytes</td>
+<td>1 byte</td>
+<td>2bytes</td>
+<td>Data</td>
+<td>Data</td>
+<td>2 bytes</td>
+</tr>
+</tbody>
+</table>
+
+<p>The Command/Instructions codes can be found <a href="https://github.com/girish946/python-R305/blob/master/r305/r305.py#L14">here</a></p>
+
+<p>The Response/Confirmation Codes can be found <a href="https://github.com/girish946/python-R305/blob/master/r305/r305.py#L42">here</a></p>
+
+<p>What Python-R305 does is to generate the command packets for you and parse the
+response.</p>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="connections">Connections</h3>
+
+<p>Connect the fingerprint module with USB to TTL convertor, the pin-out of
+R305 fingerprint module is as follows.</p>
+
+<p><img src="/images/R305-pins.jpg" height="250"></p>
+
+<p>If you are using Raspberry/Orange/Banana Pi or any other board like that;
+you can use Tx and Rx Pins of the board itself instead of using USB to TTL.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>To install the python package</p>
+
+<pre><code class="language-bash">$ pip install R305
+</code></pre>
+
+<h3 id="the-code">The Code</h3>
+
+<p>To store the fingerprint into the module</p>
+
+<pre><code class="language-python">from r305 import R305
+import sys
+
+device   = sys.argv[1] # the serial port to which the module is connected
+baudrate = sys.argv[2] # the default baudrate for this module is 57600
+
+dev = R305(device, baudrate)
+
+def callback(data):
+    &quot;&quot;&quot;
+    This function is called when you are instructed to put the finger on the
+    module the second time.
+    &quot;&quot;&quot;
+    x = raw_input(data)
+
+result = dev.StoreFingerPrint(IgnoreChecksum=True, callback=callback)
+print(result)
+</code></pre>
+
+<p>To search fingerprint in the module</p>
+
+<pre><code class="language-python">from r305 import R305
+import sys
+
+device   = sys.argv[1] # the serial port to which the module is connected
+baudrate = sys.argv[2] # the default baudrate for this module is 57600
+
+dev = R305(device, baudrate)
+
+result = dev.SearchFingerPrint()
+print(result)
+</code></pre>
+
+<h2 id="things-to-be-implemented">Things to be implemented.</h2>
+
+<ul>
+<li>Method to Create a .PNG from a character file of the fingerprint.</li>
+<li>Method for changing the default Address of the module.</li>
+<li>Method for changing the baud rate of the device</li>
+</ul>
+
+<p>I&rsquo;ll try to implement these things as soon as possible. If anyone has already
+implemented any of these functionalities already, feel free to send a PR;
+I would be more than happy to merge it.</p>
+
+<h2 id="special-thanks-to">Special thanks to</h2>
+
+<p><a href="https://twitter.com/nikhil9237">Nikhil</a> the guy who forced me to use R305 with
+python.</p>
+
+<p><a href="https://reserved-bit.com/">Reserved-bit</a> for making a new module
+available at the makerspace when I accidentally burnt my own 😅,
+So now on I&rsquo;ll work on this project at Reserved-bit.</p>
+
+<p><a href="https://twitter.com/kushaldas">Kushal</a> for getting the sphinx configuration in
+place, thanks to him the documentation is there on <a href="http://python-r305-doc.readthedocs.io/en/latest/index.html">rtfd.io</a>.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/R305">#R305</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/fingerprint">#fingerprint</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/module">#module</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jun 19, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+

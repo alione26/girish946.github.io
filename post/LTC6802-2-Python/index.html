@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.19" />
+
+<link rel="canonical" href="/post/LTC6802-2-Python/">
+<base href="/" />
+<meta property="og:title" content="Interfacing LTC6802-2 with OrangePi using Python." />
+<meta property="og:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/LTC6802-2-Python/" />
+
+
+
+<meta property="article:published_time" content="2017-06-05T17:31:50&#43;05:30"/>
+<meta property="article:modified_time" content="2017-06-05T17:31:50&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Interfacing LTC6802-2 with OrangePi using Python."/>
+<meta name="twitter:title" content="Interfacing LTC6802-2 with OrangePi using Python."/>
+<meta name="twitter:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol."/>
+
+
+
+
+<meta itemprop="name" content="Interfacing LTC6802-2 with OrangePi using Python.">
+<meta itemprop="description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.">
+
+
+<meta itemprop="dateModified" content="2017-06-05T17:31:50&#43;05:30" />
+<meta itemprop="wordCount" content="633">
+
+
+
+<meta itemprop="keywords" content="about-me,bio,event-report,hack,iot,orangepi,package,python,raspberrypi,tutorial,101,about-me,adc,coding,fedora,fingerprint,installation,integer-overflow,iot,ltc6802,meetup,module,orangepi,programming,python,r305,raspberrypi,spi,ubuntu," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '113630432', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Interfacing LTC6802-2 with OrangePi using Python. 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Interfacing LTC6802-2 with OrangePi using Python. </h1>
+    <div class="content"> 
+
+<h1 id="ltc6802">LTC6802</h1>
+
+<p>The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC,
+a precision voltage reference, a high voltage input multiplexer and a serial
+interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells
+with an input common mode voltage up to 60V.</p>
+
+<p>LTC6802 is a great option if you want to build battry monitoring system with
+more accuracy. This IC operates on
+<a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI protocol</a>.</p>
+
+<p>The datasheet for LTC6802-2 can be found at <a href="http://cds.linear.com/docs/en/datasheet/68021fa.pdf">here</a></p>
+
+<p>Following figure shows the circuit diagram to interface the LTC6802-2 with Orange Pi zero.</p>
+
+<p><img src="/images/ltc68021.jpg" height="300" ></p>
+
+<p>After mounting the IC on PCB it looks like this.</p>
+
+<p><img src="/images/LTC6802-PCB.jpg" height="250"></p>
+
+<h1 id="interfacing-with-orange-pi">Interfacing with Orange-Pi</h1>
+
+<p>In order to access the data from IC over SPI, I&rsquo;m using
+<a href="https://python-periphery.readthedocs.io/en/latest/">periphery</a>.</p>
+
+<p>to install periphery:</p>
+
+<pre><code class="language-bash">$ pip install python-periphery
+</code></pre>
+
+<p>To activate the LTC chip we need to make the CS pin low. To do that I&rsquo;m using
+<a href="https://github.com/duxingkei33/orangepi_PC_gpio_pyH3">pyA20</a> library for Orange Pi.</p>
+
+<p>to install pyA20:</p>
+
+<pre><code class="language-bash">$ pip install pyA20
+</code></pre>
+
+<p>The standard procedure to access the data from LTC6802 over SPI is:</p>
+
+<ul>
+<li><p>make CS pin low.</p></li>
+
+<li><p>write the data/command to SPI.</p></li>
+
+<li><p>read the output from the SPI.</p></li>
+
+<li><p>make CS pin high.</p></li>
+</ul>
+
+<p>Since the circuit and the dependencies are in place, let&rsquo;s start coding.</p>
+
+<pre><code class="language-python">#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from periphery import SPI
+from pyA20.gpio import gpio as io
+from pyA20.gpio import port
+import time
+
+
+cs  = port.PA13                         # Chip select pin
+spi = SPI(&quot;/dev/spidev1.0&quot;, 0, 1000000) # Spi port
+
+io.init()                 # init GPIO
+io.setcfg(cs, io.OUTPUT)  # configure cs Pin as output pin.
+
+RDCV    = 0x04   # Read cells
+STCVAD  = 0x10   # Start all A/D's - poll status
+
+address = 0x80   # as we are connecting only one IC the address is 0x80
+                 # refer the datasheet for the details about addressing of LTC6802
+
+# refer datasheet for more details about configuration.
+Config = [0x01, 0x01, 0x00, 0x00, 0x00, 0x71, 0xAB]
+
+def writeCfg():
+
+   &quot;&quot;&quot;
+   Writes the configuration to IC.
+   &quot;&quot;&quot;
+   io.output(cs, io.LOW)            # make CS low
+   data_in = spi.transfer(Config)   # write the config to IC and read the OP
+   io.output(cs, io.HIGH)           # make CS high
+   
+def readVoltage():
+
+    &quot;&quot;&quot;
+    Returns a dictionary containing the voltages of 12 battries.
+    &quot;&quot;&quot;
+
+    v = {}
+    io.output(cs, io.LOW)            # make CS low
+    data_out = [STCVAD]              
+    data_in = spi.transfer(data_out) # start all A/D 
+    time.sleep(0.02)
+    io.output(cs, io.HIGH)           # make CS high
+    io.output(cs, io.LOW)            # again make CS low
+    spi.transfer([0x80])             # write the address 0x80 to SPI
+    spi.transfer([RDCV])             # (command to) read cells
+
+    data = []
+
+    for i in range(18):                   # read 18 bytes from the IC
+        data.append(spi.transfer([RDCV]))
+    io.output(cs, io.HIGH)
+
+
+    # refer the datasheet of LTC6802 for conversion of ADC value to Voltages.
+    
+    # here we are calculating voltages from ADC values of all 12 battries.
+
+    v['0']  = ((data[0][0] &amp; 0xFF) | (data[1][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['1']  = ((data[1][0] &amp; 0xF0) &gt;&gt; 4 | (data[2][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v['2']  = ((data[3][0] &amp; 0xFF) | (data[4][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['3']  = ((data[4][0] &amp; 0xF0) &gt;&gt; 4 | (data[5][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+
+    v['4']  = ((data[6][0] &amp; 0xFF) | (data[7][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['5']  = ((data[7][0] &amp; 0xF0) &gt;&gt; 4 | (data[8][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v['6']  = ((data[9][0] &amp; 0xFF) | (data[10][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['7']  = ((data[10][0] &amp; 0xF0) &gt;&gt; 4 | (data[11][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+
+    v['8']  = ((data[12][0] &amp; 0xFF) | (data[13][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['9'] = ((data[13][0] &amp; 0xF0) &gt;&gt; 4 | (data[14][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v['10'] = ((data[15][0] &amp; 0xFF) | (data[16][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
+    v['11'] = ((data[16][0] &amp; 0xF0) &gt;&gt; 4 | (data[17][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    
+    return v
+
+def readVal():
+
+    while True:
+        writeCfg()
+        time.sleep(0.001)
+        v = readVoltage()
+        print(v)
+        time.sleep(1)
+        
+if __name__ == '__main__':
+
+    readVal()
+    
+</code></pre>
+
+<pre><code class="language-note">The minimum operating voltage of LTC6802 is 10V.
+Make sure that total voltage of all the battries combined together is more than 10V.
+
+</code></pre>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><p><a href="http://cds.linear.com/docs/en/datasheet/68021fa.pdf">http://cds.linear.com/docs/en/datasheet/68021fa.pdf</a></p></li>
+
+<li><p><a href="https://sourcelion.wordpress.com/2014/07/20/battery-management-system-ltc6802-arduino/">sourcelion.wordpress.com</a></p></li>
+</ul>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/ltc6802">#ltc6802</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/spi">#spi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/RaspberryPi">#RaspberryPi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/OrangePi">#OrangePi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/ADC">#ADC</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jun 5, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+
