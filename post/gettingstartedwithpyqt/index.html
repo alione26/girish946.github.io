@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.25.1" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/gettingstartedwithpyqt/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Getting Started With PyQt" />
+<meta property="og:description" content="PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C&#43;&#43; framework (another binding is PySide).
+If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/gettingstartedwithpyqt/" />
+
+
+
+<meta property="article:published_time" content="2017-11-20T20:42:57&#43;05:30"/>
+<meta property="article:modified_time" content="2017-11-20T20:42:57&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Getting Started With PyQt"/>
+<meta name="twitter:title" content="Getting Started With PyQt"/>
+<meta name="twitter:description" content="PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C&#43;&#43; framework (another binding is PySide).
+If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces."/>
+
+
+
+
+<meta itemprop="name" content="Getting Started With PyQt">
+<meta itemprop="description" content="PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C&#43;&#43; framework (another binding is PySide).
+If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces.">
+
+
+<meta itemprop="dateModified" content="2017-11-20T20:42:57&#43;05:30" />
+<meta itemprop="wordCount" content="782">
+
+
+
+<meta itemprop="keywords" content="python,Qt,PyQt," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '113630432', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Getting Started With PyQt 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Getting Started With PyQt </h1>
+    <div class="content"> 
+
+<p>PyQt is one of the two most popular Python bindings for the
+Qt cross-platform GUI/XML/SQL C++ framework (another binding is PySide).</p>
+
+<p>If you have ever used any distribution of linux, you must have heard about
+Qt and GTK. Most of the desktop enviornments in linux used either of those
+Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while
+KDE, Razor-Qt etc use Qt for creating Graphical interfaces.</p>
+
+<p>Both Gtk and Qt are very very powerful libraries and can be used to create
+beautiful user interfaces also the python bindings for both of them
+are available.</p>
+
+<p>In this post I&rsquo;m writing about how to create Gui applications in python using
+Qt.</p>
+
+<h2 id="tools-required">Tools required.</h2>
+
+<p>You will need following tools to build the application with GUI usig PyQt.</p>
+
+<pre><code>* Qt-devel library prefarably Qt4 or Qt5
+
+* Qt-Designer
+
+* PyQt, python bindings for Qt framework.
+</code></pre>
+
+<p>Qt-devel: Is the development package of Qt framework which contains all the
+header files required to access library.</p>
+
+<p>Qt-Designer: Is a tool for creating and buildig graphical user interfaces with
+QtWidgets.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>On Fedora 24 and above</p>
+
+<pre><code class="language-bash">$ dnf install qt5-designer qt5-devel PyQt4-devel
+</code></pre>
+
+<p>on Ubuntu</p>
+
+<pre><code class="language-bash">$ apt-get install python-qt5 pyqt-dev-tools qt5-designer
+</code></pre>
+
+<h2 id="designing-the-gui">Designing the Gui</h2>
+
+<ul>
+<li>Start the Qt-designer from launcher or use the command</li>
+</ul>
+
+<pre><code class="language-bash">$ qt-designer5
+</code></pre>
+
+<p>A window like following will open.</p>
+
+<p><img src="http://girishjoshi.io/images/designer-qt5.png"></p>
+
+<p>from template formats select &ldquo;Main Window&rdquo; and click create.</p>
+
+<p>Now you can drag and drop the widgets from the side panel onto the window you
+are designing.</p>
+
+<p>Just for this example I&rsquo;m creating a click counter. I&rsquo;m putting only a button
+and a label on the window.</p>
+
+<p><img src="images/click-me-app-qt-designer.png"></p>
+
+<p>once this is done save the file and exit the qt-designer.</p>
+
+<h2 id="convert-to-python-code">Convert to python code.</h2>
+
+<p>Now it&rsquo;s time to convert this UI into the python code which can be executed.</p>
+
+<p>To do that there is a tool provided by Qt called &ldquo;pyuic5&rdquo;.</p>
+
+<pre><code class="language-bash">$ pyuic5 -o &lt;your .py file name&gt; &lt;your .ui file name&gt;
+</code></pre>
+
+<p>The python file created by <em>pyuic5</em> will contain code something like</p>
+
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'sampleWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.9
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(&quot;MainWindow&quot;)
+        MainWindow.resize(481, 379)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName(&quot;centralwidget&quot;)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(50, 40, 92, 36))
+        self.pushButton.setObjectName(&quot;pushButton&quot;)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(50, 120, 121, 21))
+        self.label.setObjectName(&quot;label&quot;)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 28))
+        self.menubar.setObjectName(&quot;menubar&quot;)
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(&quot;statusbar&quot;)
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate(&quot;MainWindow&quot;, &quot;MainWindow&quot;))
+        self.pushButton.setText(_translate(&quot;MainWindow&quot;, &quot;ClickMe&quot;))
+        self.label.setText(_translate(&quot;MainWindow&quot;, &quot;Clicked 0 Times&quot;))
+</code></pre>
+
+<p>Here in class &ldquo;Ui_MainWindow&rdquo; two methods are created,
+setupUi and retranslateUi.</p>
+
+<p>setupUi creates the widget objects in the proper containers and assigns the
+proper object names to them.</p>
+
+<p>retranslateUi sets the text and titles of the widgets.</p>
+
+<h2 id="execute-this-python-file">Execute this python file</h2>
+
+<p>Now you have the code to create the window and all the widgets you want,
+but to execute this code you will have to add some more code to it.</p>
+
+<pre><code class="language-python">import sys
+if __name__ == &quot;__main__&quot;:
+    app = QtWidgets.QApplication(sys.argv) #create a new instance of QApplication
+    ex = Ui_MainWindow() #create a new instance of the Ui you just cerated.
+    w = QtWidgets.QMainWindow() #create an instance of QMainWindow
+    ex.setupUi(w) #create your widgets inside the window you just created.
+    w.show() #show the window.
+    sys.exit(app.exec_()) #Exit the program when you close the application window.
+</code></pre>
+
+<p>Append this code to the end of your python file.</p>
+
+<p>After this when you run this python file a window like following will appear</p>
+
+<p><img src="images/py-qt-main-window.png"></p>
+
+<h3 id="button-clicked-event">Button <em>clicked</em> event</h3>
+
+<p>To count the number of clicks, create variable &ldquo;count&rdquo; in the class.</p>
+
+<pre><code class="language-python">self.count = 0
+</code></pre>
+
+<p>To &ldquo;connect&rdquo; the clicked event of the button to a method in the class.</p>
+
+<pre><code class="language-python">self.pushButton.clicked.connect(self.incCount)
+</code></pre>
+
+<p>and creaet a method &ldquo;incCount&rdquo; in the same class.</p>
+
+<pre><code class="language-python">def incCount(self):
+    self.label.setText(str(count))
+    self.count+=1
+</code></pre>
+
+<p>Once done all of the above changes the code looks like.</p>
+
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'sampleWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.9
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        self.count = 0
+        MainWindow.setObjectName(&quot;MainWindow&quot;)
+        MainWindow.resize(481, 379)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName(&quot;centralwidget&quot;)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(50, 40, 92, 36))
+        self.pushButton.setObjectName(&quot;pushButton&quot;)
+
+        self.pushButton.clicked.connect(self.incCount)#connect a method to click event
+
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(50, 120, 121, 21))
+        self.label.setObjectName(&quot;label&quot;)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 28))
+        self.menubar.setObjectName(&quot;menubar&quot;)
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(&quot;statusbar&quot;)
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate(&quot;MainWindow&quot;, &quot;MainWindow&quot;))
+        self.pushButton.setText(_translate(&quot;MainWindow&quot;, &quot;ClickMe&quot;))
+        self.label.setText(_translate(&quot;MainWindow&quot;, &quot;Clicked 0 Times&quot;))
+
+    def incCount(self):
+        self.label.setText(str(self.count))
+        self.count+=1
+
+if __name__ == &quot;__main__&quot;:
+    app = QtWidgets.QApplication(sys.argv)
+    ex = Ui_MainWindow()
+    w = QtWidgets.QMainWindow()
+    ex.setupUi(w)
+    w.show()
+    sys.exit(app.exec_())
+</code></pre>
+
+<p>This way you can create beautiful Gui applications using Qt framework in python.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/qt">#Qt</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/pyqt">#PyQt</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Nov 20, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+

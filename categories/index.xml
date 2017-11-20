@@ -6,7 +6,7 @@
     <description>Recent content in Categories on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
+    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Tue, 06 Jun 2017 00:15:03 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/categories/index.xml" rel="self" type="application/rss+xml" />
@@ -78,9 +78,18 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/categories/python/</link>
-      <pubDate>Mon, 19 Jun 2017 21:55:23 +0530</pubDate>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qt</title>
+      <link>http://girishjoshi.io/categories/qt/</link>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/qt/</guid>
       <description></description>
     </item>
     
@@ -96,7 +105,7 @@
     <item>
       <title>Tutorial</title>
       <link>http://girishjoshi.io/categories/tutorial/</link>
-      <pubDate>Mon, 19 Jun 2017 21:55:23 +0530</pubDate>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/tutorial/</guid>
       <description></description>

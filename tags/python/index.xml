@@ -6,11 +6,21 @@
     <description>Recent content in Python on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
-    <lastBuildDate>Mon, 19 Jun 2017 21:55:23 +0530</lastBuildDate>
+    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
+    <lastBuildDate>Mon, 20 Nov 2017 20:42:57 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started With PyQt</title>
+      <link>http://girishjoshi.io/post/gettingstartedwithpyqt/</link>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/gettingstartedwithpyqt/</guid>
+      <description>PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C++ framework (another binding is PySide).
+If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces.</description>
+    </item>
     
     <item>
       <title>R305 fingerprint module &#43; python</title>

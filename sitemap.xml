@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/gettingstartedwithpyqt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</loc>
     <lastmod>2017-06-19T21:55:23+05:30</lastmod>
   </url>
@@ -170,7 +175,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2017-06-19T21:55:23+05:30</lastmod>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,14 +186,32 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/pyqt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2017-06-19T21:55:23+05:30</lastmod>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2017-06-19T21:55:23+05:30</lastmod>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/qt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/qt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -224,7 +247,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/tutorial/</loc>
-    <lastmod>2017-06-19T21:55:23+05:30</lastmod>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +259,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2017-06-19T21:55:23+05:30</lastmod>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   

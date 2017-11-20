@@ -6,7 +6,7 @@
     <description>Recent content in Tags on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2017, all rights reserved.</copyright>
+    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Wed, 12 Apr 2017 16:42:34 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -139,11 +139,29 @@
     </item>
     
     <item>
+      <title>Pyqt</title>
+      <link>http://girishjoshi.io/tags/pyqt/</link>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/pyqt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>http://girishjoshi.io/tags/python/</link>
-      <pubDate>Mon, 19 Jun 2017 21:55:23 +0530</pubDate>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qt</title>
+      <link>http://girishjoshi.io/tags/qt/</link>
+      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/qt/</guid>
       <description></description>
     </item>
     
