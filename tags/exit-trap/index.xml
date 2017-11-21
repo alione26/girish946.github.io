@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exit Trap on girishjoshi.io</title>
+    <link>http://girishjoshi.io/tags/exit-trap/</link>
+    <description>Recent content in Exit Trap on girishjoshi.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
+    <lastBuildDate>Tue, 21 Nov 2017 14:20:08 +0530</lastBuildDate>
+    
+	<atom:link href="http://girishjoshi.io/tags/exit-trap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Keep your bash history clean using python</title>
+      <link>http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/</link>
+      <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/</guid>
+      <description>If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&amp;rsquo;ve used, in your bash history. The commands like &amp;lsquo;ls&amp;rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &amp;ldquo;Moon Buggy&amp;rdquo; or &amp;ldquo;2048-cli&amp;rdquo; etc, the things which are not important enough and don&amp;rsquo;t have too comples commands to be stored in the bash history.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/gettingstartedwithpyqt/</loc>
     <lastmod>2017-11-20T20:42:57+05:30</lastmod>
   </url>
@@ -48,6 +53,12 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/.bashrc/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/101/</loc>
     <lastmod>2017-04-12T16:42:34+05:30</lastmod>
     <priority>0</priority>
@@ -72,6 +83,18 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/bash/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/bash/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/categories/bio/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
@@ -92,6 +115,12 @@
   <url>
     <loc>http://girishjoshi.io/categories/event-report/</loc>
     <lastmod>2016-02-11T12:13:27+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/exit-trap/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,7 +204,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -193,13 +222,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -234,6 +263,18 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/shell-scripting/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/shell-scripting/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/spi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
@@ -241,7 +282,7 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/</loc>
-    <lastmod>2017-04-12T16:42:34+05:30</lastmod>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -259,7 +300,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
