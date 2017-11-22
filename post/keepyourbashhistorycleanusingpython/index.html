@@ -12,7 +12,7 @@
 <link rel="canonical" href="http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/">
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Keep your bash history clean using python" />
-<meta property="og:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too comples commands to be stored in the bash history." />
+<meta property="og:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/" />
 
@@ -39,17 +39,17 @@
 
 <meta name="twitter:text:title" content="Keep your bash history clean using python"/>
 <meta name="twitter:title" content="Keep your bash history clean using python"/>
-<meta name="twitter:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too comples commands to be stored in the bash history."/>
+<meta name="twitter:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history."/>
 
 
 
 
 <meta itemprop="name" content="Keep your bash history clean using python">
-<meta itemprop="description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too comples commands to be stored in the bash history.">
+<meta itemprop="description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history.">
 
 
 <meta itemprop="dateModified" content="2017-11-21T14:20:08&#43;05:30" />
-<meta itemprop="wordCount" content="402">
+<meta itemprop="wordCount" content="418">
 
 
 
@@ -141,14 +141,14 @@ have certain commands that you&rsquo;ve used, in your bash history.
 The commands like &lsquo;ls&rsquo; which prints the contents of the directory
 to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or
 &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too
-comples commands to be stored in the bash history.</p>
+complex commands to be stored in the bash history.</p>
 
-<p>If you are interested in this, you can achive this pretty easily by adding
+<p>If you are interested in this, you can achieve this pretty easily by adding
 an EXIT Trap to your bashrc and writing a very simple python script (actually
 this doesn&rsquo;t have to be a python script, I&rsquo;ve done it using python; but you can
 use whichever language you are comfortable with).</p>
 
-<p>Okay, so lets get on to it.</p>
+<p>Okay, so let&rsquo;s get on to it.</p>
 
 <h2 id="add-exit-trap-to-your-bashrc">Add EXIT trap to your .bashrc</h2>
 
@@ -162,7 +162,7 @@ commands or functions trapped on it will execute when the script exits for any r
 
 <p><a href="http://redsymbol.net/articles/bash-exit-traps/">source</a></p>
 
-<p>To add this exit trap all you need to do is add following code to your bashrc.</p>
+<p>To add this exit trap all you need to do is add the following code to your bashrc.</p>
 
 <pre><code class="language-bash">    function finish {
       # Your cleanup code
@@ -206,11 +206,12 @@ with open('.bash_history', 'w') as b_clean:
         b_clean.write(lines[i]+'\n')
 </code></pre>
 
-<p>save this file as &ldquo;.exit_script&rdquo; and make this file executable using following
-command.</p>
+<p>Save this file as &ldquo;.exit_script&rdquo; and make this file executable using the following command.</p>
 
 <pre><code class="language-bash">chmod +x .exit_script
 </code></pre>
+
+<p>Now &ldquo;.exit_script&rdquo; will be executed each and every time the terminal window is closed.</p>
 
 <p>This way you can get rid of unnecessary entries in the bash history.</p>
  </div>

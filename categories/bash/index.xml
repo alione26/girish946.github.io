@@ -18,7 +18,7 @@
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/</guid>
-      <description>If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&amp;rsquo;ve used, in your bash history. The commands like &amp;lsquo;ls&amp;rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &amp;ldquo;Moon Buggy&amp;rdquo; or &amp;ldquo;2048-cli&amp;rdquo; etc, the things which are not important enough and don&amp;rsquo;t have too comples commands to be stored in the bash history.</description>
+      <description>If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&amp;rsquo;ve used, in your bash history. The commands like &amp;lsquo;ls&amp;rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &amp;ldquo;Moon Buggy&amp;rdquo; or &amp;ldquo;2048-cli&amp;rdquo; etc, the things which are not important enough and don&amp;rsquo;t have too complex commands to be stored in the bash history.</description>
     </item>
     
   </channel>
