@@ -65,13 +65,13 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/about-me/</loc>
+    <loc>http://girishjoshi.io/categories/about-me/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/about-me/</loc>
+    <loc>http://girishjoshi.io/tags/about-me/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -83,13 +83,13 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/bash/</loc>
+    <loc>http://girishjoshi.io/categories/bash/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/bash/</loc>
+    <loc>http://girishjoshi.io/tags/bash/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -155,14 +155,14 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/iot/</loc>
-    <lastmod>2015-12-17T17:14:28+05:30</lastmod>
+    <loc>http://girishjoshi.io/categories/iot/</loc>
+    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/iot/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/iot/</loc>
+    <lastmod>2015-12-17T17:14:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -185,13 +185,13 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/orangepi/</loc>
+    <loc>http://girishjoshi.io/categories/orangepi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/orangepi/</loc>
+    <loc>http://girishjoshi.io/tags/orangepi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -221,25 +221,25 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/qt/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/python/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/qt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/qt/</loc>
     <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -251,25 +251,25 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/raspberrypi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://girishjoshi.io/categories/raspberrypi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/shell-scripting/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/raspberrypi/</loc>
+    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/shell-scripting/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/shell-scripting/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
