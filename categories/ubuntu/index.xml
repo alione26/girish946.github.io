@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Orangepi on girishjoshi.io</title>
-    <link>http://girishjoshi.io/categories/orangepi/</link>
-    <description>Recent content in Orangepi on girishjoshi.io</description>
+    <title>Ubuntu on girishjoshi.io</title>
+    <link>http://girishjoshi.io/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Fri, 15 Dec 2017 09:18:40 +0530</lastBuildDate>
     
-	<atom:link href="http://girishjoshi.io/categories/orangepi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://girishjoshi.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,16 +22,6 @@
 If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
 In fact their web site claims that
 We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general.</description>
-    </item>
-    
-    <item>
-      <title>Interfacing LTC6802-2 with OrangePi using Python.</title>
-      <link>http://girishjoshi.io/post/ltc6802-2-python/</link>
-      <pubDate>Mon, 05 Jun 2017 17:31:50 +0530</pubDate>
-      
-      <guid>http://girishjoshi.io/post/ltc6802-2-python/</guid>
-      <description>LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
-LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.</description>
     </item>
     
   </channel>

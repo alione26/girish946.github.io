@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.25.1" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Install Armbian On Orange Pi Zero" />
+<meta property="og:description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
+If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
+In fact their web site claims that
+We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/" />
+
+
+
+<meta property="article:published_time" content="2017-12-15T09:18:40&#43;05:30"/>
+<meta property="article:modified_time" content="2017-12-15T09:18:40&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Install Armbian On Orange Pi Zero"/>
+<meta name="twitter:title" content="Install Armbian On Orange Pi Zero"/>
+<meta name="twitter:description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
+If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
+In fact their web site claims that
+We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general."/>
+
+
+
+
+<meta itemprop="name" content="Install Armbian On Orange Pi Zero">
+<meta itemprop="description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
+If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
+In fact their web site claims that
+We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general.">
+
+
+<meta itemprop="dateModified" content="2017-12-15T09:18:40&#43;05:30" />
+<meta itemprop="wordCount" content="422">
+
+
+
+<meta itemprop="keywords" content="Debian,Ubuntu,Armbian,OrangePi,Insallation," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-110079903-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Install Armbian On Orange Pi Zero 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Install Armbian On Orange Pi Zero </h1>
+    <div class="content"> 
+
+<h2 id="armbian">Armbian</h2>
+
+<p>Armbian is the linux for ARM development boards. It is a debian based distro,
+available for a verity of different development boards.</p>
+
+<p>If you like to configure low level settings for your devices and if you are
+really concerned about the security; Armbian is for you.</p>
+
+<p>In fact their web site claims that</p>
+
+<pre><code class="language-text">    We are the only distribution specialized for ARM development boards.
+    Our primary objectives are optimizing low-level settings, kernel settings
+    and its security and security in general. They lead into lowering
+    consumption, provide top performance and high security at the same time.
+    Not a single of those aspects is covered by board maker or any other 
+    distribution.
+</code></pre>
+
+<p>That is pretty cool, right?</p>
+
+<p>So let&rsquo;s get started. In this post I will be posting the procedure for
+installing the Armbian os on Orange Pi Zero. For those who don&rsquo;t know what an
+Orange Pi zero is, <a href="http://www.orangepi.org/orangepizero/">here</a> is the link
+for the bord where you can find the detailsabout it. Soon I&rsquo;ll be writinng
+another post about Orange Pi zero and Orange Pi family of single board computers.</p>
+
+<h3 id="download-the-armbian-image-file-for-orange-pi-zero">Download the Armbian image file for Orange Pi zero.</h3>
+
+<p>The Armbian image for Orange Pi zero can be found at
+<a href="https://www.armbian.com/orange-pi-zero/">https://www.armbian.com/orange-pi-zero/</a> .</p>
+
+<p>There you can choose between Ubuntu and Debian server images. When you click
+on whatever base image you like, you will get a .7z file. It is a 7zip archive.
+Download it and extract it. It would contain several files including a
+.img file. This .img file is the image that we are going to install on an SDCard.</p>
+
+<h3 id="download-the-etcher">Download the Etcher.</h3>
+
+<p>Etcher is the tool for burning images to SDCards and USB drives, it is available
+for Linux, Mac and Windows.</p>
+
+<p>You can download it from it&rsquo;s official website <a href="https://etcher.io/">https://etcher.io/</a></p>
+
+<h3 id="burn-image-to-the-sdcard">Burn Image to the SDCard.</h3>
+
+<p>To burn the image that you have downloaded from the armbian.com to the SD Card.</p>
+
+<ul>
+<li><p>Start Etcher.</p></li>
+
+<li><p>Insert the SD Card into the computer.</p></li>
+
+<li><p>Select the image that you want to burn on the SD Card.</p></li>
+
+<li><p>Select the SDCard on which you want to burn the image.</p>
+
+<p><img src="http://girishjoshi.io/images/etcher-select-image-and-SDCard.png" height="200" 
+width="300"></img></p></li>
+
+<li><p>Click &ldquo;Flash&rdquo; button.</p>
+
+<p><img src="http://girishjoshi.io/images/etcher-burn-sd-card.png" height="200" width="300"></img></p></li>
+
+<li><p>After this process is done etcher will validate the writing.</p></li>
+</ul>
+
+<p>Once all of the above steps are done, remove the SDCard from the computer and
+put it into Orange Pi zero. Now you can start using it.</p>
+
+<p>Congratultions; you have just installed a fresh copy of os of your choice on
+Orange Pi zero.</p>
+
+<p>What you can do with Orange Pi? and how to do it? I&rsquo;ll be covering that
+in the next post.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/debian">#Debian</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/ubuntu">#Ubuntu</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/armbian">#Armbian</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/orangepi">#OrangePi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/insallation">#Insallation</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Dec 15, 2017 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+

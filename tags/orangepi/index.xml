@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Mon, 05 Jun 2017 17:31:50 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 09:18:40 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/orangepi/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install Armbian On Orange Pi Zero</title>
+      <link>http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/</link>
+      <pubDate>Fri, 15 Dec 2017 09:18:40 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/</guid>
+      <description>Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
+If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
+In fact their web site claims that
+We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general.</description>
+    </item>
     
     <item>
       <title>Interfacing LTC6802-2 with OrangePi using Python.</title>

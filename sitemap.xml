@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
   </url>
@@ -65,13 +70,13 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/about-me/</loc>
+    <loc>http://girishjoshi.io/tags/about-me/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/about-me/</loc>
+    <loc>http://girishjoshi.io/categories/about-me/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -83,13 +88,25 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/bash/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/armbian/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/armbian/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/tags/bash/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/bash/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -109,6 +126,12 @@
   <url>
     <loc>http://girishjoshi.io/tags/coding/</loc>
     <lastmod>2015-12-17T17:14:28+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/debian/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,8 +166,20 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/insallation/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/installation/</loc>
     <lastmod>2017-04-12T16:42:34+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/installation/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,14 +190,14 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/iot/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/iot/</loc>
+    <lastmod>2015-12-17T17:14:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/iot/</loc>
-    <lastmod>2015-12-17T17:14:28+05:30</lastmod>
+    <loc>http://girishjoshi.io/categories/iot/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -185,14 +220,14 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/orangepi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <loc>http://girishjoshi.io/tags/orangepi/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/tags/orangepi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <loc>http://girishjoshi.io/categories/orangepi/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -204,7 +239,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -221,25 +256,25 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/qt/</loc>
-    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <loc>http://girishjoshi.io/categories/python/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/tags/qt/</loc>
+    <lastmod>2017-11-20T20:42:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/qt/</loc>
     <lastmod>2017-11-20T20:42:57+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -251,25 +286,25 @@
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/raspberrypi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://girishjoshi.io/tags/raspberrypi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://girishjoshi.io/categories/shell-scripting/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <loc>http://girishjoshi.io/categories/raspberrypi/</loc>
+    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/tags/shell-scripting/</loc>
+    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/shell-scripting/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -294,13 +329,19 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/ubuntu/</loc>
-    <lastmod>2016-02-11T12:13:27+05:30</lastmod>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/ubuntu/</loc>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
     <priority>0</priority>
   </url>
   
