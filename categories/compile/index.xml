@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Qt on girishjoshi.io</title>
-    <link>http://girishjoshi.io/tags/qt/</link>
-    <description>Recent content in Qt on girishjoshi.io</description>
+    <title>Compile on girishjoshi.io</title>
+    <link>http://girishjoshi.io/categories/compile/</link>
+    <description>Recent content in Compile on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Sat, 07 Apr 2018 23:00:21 +0530</lastBuildDate>
     
-	<atom:link href="http://girishjoshi.io/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://girishjoshi.io/categories/compile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>http://girishjoshi.io/post/compile-featherpad-text-editor-on-fedora/</guid>
       <description>FetherPad FeatherPad is a lightweight Qt5 plain-text editor for Linux. It is independent of any desktop environment and has:
  Drag-and-drop support, including tab detachment and attachment; X11 virtual desktop awareness (using tabs on current desktop but opening a new window on another); An optionally permanent search-bar with a different search entry for each tab; Instant highlighting of found matches when searching; A docked window for text replacement; Support for showing line numbers and jumping to a specific line; Automatic detection of text encoding as far as possible and optional saving with encoding; Syntax highlighting for common programming languages; Session management; Side-pane mode; Auto-saving; Printing; Text zooming; Appropriate but non-interrupting prompts; and Other features that can be found in its settings, on its menus or when it is actually used.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started With PyQt</title>
-      <link>http://girishjoshi.io/post/gettingstartedwithpyqt/</link>
-      <pubDate>Mon, 20 Nov 2017 20:42:57 +0530</pubDate>
-      
-      <guid>http://girishjoshi.io/post/gettingstartedwithpyqt/</guid>
-      <description>PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C++ framework (another binding is PySide).
-If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces.</description>
     </item>
     
   </channel>
