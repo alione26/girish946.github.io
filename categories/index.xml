@@ -51,7 +51,7 @@
     <item>
       <title>Compile</title>
       <link>http://girishjoshi.io/categories/compile/</link>
-      <pubDate>Sat, 07 Apr 2018 23:00:21 +0530</pubDate>
+      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
       
       <guid>http://girishjoshi.io/categories/compile/</guid>
       <description></description>
@@ -69,7 +69,7 @@
     <item>
       <title>Fedora</title>
       <link>http://girishjoshi.io/categories/fedora/</link>
-      <pubDate>Sat, 07 Apr 2018 23:00:21 +0530</pubDate>
+      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
       
       <guid>http://girishjoshi.io/categories/fedora/</guid>
       <description></description>
@@ -87,7 +87,7 @@
     <item>
       <title>How To</title>
       <link>http://girishjoshi.io/categories/how-to/</link>
-      <pubDate>Sat, 07 Apr 2018 23:00:21 +0530</pubDate>
+      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
       
       <guid>http://girishjoshi.io/categories/how-to/</guid>
       <description></description>
@@ -108,6 +108,24 @@
       <pubDate>Fri, 15 Dec 2017 09:18:40 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kernel</title>
+      <link>http://girishjoshi.io/categories/kernel/</link>
+      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://girishjoshi.io/categories/linux/</link>
+      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/linux/</guid>
       <description></description>
     </item>
     
