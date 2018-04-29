@@ -87,7 +87,7 @@
     <item>
       <title>How To</title>
       <link>http://girishjoshi.io/categories/how-to/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/how-to/</guid>
       <description></description>
@@ -130,6 +130,15 @@
     </item>
     
     <item>
+      <title>Mediaserver</title>
+      <link>http://girishjoshi.io/categories/mediaserver/</link>
+      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/mediaserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Orangepi</title>
       <link>http://girishjoshi.io/categories/orangepi/</link>
       <pubDate>Fri, 15 Dec 2017 09:18:40 +0530</pubDate>
@@ -168,9 +177,18 @@
     <item>
       <title>Raspberrypi</title>
       <link>http://girishjoshi.io/categories/raspberrypi/</link>
-      <pubDate>Mon, 05 Jun 2017 17:31:50 +0530</pubDate>
+      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/raspberrypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>http://girishjoshi.io/categories/setup/</link>
+      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/setup/</guid>
       <description></description>
     </item>
     

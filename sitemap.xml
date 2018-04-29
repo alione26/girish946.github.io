@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/</loc>
     <lastmod>2018-04-22T12:03:14+00:00</lastmod>
   </url>
@@ -213,7 +218,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/how-to/</loc>
-    <lastmod>2018-04-22T12:03:14+00:00</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -267,7 +272,7 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/linux/</loc>
-    <lastmod>2018-04-22T12:03:14+00:00</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -284,8 +289,26 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/media-server/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/mediaserver/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/meetup/</loc>
     <lastmod>2016-02-11T12:13:27+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/minidlna/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -315,7 +338,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-04-22T12:03:14+00:00</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -369,13 +392,31 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/raspberrypi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/raspberrypi/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/raspbian/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/readymedia/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/setup/</loc>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -429,7 +470,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-04-22T12:03:14+00:00</lastmod>
+    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
   </url>
   
