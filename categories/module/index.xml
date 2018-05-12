@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on girishjoshi.io</title>
-    <link>http://girishjoshi.io/categories/linux/</link>
-    <description>Recent content in Linux on girishjoshi.io</description>
+    <title>Module on girishjoshi.io</title>
+    <link>http://girishjoshi.io/categories/module/</link>
+    <description>Recent content in Module on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Fri, 04 May 2018 17:13:29 +0530</lastBuildDate>
     
-	<atom:link href="http://girishjoshi.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://girishjoshi.io/categories/module/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,19 +22,6 @@
 The device drivers, networking stack; for almost everything you will find a module in the kernel.
 To use the kernel module there are three specific tools/commands that you will need.
 $ lsmod # List all existing modules in the kernel.</description>
-    </item>
-    
-    <item>
-      <title>Compile Linux Kernel (on Fedora), Pune Kernel Meetup Assignment</title>
-      <link>http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
-      
-      <guid>http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/</guid>
-      <description>Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
-The assignment was to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel boot up.
-So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel bootup.
- Get the kernel source tree.</description>
     </item>
     
   </channel>

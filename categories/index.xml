@@ -51,7 +51,7 @@
     <item>
       <title>Compile</title>
       <link>http://girishjoshi.io/categories/compile/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/compile/</guid>
       <description></description>
@@ -69,7 +69,7 @@
     <item>
       <title>Fedora</title>
       <link>http://girishjoshi.io/categories/fedora/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/fedora/</guid>
       <description></description>
@@ -85,9 +85,18 @@
     </item>
     
     <item>
+      <title>Hello World</title>
+      <link>http://girishjoshi.io/categories/hello-world/</link>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/hello-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>How To</title>
       <link>http://girishjoshi.io/categories/how-to/</link>
-      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/how-to/</guid>
       <description></description>
@@ -114,7 +123,7 @@
     <item>
       <title>Kernel</title>
       <link>http://girishjoshi.io/categories/kernel/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/kernel/</guid>
       <description></description>
@@ -123,7 +132,7 @@
     <item>
       <title>Linux</title>
       <link>http://girishjoshi.io/categories/linux/</link>
-      <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/linux/</guid>
       <description></description>
@@ -135,6 +144,15 @@
       <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/mediaserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Module</title>
+      <link>http://girishjoshi.io/categories/module/</link>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/module/</guid>
       <description></description>
     </item>
     

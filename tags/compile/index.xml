@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Sun, 22 Apr 2018 12:03:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 May 2018 17:13:29 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/compile/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#34;Hello World!&#34; Linux Kernel Module</title>
+      <link>http://girishjoshi.io/post/linux-kernel-module-hello-world/</link>
+      <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/linux-kernel-module-hello-world/</guid>
+      <description>What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
+The device drivers, networking stack; for almost everything you will find a module in the kernel.
+To use the kernel module there are three specific tools/commands that you will need.
+$ lsmod # List all existing modules in the kernel.</description>
+    </item>
     
     <item>
       <title>Compile Linux Kernel (on Fedora), Pune Kernel Meetup Assignment</title>
