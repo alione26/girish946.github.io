@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 21 Nov 2017 14:20:08 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jun 2018 12:05:38 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>RaspberryPi GPIO Python</title>
+      <link>http://girishjoshi.io/post/raspberrypi-gpio-python/</link>
+      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/raspberrypi-gpio-python/</guid>
+      <description>To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
+ python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
+$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
+The sample code for taking input from a gpio pin is given below
+#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code.</description>
+    </item>
     
     <item>
       <title>Keep your bash history clean using python</title>

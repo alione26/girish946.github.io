@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.39-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/raspberrypi-gpio-python/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="RaspberryPi GPIO Python" />
+<meta property="og:description" content="To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
+ python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
+$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
+The sample code for taking input from a gpio pin is given below
+#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/raspberrypi-gpio-python/" />
+
+
+
+<meta property="article:published_time" content="2018-06-10T12:05:38&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-06-10T12:05:38&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RaspberryPi GPIO Python"/>
+<meta name="twitter:description" content="To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
+ python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
+$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
+The sample code for taking input from a gpio pin is given below
+#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code."/>
+
+
+
+<meta itemprop="name" content="RaspberryPi GPIO Python">
+<meta itemprop="description" content="To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
+ python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
+$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
+The sample code for taking input from a gpio pin is given below
+#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code.">
+
+
+<meta itemprop="datePublished" content="2018-06-10T12:05:38&#43;05:30" />
+<meta itemprop="dateModified" content="2018-06-10T12:05:38&#43;05:30" />
+<meta itemprop="wordCount" content="137">
+
+
+
+<meta itemprop="keywords" content="RaspberryPi,Linux,Raspbian,GPIO,Python," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-110079903-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     RaspberryPi GPIO Python 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> RaspberryPi GPIO Python </h1>
+    <div class="content"> <p>To access GPIO of Raspberry Pi using python, you need to have following
+dependencies installed.</p>
+
+<ul>
+<li>python-dev</li>
+<li>python-pip</li>
+<li>RPi.GPIO</li>
+</ul>
+
+<p>to install <em>python-dev</em> and <em>python-pip</em>:</p>
+
+<pre><code class="language-bash">$ sudo apt-get install python-dev python-pip
+</code></pre>
+
+<p>to install RPi.GPIO:</p>
+
+<pre><code class="language-bash">$  pip install RPi.GPIO 
+</code></pre>
+
+<p>Once this is done you are all set to use the RPi GPIO.</p>
+
+<p>The sample code for taking input from a gpio pin is given below</p>
+
+<pre><code class="language-python">#! /usr/bin/python
+
+from RPi import GPIO as io
+import time
+
+#Use the actual pin numbers on the board in the code.
+io.setmode(io.BOARD)
+
+#Configure pin no. 18 as input and make it a pull down.
+#Meaning to get an input you need to giv that pin a logic 1.
+io.setup(18, io.IN, pull_up_down=io.PUD_DOWN) 
+
+def check_button_state():
+    while True:
+        try:
+            if io.input(18) == 1:
+                print(&quot;pressed&quot;)
+                time.sleep(1)
+            else:
+                pass
+        except KeyboardInterrupt as ke:
+            io.cleanup()
+            break
+
+if __name__ == '__main__':
+    check_button_state()
+</code></pre>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/raspberrypi">#RaspberryPi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/raspbian">#Raspbian</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/gpio">#GPIO</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#Python</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jun 10, 2018 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+
