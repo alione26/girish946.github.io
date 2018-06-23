@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/raspberrypi-gpio-python/</loc>
     <lastmod>2018-06-10T12:05:38+05:30</lastmod>
   </url>
@@ -384,7 +389,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-06-10T12:05:38+05:30</lastmod>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -516,7 +521,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-06-10T12:05:38+05:30</lastmod>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   

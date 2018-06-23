@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.39-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Fabric a Great Tool to Automate Mundane Tasks" />
+<meta property="og:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
+The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/" />
+
+
+
+<meta property="article:published_time" content="2018-06-23T11:44:32&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-06-23T11:44:32&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fabric a Great Tool to Automate Mundane Tasks"/>
+<meta name="twitter:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
+The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device."/>
+
+
+
+<meta itemprop="name" content="Fabric a Great Tool to Automate Mundane Tasks">
+<meta itemprop="description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
+The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device.">
+
+
+<meta itemprop="datePublished" content="2018-06-23T11:44:32&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-23T11:44:32&#43;00:00" />
+<meta itemprop="wordCount" content="435">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/color-dark.css" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-110079903-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Fabric a Great Tool to Automate Mundane Tasks 
+
+</title>
+
+<script src="js/highlight.min.js"></script>
+<link rel="stylesheet" href="css/tomorrow-night.min.css" />
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Fabric a Great Tool to Automate Mundane Tasks </h1>
+    <div class="content"> 
+
+<p>This is a late post, few months back I had to update a certain firmware for a
+logger device on to hundreds of the devices. For some reason at that time the
+OTA update mechanism which was already implemented on those devices did not
+ work. As it was crucial to update all the devices as soon as possible, some
+work around for this problem had to be found.</p>
+
+<p>The update procedure was actually simple, you login to the device using <strong>ssh</strong>,
+ execute the update script and restart the device. But to do this process for
+ each device (hundreds of those) is a really boring and time consuming job.</p>
+
+<p>From previous <a href="https://www.meetup.com/PythonPune/"><strong>Python Meetups</strong></a> I had an
+ idea about <a href="http://www.fabfile.org/"><strong>fabric</strong></a> but I never had a chance to
+ use it. Now I thought this is a good opportunity for me to try this great
+library/tool whatever you may want to call it.</p>
+
+<p>So here is my setup.</p>
+
+<p>I had a script to make updates on the remote systems which needed following
+arguments as the command line arguments.</p>
+
+<ul>
+<li>server IP</li>
+<li>server port</li>
+<li>(archive) file to be downloaded</li>
+<li>Directory containing the firmware.</li>
+</ul>
+
+<h3 id="the-solution">The solution</h3>
+
+<p>The way it works is, the fabric comes with a tool called <strong>fab</strong> it looks for the
+<strong>fabfile</strong>. You have to write your deployment logic in <strong>fabfile.py</strong>
+As I had to run only one command on the remote machine it was really simple,
+ the fabfile.py looked like this.</p>
+
+<pre><code class="language-python">#! /usr/bin/python
+
+from fabric.api import run
+serverIp   = &quot;192.168.1.1&quot;
+serverPort = &quot;8000&quot;
+filename   = &quot;MyFIle.tar.gz&quot;
+dirName    = &quot;MyDir&quot;
+
+def makeUpdate():
+    run(&quot;/bin/update.sh {0} {1} {2} {3}&quot;.format(serverIp, serverPort, filename, dirName))
+</code></pre>
+
+<p>Where you import <strong>run</strong> module from <strong>fabric.api</strong> and whatever you pass it;
+gets executed on the remote machine.</p>
+
+<p>To execute this script the command is</p>
+
+<pre><code class="language-bash">fab -H &lt;remoteIP&gt; -u &lt;username&gt; -I makeUpdate
+</code></pre>
+
+<p>What this command does is:</p>
+
+<ul>
+<li>logs in to the remote machine with the specified user name</li>
+<li>calls the function you have passed to the argument <strong>-I</strong></li>
+</ul>
+
+<p>Here in this case the argument to <strong>-I</strong> is <strong>makeUpdate</strong> therefore the
+ makeUpdate function is called where we have executed <strong>update.sh</strong>.</p>
+
+<h3 id="executing-it-on-all-of-the-devices">Executing it on all of the devices.</h3>
+
+<p>Writing the fabfile is only one part of the solution. I had to run this for all
+ of the devices. So I wrote another python script (although this could be done
+ using shell script).</p>
+
+<p>This python script looks like.</p>
+
+<pre><code class="language-python">#! /usr/bin/python
+import os
+clients =  open(&quot;clients.txt&quot;).read().strip().split(&quot;\n&quot;)
+
+print(&quot;updating following machines&quot;)
+for i in clients:
+    if i:
+        print(i)
+
+for i in clients:
+    os.system(&quot;fab -H {0} -u root -I makeUpdate&quot;.format(i))
+</code></pre>
+
+<p>Fabric is a great tool, really simple to understand and use; saved me a lot of time.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Jun 23, 2018 </div>
+  </div>
+
+</footer>
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'girishjoshi-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>
+  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</body>
+</html>
+
