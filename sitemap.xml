@@ -130,6 +130,18 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/categories/automate/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/automation/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/bash/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
     <priority>0</priority>
@@ -190,6 +202,18 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/devops/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/devops/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/categories/event-report/</loc>
     <lastmod>2016-02-11T12:13:27+05:30</lastmod>
     <priority>0</priority>
@@ -198,6 +222,18 @@
   <url>
     <loc>http://girishjoshi.io/tags/exit-trap/</loc>
     <lastmod>2017-11-21T14:20:08+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/fabric/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/fabric/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -413,13 +449,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2018-06-10T12:05:38+05:30</lastmod>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2018-06-10T12:05:38+05:30</lastmod>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -486,6 +522,12 @@
   <url>
     <loc>http://girishjoshi.io/tags/spi/</loc>
     <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/ssh/</loc>
+    <lastmod>2018-06-23T11:44:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   

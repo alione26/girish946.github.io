@@ -58,6 +58,15 @@
     </item>
     
     <item>
+      <title>Automation</title>
+      <link>http://girishjoshi.io/tags/automation/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>http://girishjoshi.io/tags/bash/</link>
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
@@ -112,11 +121,29 @@
     </item>
     
     <item>
+      <title>Devops</title>
+      <link>http://girishjoshi.io/tags/devops/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Exit Trap</title>
       <link>http://girishjoshi.io/tags/exit-trap/</link>
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/exit-trap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fabric</title>
+      <link>http://girishjoshi.io/tags/fabric/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/fabric/</guid>
       <description></description>
     </item>
     
@@ -312,7 +339,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/tags/python/</link>
-      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
       
       <guid>http://girishjoshi.io/tags/python/</guid>
       <description></description>
@@ -378,6 +405,15 @@
       <pubDate>Mon, 05 Jun 2017 17:31:50 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/spi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>http://girishjoshi.io/tags/ssh/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/ssh/</guid>
       <description></description>
     </item>
     

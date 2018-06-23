@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>Automate</title>
+      <link>http://girishjoshi.io/categories/automate/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/automate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>http://girishjoshi.io/categories/bash/</link>
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
@@ -58,11 +67,29 @@
     </item>
     
     <item>
+      <title>Devops</title>
+      <link>http://girishjoshi.io/categories/devops/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Event Report</title>
       <link>http://girishjoshi.io/categories/event-report/</link>
       <pubDate>Thu, 11 Feb 2016 12:13:27 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/event-report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fabric</title>
+      <link>http://girishjoshi.io/categories/fabric/</link>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/fabric/</guid>
       <description></description>
     </item>
     
@@ -186,7 +213,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/categories/python/</link>
-      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
       
       <guid>http://girishjoshi.io/categories/python/</guid>
       <description></description>
