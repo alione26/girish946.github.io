@@ -6,16 +6,28 @@
     <description>Recent content on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Sat, 23 Jun 2018 11:44:32 +0000</lastBuildDate>
+    <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
+    <lastBuildDate>Thu, 05 Jul 2018 14:21:38 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Implementing HTTP Basic Authentication in Golang</title>
+      <link>http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/</guid>
+      <description>Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
+The specifications for basic access authentication are specified in RFC7617
+For Golang httpauth package provides HTTP Basic Authentication middleware.
+Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http.</description>
+    </item>
+    
+    <item>
       <title>Fabric a Great Tool to Automate Mundane Tasks</title>
       <link>http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/</guid>
       <description>This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.

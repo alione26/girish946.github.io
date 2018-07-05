@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.39-DEV" />
+<meta name="generator" content="Hugo 0.43-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/">
 <base href="http://girishjoshi.io" />
@@ -62,11 +62,15 @@ There were a lot of different tools to implement it, some of them are:">
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110079903-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <title>
@@ -352,7 +356,7 @@ connected to and you will be able to see it in the Slick Upnp android app.</p>
 </div>
 
 
-  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
 
   <div class="poweredby">
     Powered by <a href="https://gohugo.io/">Hugo</a>.

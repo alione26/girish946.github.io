@@ -8,7 +8,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.39-DEV" />
+<meta name="generator" content="Hugo 0.43-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/">
 <base href="http://girishjoshi.io" />
@@ -19,7 +19,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-06-23T11:44:32&#43;00:00"/>
+<meta property="og:updated_time" content="2018-07-05T14:21:38&#43;05:30"/>
 
 
 
@@ -46,11 +46,15 @@
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110079903-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <title>
@@ -121,6 +125,58 @@ ga('send', 'pageview');
 
 
   
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/'> Implementing HTTP Basic Authentication in Golang</a> </h2>
+    <div class="meta">
+      Jul 5, 2018 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/golang">#Golang</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/http">#HTTP</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/basic-authentication">#Basic Authentication</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/goji/httpauth">#goji/httpauth</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/authentication">#Authentication</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary"> Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
+The specifications for basic access authentication are specified in RFC7617
+For Golang httpauth package provides HTTP Basic Authentication middleware.
+Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http. </div>
+
+  <footer>
+  <div class="rmore">
+    <a href='http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/'><nobr>Read more ...</nobr></a>
+  </div>
+  </footer>
+
+</article>
+
+
     <article class="post-preview">
 
   <header>
@@ -217,62 +273,6 @@ The sample code for taking input from a gpio pin is given below
 </article>
 
 
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='http://girishjoshi.io/post/linux-kernel-module-hello-world/'> &#34;Hello World!&#34; Linux Kernel Module</a> </h2>
-    <div class="meta">
-      May 4, 2018 - 2 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/kernel">#Kernel</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/module">#Module</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/compile">#Compile</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/c">#c</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/kernel-module">#Kernel Module</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/fedora">#Fedora</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary"> What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel. </div>
-
-  <footer>
-  <div class="rmore">
-    <a href='http://girishjoshi.io/post/linux-kernel-module-hello-world/'><nobr>Read more ...</nobr></a>
-  </div>
-  </footer>
-
-</article>
-
-
 
 
 <div class="page-nav">
@@ -323,7 +323,7 @@ $ lsmod # List all existing modules in the kernel. </div>
 </div>
 
 
-  <div class="copyright"> Copyright (c) 2017 Girish Joshi, all rights reserved. </div>
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
 
   <div class="poweredby">
     Powered by <a href="https://gohugo.io/">Hugo</a>.

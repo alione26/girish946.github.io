@@ -7,19 +7,20 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.19" />
+<meta name="generator" content="Hugo 0.43-DEV" />
 
-<link rel="canonical" href="/post/LTC6802-2-Python/">
-<base href="/" />
+<link rel="canonical" href="http://girishjoshi.io/post/ltc6802-2-python/">
+<base href="http://girishjoshi.io" />
 <meta property="og:title" content="Interfacing LTC6802-2 with OrangePi using Python." />
 <meta property="og:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
 LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/LTC6802-2-Python/" />
+<meta property="og:url" content="http://girishjoshi.io/post/ltc6802-2-python/" />
 
 
 
 <meta property="article:published_time" content="2017-06-05T17:31:50&#43;05:30"/>
+
 <meta property="article:modified_time" content="2017-06-05T17:31:50&#43;05:30"/>
 
 
@@ -32,17 +33,10 @@ LTC6802 is a great option if you want to build battry monitoring system with mor
 
 
 
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="Interfacing LTC6802-2 with OrangePi using Python."/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Interfacing LTC6802-2 with OrangePi using Python."/>
 <meta name="twitter:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
 LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol."/>
-
 
 
 
@@ -51,12 +45,13 @@ LTC6802 is a great option if you want to build battry monitoring system with mor
 LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.">
 
 
+<meta itemprop="datePublished" content="2017-06-05T17:31:50&#43;05:30" />
 <meta itemprop="dateModified" content="2017-06-05T17:31:50&#43;05:30" />
 <meta itemprop="wordCount" content="633">
 
 
 
-<meta itemprop="keywords" content="about-me,bio,event-report,hack,iot,orangepi,package,python,raspberrypi,tutorial,101,about-me,adc,coding,fedora,fingerprint,installation,integer-overflow,iot,ltc6802,meetup,module,orangepi,programming,python,r305,raspberrypi,spi,ubuntu," />
+<meta itemprop="keywords" content="ltc6802,python,spi,RaspberryPi,OrangePi,ADC," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -64,11 +59,15 @@ LTC6802 is a great option if you want to build battry monitoring system with mor
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', '113630432', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <title>
@@ -93,16 +92,16 @@ ga('send', 'pageview');
 
   <nav>
     <div class="siteTitle">
-      <a href="/">girishjoshi.io</a>
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
     </div> 
 
     
     
-    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
-    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
-    <a class="nav-item" href="/about-me/"><div class="nav-item-title">About</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
     
 
   </nav>
@@ -154,11 +153,11 @@ more accuracy. This IC operates on
 
 <p>Following figure shows the circuit diagram to interface the LTC6802-2 with Orange Pi zero.</p>
 
-<p><img src="/images/ltc68021.jpg" height="300" ></p>
+<p><img src="http://girishjoshi.io/images/ltc68021.jpg" height="300" ></p>
 
 <p>After mounting the IC on PCB it looks like this.</p>
 
-<p><img src="/images/LTC6802-PCB.jpg" height="250"></p>
+<p><img src="http://girishjoshi.io/images/LTC6802-PCB.jpg" height="250"></p>
 
 <h1 id="interfacing-with-orange-pi">Interfacing with Orange-Pi</h1>
 
@@ -304,27 +303,27 @@ Make sure that total voltage of all the battries combined together is more than 
 <div class="tags">
     
       <div class="tag">
-        <a href="/tags/ltc6802">#ltc6802</a>
+        <a href="http://girishjoshi.io/tags/ltc6802">#ltc6802</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/python">#python</a>
+        <a href="http://girishjoshi.io/tags/python">#python</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/spi">#spi</a>
+        <a href="http://girishjoshi.io/tags/spi">#spi</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/RaspberryPi">#RaspberryPi</a>
+        <a href="http://girishjoshi.io/tags/raspberrypi">#RaspberryPi</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/OrangePi">#OrangePi</a>
+        <a href="http://girishjoshi.io/tags/orangepi">#OrangePi</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/ADC">#ADC</a>
+        <a href="http://girishjoshi.io/tags/adc">#ADC</a>
       </div>
     
 </div>
@@ -384,13 +383,13 @@ Make sure that total voltage of all the battries combined together is more than 
   
 
   <div class="social-link">
-  <a href="/index.xml" target="_blank">RSS</a>
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
   </div>
 
 </div>
 
 
-  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
 
   <div class="poweredby">
     Powered by <a href="https://gohugo.io/">Hugo</a>.

@@ -7,20 +7,21 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.19" />
+<meta name="generator" content="Hugo 0.43-DEV" />
 
-<link rel="canonical" href="/post/R305-fingerprint-module-with-python/">
-<base href="/" />
+<link rel="canonical" href="http://girishjoshi.io/post/r305-fingerprint-module-with-python/">
+<base href="http://girishjoshi.io" />
 <meta property="og:title" content="R305 fingerprint module &#43; python" />
 <meta property="og:description" content="This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
 I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/R305-fingerprint-module-with-python/" />
+<meta property="og:url" content="http://girishjoshi.io/post/r305-fingerprint-module-with-python/" />
 
 
 
 <meta property="article:published_time" content="2017-06-19T21:55:23&#43;05:30"/>
+
 <meta property="article:modified_time" content="2017-06-19T21:55:23&#43;05:30"/>
 
 
@@ -33,18 +34,11 @@ I came across this module about one and a half year ago. I had to use it in a sm
 
 
 
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="R305 fingerprint module &#43; python"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="R305 fingerprint module &#43; python"/>
 <meta name="twitter:description" content="This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
 I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module."/>
-
 
 
 
@@ -54,12 +48,13 @@ R305 is a very common finger print sensor. It is quite cheap, has a storage capa
 I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module.">
 
 
+<meta itemprop="datePublished" content="2017-06-19T21:55:23&#43;05:30" />
 <meta itemprop="dateModified" content="2017-06-19T21:55:23&#43;05:30" />
 <meta itemprop="wordCount" content="593">
 
 
 
-<meta itemprop="keywords" content="about-me,bio,event-report,hack,iot,orangepi,package,python,raspberrypi,tutorial,101,about-me,adc,coding,fedora,fingerprint,installation,integer-overflow,iot,ltc6802,meetup,module,orangepi,programming,python,r305,raspberrypi,spi,ubuntu," />
+<meta itemprop="keywords" content="python,R305,fingerprint,module," />
 
 
 <link rel="stylesheet" href="css/layout.css" />
@@ -67,11 +62,15 @@ I came across this module about one and a half year ago. I had to use it in a sm
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', '113630432', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 <title>
@@ -96,16 +95,16 @@ ga('send', 'pageview');
 
   <nav>
     <div class="siteTitle">
-      <a href="/">girishjoshi.io</a>
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
     </div> 
 
     
     
-    <a class="nav-item" href="/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
-    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
-    <a class="nav-item" href="/about-me/"><div class="nav-item-title">About</div></a>
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
     
 
   </nav>
@@ -147,7 +146,7 @@ ga('send', 'pageview');
 <p>R305 is a very common finger print sensor. It is quite cheap, has a storage
 capacity of 250 fingerprints.</p>
 
-<p><img src="/images/R305.jpg" height="250"></p>
+<p><img src="http://girishjoshi.io/images/R305.jpg" height="250"></p>
 
 <p>I came across this module about one and a half year ago. I had to use it in a small
 project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers
@@ -237,7 +236,7 @@ response.</p>
 <p>Connect the fingerprint module with USB to TTL convertor, the pin-out of
 R305 fingerprint module is as follows.</p>
 
-<p><img src="/images/R305-pins.jpg" height="250"></p>
+<p><img src="http://girishjoshi.io/images/R305-pins.jpg" height="250"></p>
 
 <p>If you are using Raspberry/Orange/Banana Pi or any other board like that;
 you can use Tx and Rx Pins of the board itself instead of using USB to TTL.</p>
@@ -317,19 +316,19 @@ place, thanks to him the documentation is there on <a href="http://python-r305-d
 <div class="tags">
     
       <div class="tag">
-        <a href="/tags/python">#python</a>
+        <a href="http://girishjoshi.io/tags/python">#python</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/R305">#R305</a>
+        <a href="http://girishjoshi.io/tags/r305">#R305</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/fingerprint">#fingerprint</a>
+        <a href="http://girishjoshi.io/tags/fingerprint">#fingerprint</a>
       </div>
     
       <div class="tag">
-        <a href="/tags/module">#module</a>
+        <a href="http://girishjoshi.io/tags/module">#module</a>
       </div>
     
 </div>
@@ -389,13 +388,13 @@ place, thanks to him the documentation is there on <a href="http://python-r305-d
   
 
   <div class="social-link">
-  <a href="/index.xml" target="_blank">RSS</a>
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
   </div>
 
 </div>
 
 
-  <div class="copyright"> Copyright (c) 2017, all rights reserved. </div>
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
 
   <div class="poweredby">
     Powered by <a href="https://gohugo.io/">Hugo</a>.

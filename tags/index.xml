@@ -6,7 +6,7 @@
     <description>Recent content in Tags on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2017 Girish Joshi, all rights reserved.</copyright>
+    <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Tue, 21 Nov 2017 14:20:08 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -58,9 +58,18 @@
     </item>
     
     <item>
+      <title>Authentication</title>
+      <link>http://girishjoshi.io/tags/authentication/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Automation</title>
       <link>http://girishjoshi.io/tags/automation/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/automation/</guid>
       <description></description>
@@ -72,6 +81,15 @@
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basic Authentication</title>
+      <link>http://girishjoshi.io/tags/basic-authentication/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/basic-authentication/</guid>
       <description></description>
     </item>
     
@@ -123,7 +141,7 @@
     <item>
       <title>Devops</title>
       <link>http://girishjoshi.io/tags/devops/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/devops/</guid>
       <description></description>
@@ -141,7 +159,7 @@
     <item>
       <title>Fabric</title>
       <link>http://girishjoshi.io/tags/fabric/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/fabric/</guid>
       <description></description>
@@ -175,6 +193,24 @@
     </item>
     
     <item>
+      <title>Goji/Httpauth</title>
+      <link>http://girishjoshi.io/tags/goji/httpauth/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/goji/httpauth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://girishjoshi.io/tags/golang/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gpio</title>
       <link>http://girishjoshi.io/tags/gpio/</link>
       <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
@@ -189,6 +225,15 @@
       <pubDate>Sun, 22 Apr 2018 12:03:14 +0000</pubDate>
       
       <guid>http://girishjoshi.io/tags/hello-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Http</title>
+      <link>http://girishjoshi.io/tags/http/</link>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/http/</guid>
       <description></description>
     </item>
     
@@ -249,7 +294,7 @@
     <item>
       <title>Linux</title>
       <link>http://girishjoshi.io/tags/linux/</link>
-      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/linux/</guid>
       <description></description>
@@ -339,7 +384,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/tags/python/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/python/</guid>
       <description></description>
@@ -411,7 +456,7 @@
     <item>
       <title>Ssh</title>
       <link>http://girishjoshi.io/tags/ssh/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0000</pubDate>
+      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/ssh/</guid>
       <description></description>
