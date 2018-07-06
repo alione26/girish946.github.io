@@ -19,7 +19,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-04T17:13:29&#43;05:30"/>
+<meta property="og:updated_time" content="2017-11-21T14:20:08&#43;05:30"/>
 
 
 
@@ -42,7 +42,71 @@
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -63,10 +127,6 @@ if (!doNotTrack) {
     girishjoshi.io
 
 </title>
-
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -102,7 +162,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -112,7 +172,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -128,55 +188,44 @@ if (!doNotTrack) {
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='http://girishjoshi.io/post/linux-kernel-module-hello-world/'> &#34;Hello World!&#34; Linux Kernel Module</a> </h2>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/'> Keep your bash history clean using python</a> </h2>
     <div class="meta">
-      May 4, 2018 - 2 minutes
+      Nov 21, 2017 - 2 minutes
     </div>
     
 <div class="tags">
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
+        <a href="http://girishjoshi.io/tags/python">#python</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/kernel">#Kernel</a>
+        <a href="http://girishjoshi.io/tags/bash">#bash</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/module">#Module</a>
+        <a href="http://girishjoshi.io/tags/shell-scripting">#shell scripting</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/compile">#Compile</a>
+        <a href="http://girishjoshi.io/tags/exit-trap">#exit trap</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/c">#c</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/kernel-module">#Kernel Module</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/fedora">#Fedora</a>
+        <a href="http://girishjoshi.io/tags/.bashrc">#.bashrc</a>
       </div>
     
 </div>
 
   </header>
 
-  <div class="summary"> What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel. </div>
-
-  <footer>
-  <div class="rmore">
-    <a href='http://girishjoshi.io/post/linux-kernel-module-hello-world/'><nobr>Read more ...</nobr></a>
+  <div class="summary">
+    If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history.
+    <a href='http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/' class="rmore">Read more ...</a>
   </div>
-  </footer>
+
+  <div class="rmore">
+  </div>
 
 </article>
 
@@ -184,23 +233,104 @@ $ lsmod # List all existing modules in the kernel. </div>
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/'> Setup Personal MediaServer Using RaspberryPi and MiniDLNA</a> </h2>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/gettingstartedwithpyqt/'> Getting Started With PyQt</a> </h2>
     <div class="meta">
-      Apr 29, 2018 - 3 minutes
+      Nov 20, 2017 - 4 minutes
     </div>
     
 <div class="tags">
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/media-server">#Media Server</a>
+        <a href="http://girishjoshi.io/tags/python">#python</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/minidlna">#MiniDLNA</a>
+        <a href="http://girishjoshi.io/tags/qt">#Qt</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/readymedia">#ReadyMedia</a>
+        <a href="http://girishjoshi.io/tags/pyqt">#PyQt</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    PyQt is one of the two most popular Python bindings for the Qt cross-platform GUI/XML/SQL C++ framework (another binding is PySide).
+If you have ever used any distribution of linux, you must have heard about Qt and GTK. Most of the desktop enviornments in linux used either of those Gui Toolkits, for example Gnome, Unity, MATE, Cinnamon etc use Gtk while KDE, Razor-Qt etc use Qt for creating Graphical interfaces.
+    <a href='http://girishjoshi.io/post/gettingstartedwithpyqt/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/r305-fingerprint-module-with-python/'> R305 fingerprint module &#43; python</a> </h2>
+    <div class="meta">
+      Jun 19, 2017 - 3 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/r305">#R305</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/fingerprint">#fingerprint</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/module">#module</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    This is the post regarding the Python-R305 package.
+R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi.
+    <a href='http://girishjoshi.io/post/r305-fingerprint-module-with-python/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/ltc6802-2-python/'> Interfacing LTC6802-2 with OrangePi using Python.</a> </h2>
+    <div class="meta">
+      Jun 5, 2017 - 3 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/ltc6802">#ltc6802</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/spi">#spi</a>
       </div>
     
       <div class="tag">
@@ -208,26 +338,25 @@ $ lsmod # List all existing modules in the kernel. </div>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
+        <a href="http://girishjoshi.io/tags/orangepi">#OrangePi</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/raspbian">#Raspbian</a>
+        <a href="http://girishjoshi.io/tags/adc">#ADC</a>
       </div>
     
 </div>
 
   </header>
 
-  <div class="summary"> Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are: </div>
-
-  <footer>
-  <div class="rmore">
-    <a href='http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/'><nobr>Read more ...</nobr></a>
+  <div class="summary">
+    LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy.
+    <a href='http://girishjoshi.io/post/ltc6802-2-python/' class="rmore">Read more ...</a>
   </div>
-  </footer>
+
+  <div class="rmore">
+  </div>
 
 </article>
 
@@ -235,52 +364,150 @@ There were a lot of different tools to implement it, some of them are: </div>
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/'> Compile Linux Kernel (on Fedora), Pune Kernel Meetup Assignment</a> </h2>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/getting-started-with-raspberry-pi/'> Getting started with Raspberry Pi</a> </h2>
     <div class="meta">
-      Apr 22, 2018 - 4 minutes
+      Apr 12, 2017 - 3 minutes
     </div>
     
 <div class="tags">
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/linux">#Linux</a>
+        <a href="http://girishjoshi.io/tags/raspberrypi">#RaspberryPi</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/kernel">#Kernel</a>
+        <a href="http://girishjoshi.io/tags/101">#101</a>
       </div>
     
       <div class="tag">
-        <a href="http://girishjoshi.io/tags/compile">#Compile</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/fedora">#Fedora</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/hello-world">#Hello World</a>
-      </div>
-    
-      <div class="tag">
-        <a href="http://girishjoshi.io/tags/printk">#printk()</a>
+        <a href="http://girishjoshi.io/tags/installation">#installation</a>
       </div>
     
 </div>
 
   </header>
 
-  <div class="summary"> Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
-The assignment was to print &ldquo;Hello World&rdquo; as the first line in the kernel boot up.
-So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first line in the kernel bootup.
- Get the kernel source tree. </div>
-
-  <footer>
-  <div class="rmore">
-    <a href='http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/'><nobr>Read more ...</nobr></a>
+  <div class="summary">
+    If you are using raspberry pi for the first time; then this post might be helpful to setup the device.
+In this post I&rsquo;ll cover
+ installing raspbian/ubuntu on the sd card for raspberry pi. configuring ssh. configuring wifi to connect to the network automatically.  Installing Raspbian/Ubuntu on the SD card First of all download the image of the os you want to install on the SD card from raspberrypi.
+    <a href='http://girishjoshi.io/post/getting-started-with-raspberry-pi/' class="rmore">Read more ...</a>
   </div>
-  </footer>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/'> Plotting live serial input from arduino/microcontroller using python matplotlib</a> </h2>
+    <div class="meta">
+      Aug 30, 2016 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/programming">#Programming</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#Python</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Plotcat Hello all, I&rsquo;m writing once again after almost six months. As the title of this post suggests I&rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.
+    <a href='http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/february-2016-frdora-meetup-pune/'> February 2016 frdora meetup pune</a> </h2>
+    <div class="meta">
+      Feb 11, 2016 - 3 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/fedora">#Fedora</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/ubuntu">#Ubuntu</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/meetup">#Meetup</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/integer-overflow">#Integer Overflow</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    On 6-Feb-2016 it was third Fedora meetup at pune at the same venue as earlier meetups &ldquo;K 104, Jasminium, Magarpatta City Pune&rdquo;. Event host was Kushal Das.
+For this meetup the ajenda was &ldquo;Debugging bugs in different applications written in C/Python in Fedora&rdquo;. But after last meetup Amol and me had discussed about writing a tool like &ldquo;Ip messenger&rdquo; (our purpose was for file transfer) for linux which will be a nautilus plugin; so we decided that in this meetup we will do it.
+    <a href='http://girishjoshi.io/post/february-2016-frdora-meetup-pune/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
+    <h2 class="title"> <a href='http://girishjoshi.io/post/introduction_to_python/'> Introduction to Python</a> </h2>
+    <div class="meta">
+      Dec 18, 2015 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#Python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/programming">#Programming</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Python What is Python? Python is probably one of the few programming languages which is both simple and powerful.
+It is a general purpose Language.
+Features of Python:
+Simple:
+Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.
+    <a href='http://girishjoshi.io/post/introduction_to_python/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
 
 </article>
 
@@ -292,17 +519,17 @@ The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first
     
         <a href="http://girishjoshi.io/" title="Previous page" > &lt;&lt; </a>
     
-  </div>
+  </div> 
 
   <div class="page-num">
-    2/6
-  </div>
+    2/3
+  </div> 
 
   <div class="page-next">
     
     <a href="http://girishjoshi.io/page/3/" title="Next page"> >> </a>
     
-  </div>
+  </div> 
 </div> 
 
 
@@ -344,6 +571,8 @@ The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

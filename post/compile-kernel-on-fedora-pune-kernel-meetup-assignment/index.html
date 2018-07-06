@@ -15,8 +15,7 @@
 <meta property="og:description" content="Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &ldquo;Hello World&rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first line in the kernel bootup.
- Get the kernel source tree." />
+The Solution." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/" />
 
@@ -41,8 +40,7 @@ The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first
 <meta name="twitter:description" content="Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &ldquo;Hello World&rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first line in the kernel bootup.
- Get the kernel source tree."/>
+The Solution."/>
 
 
 
@@ -50,8 +48,7 @@ The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first
 <meta itemprop="description" content="Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &ldquo;Hello World&rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first line in the kernel bootup.
- Get the kernel source tree.">
+The Solution.">
 
 
 <meta itemprop="datePublished" content="2018-04-22T12:03:14&#43;00:00" />
@@ -64,7 +61,71 @@ The Solution. Here are the steps to print &ldquo;Hello World&rdquo; as the first
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -86,10 +147,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -106,7 +163,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -124,7 +181,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -134,7 +191,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -185,28 +242,19 @@ started with linux kernel.</p>
 <p>You can install git using these commands.</p>
 
 <h4 id="on-debian-based-systems">On Debian based systems.</h4>
-
-<pre><code class="language-bash">$ sudo apt-get install git
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install git</code></pre></div>
 <h4 id="on-rpm-based-systems">On rpm based systems.</h4>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># for rhel/centos
+</span><span style="color:#999;font-style:italic"></span>$ sudo yum install git
 
-<pre><code class="language-bash"># for rhel/centos
-$ sudo yum install git
-
-# for fedora 21 and above
-$ sudo dnf install git
-</code></pre>
-
+<span style="color:#999;font-style:italic"># for fedora 21 and above
+</span><span style="color:#999;font-style:italic"></span>$ sudo dnf install git</code></pre></div>
 <p>Once you have git installed, you can now clone the kernel.</p>
 
 <p>To clone the kernel, run these commands.</p>
-
-<pre><code class="language-bash">$ mkdir kernel
-$ cd kernel
-$ git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir kernel
+$ <span style="color:#24909d">cd</span> kernel
+$ git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git</code></pre></div>
 <p>After this you will have Greg Kroah-Hartman&rsquo;s staging tree repository cloned
 into kernel directory.</p>
 
@@ -216,17 +264,14 @@ into kernel directory.</p>
 
 <p>If you go to the kernel source tree and check out what directories are there,
 it is quite easy to guess which directory may contain the main function of the kernel.</p>
-
-<pre><code class="language-text">[groot@localhost ~]$ cd kernel/staging/
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[groot@localhost ~]$ cd kernel/staging/
 [groot@localhost staging]$ ls
 arch   COPYING  Documentation  fs       ipc      kernel    MAINTAINERS  Module.symvers  samples   sound  virt
 block  CREDITS  drivers        include  Kbuild   lib       Makefile     net             scripts   tools
 certs  crypto   firmware       init     Kconfig  LICENSES  mm           README          security  usr
 [groot@localhost staging]$ ls init/
 built-in.a   do_mounts.c  do_mounts_initrd.c  do_mounts_rd.c  init_task.c  main.c    modules.builtin  noinitramfs.c
-calibrate.c  do_mounts.h  do_mounts_md.c      initramfs.c     Kconfig      Makefile  modules.order    version.
-</code></pre>
-
+calibrate.c  do_mounts.h  do_mounts_md.c      initramfs.c     Kconfig      Makefile  modules.order    version.</code></pre></div>
 <p>You can see there is a main.c in the kernel/staging/init directory.</p>
 
 <p>There is no <strong>main</strong> function in this main.c but, there is a function called
@@ -242,47 +287,29 @@ calibrate.c  do_mounts.h  do_mounts_md.c      initramfs.c     Kconfig      Makef
 <p>To compile the kernel you will have to install some packages.</p>
 
 <p>On fedora you can do it using the following command.</p>
-
-<pre><code class="language-bash">$ sudo dnf group install &quot;C Development Tools and Libraries&quot;
-$ sudo dnf install elfutils-libelf-devel
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf group install <span style="color:#ed9d13">&#34;C Development Tools and Libraries&#34;</span>
+$ sudo dnf install elfutils-libelf-devel</code></pre></div>
 <h3 id="get-the-config">Get the config</h3>
 
 <p>You can use your existing kernel config for the kernel you are now
 going to compile. You can do that by running,</p>
-
-<pre><code class="language-bash">$ cd ~/kernel/staging/
-$ cp /boot/config-`uname -r`* .config 
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> ~/kernel/staging/
+$ cp /boot/config-<span style="color:#ed9d13">`</span>uname -r<span style="color:#ed9d13">`</span>* .config </code></pre></div>
 <p>If you want to make any changes in the config you can use</p>
-
-<pre><code class="language-bash">$ make menuconfig
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make menuconfig</code></pre></div>
 <p>If you want to save the current config before you make any changes, you can use.</p>
-
-<pre><code class="language-bash">$ make olddefconfig
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make olddefconfig</code></pre></div>
 <h3 id="build-the-kernel">Build the kernel</h3>
 
 <p>To build the kernel</p>
-
-<pre><code class="language-bash">$ make
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make</code></pre></div>
 <p>Once this is done, you will have  <strong>vmlinux</strong> file in the kernel/staging directory.
 This is your kernel that you&rsquo;ve just built.</p>
 
 <h3 id="install-kernel">Install kernel</h3>
 
 <p>To install this kernel</p>
-
-<pre><code class="language-bash">$ sudo make modules_install install
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo make modules_install install</code></pre></div>
 <h3 id="run-the-kernel">Run the kernel.</h3>
 
 <p>Now you have the kernel installed, but the os won&rsquo;t run this kernel right away
@@ -290,10 +317,7 @@ when you reboot your system. For that you will have to put a <strong>menu entry<
 the grub (bootloader).</p>
 
 <p>On Fedora you can do this using</p>
-
-<pre><code class="language-bash">$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg</code></pre></div>
 <p>This command adds a menu entrie in the /boot/grub2/grub.cfg for each of the kernels
 available in the /boot directory.</p>
 
@@ -303,10 +327,7 @@ Just reboot the system and select your kernel entry in the grub.</p>
 <h3 id="check-if-the-hello-world-message">Check if the &ldquo;Hello World&rdquo; message.</h3>
 
 <p>After booting your new kernel, go to terminal and run</p>
-
-<pre><code class="language-bash">$ dmesg | grep &lt;your message&gt;
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dmesg | grep &lt;your message&gt;</code></pre></div>
 <p>This will show the line in the kernel log where your message is printed on
 the kernel.</p>
  </div>
@@ -348,28 +369,26 @@ the kernel.</p>
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -410,6 +429,8 @@ the kernel.</p>
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

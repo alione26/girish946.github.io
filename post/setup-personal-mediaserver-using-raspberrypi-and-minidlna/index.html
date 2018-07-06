@@ -13,8 +13,7 @@
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Setup Personal MediaServer Using RaspberryPi and MiniDLNA" />
 <meta property="og:description" content="Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are:" />
+As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/" />
 
@@ -37,15 +36,13 @@ There were a lot of different tools to implement it, some of them are:" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup Personal MediaServer Using RaspberryPi and MiniDLNA"/>
 <meta name="twitter:description" content="Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are:"/>
+As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage."/>
 
 
 
 <meta itemprop="name" content="Setup Personal MediaServer Using RaspberryPi and MiniDLNA">
 <meta itemprop="description" content="Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are:">
+As we didn&rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.">
 
 
 <meta itemprop="datePublished" content="2018-04-29T05:10:55&#43;05:30" />
@@ -58,7 +55,71 @@ There were a lot of different tools to implement it, some of them are:">
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -80,10 +141,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -100,7 +157,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -118,7 +175,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -128,7 +185,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -177,65 +234,41 @@ For Media Tomb I could not find any packages in the Raspbian Jissie repo.
 Therefore I went ahed with MiniDLNA.</p>
 
 <h3 id="about-readymedia-minidlna">About ReadyMedia/MiniDLNA.</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ReadyMedia (formerly known as MiniDLNA) is a simple media server software, with the aim of being fully compliant with DLNA/UPnP-AV clients. It is developed by a NETGEAR employee for the ReadyNAS product line.
 
-<pre><code class="language-text">ReadyMedia (formerly known as MiniDLNA) is a simple media server software, with the aim of being fully compliant with DLNA/UPnP-AV clients. It is developed by a NETGEAR employee for the ReadyNAS product line.
-
-It is not in any way endorsed by the Digital Living Network Alliance®.
-</code></pre>
-
+It is not in any way endorsed by the Digital Living Network Alliance®.</code></pre></div>
 <p><a href="https://sourceforge.net/projects/minidlna/">Source</a>.</p>
 
 <h3 id="let-s-begin">Let&rsquo;s begin</h3>
 
 <h4 id="install-minidlna">Install MiniDLNA</h4>
-
-<pre><code class="language-bash">$ sudo apt-get install minidlna
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install minidlna</code></pre></div>
 <h4 id="configurations-for-minidlna">Configurations for MiniDLNA</h4>
 
 <p>To make changes in the config, edit the file <strong>/etc/minidlna.conf</strong></p>
-
-<pre><code class="language-bash">$ sudo vim /etc/minidlna.conf
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo vim /etc/minidlna.conf</code></pre></div>
 <p>add or uncomment these lines in the config.</p>
-
-<pre><code class="language-text">media_dir=&lt;Path for HDD partition&gt;
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">media_dir=&lt;Path for HDD partition&gt;
 log_dir=/var/log
 log_level=general,artwork,database,inotify,scanner,metadata,http,ssdp,tivo=warn
 inotify=yes
-notify_interval=300
-</code></pre>
-
+notify_interval=300</code></pre></div>
 <p>the first line;</p>
-
-<pre><code class="language-text">media_dir=&lt;Path for HDD partition&gt;
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">media_dir=&lt;Path for HDD partition&gt;</code></pre></div>
 <p>this is the tricky part of this config. You have to make sure that your user have
 all the required permissions on the mounted disk partition and the file system
 allows you to change the permission. For me the default mount point in debian
 Jissie which is <strong>/media/pi/<HDD></strong> didn&rsquo;t work, so I had to change the mount point
 to <strong>/home/pi/media/hdd</strong> also for mounting I had to;</p>
-
-<pre><code class="language-bash">$ sudo mount -t ntfs /dev/sda1 /home/pi/media/hdd -o umask=222
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mount -t ntfs /dev/sda1 /home/pi/media/hdd -o <span style="color:#40ffff">umask</span>=<span style="color:#3677a9">222</span></code></pre></div>
 <p>after this everything worked fine.</p>
 
 <h4 id="start-the-service">Start the service</h4>
 
 <p>To start the minidlna service.</p>
-
-<pre><code class="language-bash">sudo service minidlna start
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service minidlna start</code></pre></div>
 <p>To update the media database.</p>
-
-<pre><code class="language-bash">sudo service minidlna force-reload
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service minidlna force-reload</code></pre></div>
 <p>This may take longer time if you have a huge collection of media files. But
 once it is done, it works just fine.</p>
 
@@ -301,28 +334,26 @@ connected to and you will be able to see it in the Slick Upnp android app.</p>
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -363,6 +394,8 @@ connected to and you will be able to see it in the Slick Upnp android app.</p>
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

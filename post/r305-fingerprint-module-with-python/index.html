@@ -14,7 +14,7 @@
 <meta property="og:title" content="R305 fingerprint module &#43; python" />
 <meta property="og:description" content="This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
-I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module." />
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/r305-fingerprint-module-with-python/" />
 
@@ -38,14 +38,14 @@ I came across this module about one and a half year ago. I had to use it in a sm
 <meta name="twitter:title" content="R305 fingerprint module &#43; python"/>
 <meta name="twitter:description" content="This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
-I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module."/>
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi."/>
 
 
 
 <meta itemprop="name" content="R305 fingerprint module &#43; python">
 <meta itemprop="description" content="This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
-I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&rsquo;t find a python API that covers all of the functionality provided by the module.">
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi.">
 
 
 <meta itemprop="datePublished" content="2017-06-19T21:55:23&#43;05:30" />
@@ -58,7 +58,71 @@ I came across this module about one and a half year ago. I had to use it in a sm
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -80,10 +144,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -100,7 +160,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -118,7 +178,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -128,7 +188,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -244,47 +304,38 @@ you can use Tx and Rx Pins of the board itself instead of using USB to TTL.</p>
 <h3 id="installation">Installation</h3>
 
 <p>To install the python package</p>
-
-<pre><code class="language-bash">$ pip install R305
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install R305</code></pre></div>
 <h3 id="the-code">The Code</h3>
 
 <p>To store the fingerprint into the module</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
 
-<pre><code class="language-python">from r305 import R305
-import sys
-
-device   = sys.argv[1] # the serial port to which the module is connected
-baudrate = sys.argv[2] # the default baudrate for this module is 57600
+device   = sys.argv[<span style="color:#3677a9">1</span>] <span style="color:#999;font-style:italic"># the serial port to which the module is connected</span>
+baudrate = sys.argv[<span style="color:#3677a9">2</span>] <span style="color:#999;font-style:italic"># the default baudrate for this module is 57600</span>
 
 dev = R305(device, baudrate)
 
-def callback(data):
-    &quot;&quot;&quot;
-    This function is called when you are instructed to put the finger on the
-    module the second time.
-    &quot;&quot;&quot;
-    x = raw_input(data)
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">callback</span>(data):
+    <span style="color:#ed9d13">&#34;&#34;&#34;
+</span><span style="color:#ed9d13">    This function is called when you are instructed to put the finger on the
+</span><span style="color:#ed9d13">    module the second time.
+</span><span style="color:#ed9d13">    &#34;&#34;&#34;</span>
+    x = <span style="color:#24909d">raw_input</span>(data)
 
 result = dev.StoreFingerPrint(IgnoreChecksum=True, callback=callback)
-print(result)
-</code></pre>
-
+<span style="color:#6ab825;font-weight:bold">print</span>(result)</code></pre></div>
 <p>To search fingerprint in the module</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
 
-<pre><code class="language-python">from r305 import R305
-import sys
-
-device   = sys.argv[1] # the serial port to which the module is connected
-baudrate = sys.argv[2] # the default baudrate for this module is 57600
+device   = sys.argv[<span style="color:#3677a9">1</span>] <span style="color:#999;font-style:italic"># the serial port to which the module is connected</span>
+baudrate = sys.argv[<span style="color:#3677a9">2</span>] <span style="color:#999;font-style:italic"># the default baudrate for this module is 57600</span>
 
 dev = R305(device, baudrate)
 
 result = dev.SearchFingerPrint()
-print(result)
-</code></pre>
-
+<span style="color:#6ab825;font-weight:bold">print</span>(result)</code></pre></div>
 <h2 id="things-to-be-implemented">Things to be implemented.</h2>
 
 <ul>
@@ -339,28 +390,26 @@ place, thanks to him the documentation is there on <a href="http://python-r305-d
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -401,6 +450,8 @@ place, thanks to him the documentation is there on <a href="http://python-r305-d
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

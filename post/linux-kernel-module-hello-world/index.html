@@ -13,9 +13,7 @@
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="&#34;Hello World!&#34; Linux Kernel Module" />
 <meta property="og:description" content="What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel." />
+The device drivers, networking stack; for almost everything you will find a module in the kernel." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/linux-kernel-module-hello-world/" />
 
@@ -38,22 +36,18 @@ $ lsmod # List all existing modules in the kernel." />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="&#34;Hello World!&#34; Linux Kernel Module"/>
 <meta name="twitter:description" content="What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel."/>
+The device drivers, networking stack; for almost everything you will find a module in the kernel."/>
 
 
 
 <meta itemprop="name" content="&#34;Hello World!&#34; Linux Kernel Module">
 <meta itemprop="description" content="What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel.">
+The device drivers, networking stack; for almost everything you will find a module in the kernel.">
 
 
 <meta itemprop="datePublished" content="2018-05-04T17:13:29&#43;05:30" />
 <meta itemprop="dateModified" content="2018-05-04T17:13:29&#43;05:30" />
-<meta itemprop="wordCount" content="401">
+<meta itemprop="wordCount" content="399">
 
 
 
@@ -61,7 +55,71 @@ $ lsmod # List all existing modules in the kernel.">
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -83,10 +141,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -103,7 +157,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -121,7 +175,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -131,7 +185,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -152,12 +206,9 @@ if (!doNotTrack) {
 <p>The device drivers, networking stack; for almost everything you will find a module in the kernel.</p>
 
 <p>To use the kernel module there are three specific tools/commands that you will need.</p>
-
-<pre><code class="language-bash">$ lsmod    # List all existing modules in the kernel.
-$ insmod   # Insert the new module in the kernel.
-$ rmmod    # remove the inserted module.
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsmod    <span style="color:#999;font-style:italic"># List all existing modules in the kernel.
+</span><span style="color:#999;font-style:italic"></span>$ insmod   <span style="color:#999;font-style:italic"># Insert the new module in the kernel.
+</span><span style="color:#999;font-style:italic"></span>$ rmmod    # remove the inserted module.</code></pre></div>
 <h2 id="let-s-build-our-own-hello-world-kernel-module">Let&rsquo;s build our own &ldquo;Hello World!&rdquo; kernel module</h2>
 
 <h3 id="dependencies">Dependencies.</h3>
@@ -170,83 +221,61 @@ $ rmmod    # remove the inserted module.
 <li><p>the kernel devel package.</p></li>
 
 <li><p>elfutils.</p>
-
-<pre><code class="language-bash">$ sudo dnf group install &quot;C Development Tools and Libraries&quot;
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf group install <span style="color:#ed9d13">&#34;C Development Tools and Libraries&#34;</span>
 $ sudo dnf install kernel-devel
-$ sudo dnf install elfutils-libelf-devel
-</code></pre></li>
+$ sudo dnf install elfutils-libelf-devel</code></pre></div></li>
 </ul>
 
 <h2 id="the-code">The code.</h2>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#cd2828;font-weight:bold">#include</span> <span style="color:#cd2828;font-weight:bold">&lt;linux/module.h&gt;     // included for all kernel modules</span><span style="color:#cd2828;font-weight:bold">
+</span><span style="color:#cd2828;font-weight:bold">#include</span> <span style="color:#cd2828;font-weight:bold">&lt;linux/kernel.h&gt;     // included for KERN_INFO</span><span style="color:#cd2828;font-weight:bold">
+</span><span style="color:#cd2828;font-weight:bold">#include</span> <span style="color:#cd2828;font-weight:bold">&lt;linux/init.h&gt;       // included for __init and __exit macros</span><span style="color:#cd2828;font-weight:bold">
+</span><span style="color:#cd2828;font-weight:bold"></span>
+MODULE_LICENSE(<span style="color:#ed9d13">&#34;GPL&#34;</span>);        <span style="color:#999;font-style:italic">// The license  under which the module is distributed.
+</span><span style="color:#999;font-style:italic"></span>MODULE_AUTHOR(<span style="color:#ed9d13">&#34;Girish Joshi&#34;</span>);<span style="color:#999;font-style:italic">// The author of the module.
+</span><span style="color:#999;font-style:italic"></span>MODULE_DESCRIPTION(<span style="color:#ed9d13">&#34;HelloWorld Linux Kernel Module.&#34;</span>); <span style="color:#999;font-style:italic">// The Description of the module.
+</span><span style="color:#999;font-style:italic"></span>
 
-<pre><code class="language-c">#include &lt;linux/module.h&gt;     // included for all kernel modules
-#include &lt;linux/kernel.h&gt;     // included for KERN_INFO
-#include &lt;linux/init.h&gt;       // included for __init and __exit macros
-
-MODULE_LICENSE(&quot;GPL&quot;);        // The license  under which the module is distributed.
-MODULE_AUTHOR(&quot;Girish Joshi&quot;);// The author of the module.
-MODULE_DESCRIPTION(&quot;HelloWorld Linux Kernel Module.&quot;); // The Description of the module.
-
-
-// This function defines what happens when this module is inserted into the kernel.
-// ie. when you run insmod command.
-static int __init hello_init(void)
+<span style="color:#999;font-style:italic">// This function defines what happens when this module is inserted into the kernel.
+</span><span style="color:#999;font-style:italic">// ie. when you run insmod command.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">static</span> <span style="color:#6ab825;font-weight:bold">int</span> __init <span style="color:#447fcf">hello_init</span>(<span style="color:#6ab825;font-weight:bold">void</span>)
 {
-    printk(KERN_INFO &quot;Hello world!\n&quot;);
-    return 0;    // Non-zero return means that the module couldn't be loaded.
+    printk(KERN_INFO <span style="color:#ed9d13">&#34;Hello world!</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>);
+    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#3677a9">0</span>;    <span style="color:#999;font-style:italic">// Non-zero return means that the module couldn&#39;t be loaded.
+</span><span style="color:#999;font-style:italic"></span>}
+
+<span style="color:#999;font-style:italic">// This function defines what happens when this module is removed from the kernel.
+</span><span style="color:#999;font-style:italic">// ie.when you run rmmod command.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">static</span> <span style="color:#6ab825;font-weight:bold">void</span> __exit <span style="color:#447fcf">hello_cleanup</span>(<span style="color:#6ab825;font-weight:bold">void</span>)
+{
+    printk(KERN_INFO <span style="color:#ed9d13">&#34;Cleaning up module.</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>);
 }
 
-// This function defines what happens when this module is removed from the kernel.
-// ie.when you run rmmod command.
-static void __exit hello_cleanup(void)
-{
-    printk(KERN_INFO &quot;Cleaning up module.\n&quot;);
-}
-
-module_init(hello_init);      // Registers the __init function for the module.
-module_exit(hello_cleanup);   // Registers the __exit function for the module. 
-</code></pre>
-
+module_init(hello_init);      <span style="color:#999;font-style:italic">// Registers the __init function for the module.
+</span><span style="color:#999;font-style:italic"></span>module_exit(hello_cleanup);   // Registers the __exit function <span style="color:#6ab825;font-weight:bold">for</span> the module. </code></pre></div>
 <p>Let&rsquo;s save this file as hello.c</p>
 
 <h2 id="building-the-module">Building the module.</h2>
 
 <p>The makefile for building this module looks like:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#40ffff">obj-m</span> += hello.o
 
-<pre><code class="language-makefile">obj-m += hello.o
+<span style="color:#447fcf">all</span>:
+	make -C /lib/modules/<span style="color:#6ab825;font-weight:bold">$(</span>shell uname -r<span style="color:#6ab825;font-weight:bold">)</span>/build <span style="color:#40ffff">M</span>=<span style="color:#6ab825;font-weight:bold">$(</span>PWD<span style="color:#6ab825;font-weight:bold">)</span> modules
 
-all:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-
-clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-</code></pre>
-
+<span style="color:#447fcf">clean</span>:
+	make -C /lib/modules/<span style="color:#6ab825;font-weight:bold">$(</span>shell uname -r<span style="color:#6ab825;font-weight:bold">)</span>/build <span style="color:#40ffff">M</span>=<span style="color:#6ab825;font-weight:bold">$(</span>PWD<span style="color:#6ab825;font-weight:bold">)</span> clean
+</code></pre></div>
 <p>to build the module you will have to run:</p>
-
-<pre><code class="language-bash">$ make
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make</code></pre></div>
 <p>to insert/load the module into the kernel:</p>
-
-<pre><code class="language-bash">$ insmod hello.ko
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ insmod hello.ko</code></pre></div>
 <p>to check if the <code>__init</code> function of the module is called or not:</p>
-
-<pre><code class="language-bash">$ dmesg | grep &quot;Hello World&quot;
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dmesg | grep <span style="color:#ed9d13">&#34;Hello World&#34;</span></code></pre></div>
 <p>to remove this module from the kernel:</p>
-
-<pre><code class="language-bash">$ rmmod hello
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rmmod hello</code></pre></div>
 <p>to check if <code>__exit</code> function of the module is called or not run:</p>
-
-<pre><code class="language-bash">$ dmesg | grep &quot;Cleaning up the module&quot;
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dmesg | grep <span style="color:#ed9d13">&#34;Cleaning up the module&#34;</span></code></pre></div>
 <p>So this is the template for building a linux kernel module.</p>
  </div>
     <footer class="post-footer">
@@ -291,28 +320,26 @@ clean:
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -353,6 +380,8 @@ clean:
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

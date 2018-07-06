@@ -20,7 +20,7 @@
       <guid>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</guid>
       <description>This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
-I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&amp;rsquo;t find a python API that covers all of the functionality provided by the module.</description>
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi.</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Interfacing LTC6802-2 with OrangePi using Python." />
 <meta property="og:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
-LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol." />
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/ltc6802-2-python/" />
 
@@ -36,13 +36,13 @@ LTC6802 is a great option if you want to build battry monitoring system with mor
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Interfacing LTC6802-2 with OrangePi using Python."/>
 <meta name="twitter:description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
-LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol."/>
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy."/>
 
 
 
 <meta itemprop="name" content="Interfacing LTC6802-2 with OrangePi using Python.">
 <meta itemprop="description" content="LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
-LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.">
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy.">
 
 
 <meta itemprop="datePublished" content="2017-06-05T17:31:50&#43;05:30" />
@@ -55,7 +55,71 @@ LTC6802 is a great option if you want to build battry monitoring system with mor
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -77,10 +141,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -97,7 +157,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -115,7 +175,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -125,7 +185,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -165,18 +225,12 @@ more accuracy. This IC operates on
 <a href="https://python-periphery.readthedocs.io/en/latest/">periphery</a>.</p>
 
 <p>to install periphery:</p>
-
-<pre><code class="language-bash">$ pip install python-periphery
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install python-periphery</code></pre></div>
 <p>To activate the LTC chip we need to make the CS pin low. To do that I&rsquo;m using
 <a href="https://github.com/duxingkei33/orangepi_PC_gpio_pyH3">pyA20</a> library for Orange Pi.</p>
 
 <p>to install pyA20:</p>
-
-<pre><code class="language-bash">$ pip install pyA20
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install pyA20</code></pre></div>
 <p>The standard procedure to access the data from LTC6802 over SPI is:</p>
 
 <ul>
@@ -190,104 +244,97 @@ more accuracy. This IC operates on
 </ul>
 
 <p>Since the circuit and the dependencies are in place, let&rsquo;s start coding.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#!/usr/bin/env python</span>
+<span style="color:#999;font-style:italic"># -*- coding: utf-8 -*-</span>
 
-<pre><code class="language-python">#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-from periphery import SPI
-from pyA20.gpio import gpio as io
-from pyA20.gpio import port
-import time
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">periphery</span> <span style="color:#6ab825;font-weight:bold">import</span> SPI
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">pyA20.gpio</span> <span style="color:#6ab825;font-weight:bold">import</span> gpio <span style="color:#6ab825;font-weight:bold">as</span> io
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">pyA20.gpio</span> <span style="color:#6ab825;font-weight:bold">import</span> port
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">time</span>
 
 
-cs  = port.PA13                         # Chip select pin
-spi = SPI(&quot;/dev/spidev1.0&quot;, 0, 1000000) # Spi port
+cs  = port.PA13                         <span style="color:#999;font-style:italic"># Chip select pin</span>
+spi = SPI(<span style="color:#ed9d13">&#34;/dev/spidev1.0&#34;</span>, <span style="color:#3677a9">0</span>, <span style="color:#3677a9">1000000</span>) <span style="color:#999;font-style:italic"># Spi port</span>
 
-io.init()                 # init GPIO
-io.setcfg(cs, io.OUTPUT)  # configure cs Pin as output pin.
+io.init()                 <span style="color:#999;font-style:italic"># init GPIO</span>
+io.setcfg(cs, io.OUTPUT)  <span style="color:#999;font-style:italic"># configure cs Pin as output pin.</span>
 
-RDCV    = 0x04   # Read cells
-STCVAD  = 0x10   # Start all A/D's - poll status
+RDCV    = <span style="color:#3677a9">0x04</span>   <span style="color:#999;font-style:italic"># Read cells</span>
+STCVAD  = <span style="color:#3677a9">0x10</span>   <span style="color:#999;font-style:italic"># Start all A/D&#39;s - poll status</span>
 
-address = 0x80   # as we are connecting only one IC the address is 0x80
-                 # refer the datasheet for the details about addressing of LTC6802
+address = <span style="color:#3677a9">0x80</span>   <span style="color:#999;font-style:italic"># as we are connecting only one IC the address is 0x80</span>
+                 <span style="color:#999;font-style:italic"># refer the datasheet for the details about addressing of LTC6802</span>
 
-# refer datasheet for more details about configuration.
-Config = [0x01, 0x01, 0x00, 0x00, 0x00, 0x71, 0xAB]
+<span style="color:#999;font-style:italic"># refer datasheet for more details about configuration.</span>
+Config = [<span style="color:#3677a9">0x01</span>, <span style="color:#3677a9">0x01</span>, <span style="color:#3677a9">0x00</span>, <span style="color:#3677a9">0x00</span>, <span style="color:#3677a9">0x00</span>, <span style="color:#3677a9">0x71</span>, <span style="color:#3677a9">0xAB</span>]
 
-def writeCfg():
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">writeCfg</span>():
 
-   &quot;&quot;&quot;
-   Writes the configuration to IC.
-   &quot;&quot;&quot;
-   io.output(cs, io.LOW)            # make CS low
-   data_in = spi.transfer(Config)   # write the config to IC and read the OP
-   io.output(cs, io.HIGH)           # make CS high
+   <span style="color:#ed9d13">&#34;&#34;&#34;
+</span><span style="color:#ed9d13">   Writes the configuration to IC.
+</span><span style="color:#ed9d13">   &#34;&#34;&#34;</span>
+   io.output(cs, io.LOW)            <span style="color:#999;font-style:italic"># make CS low</span>
+   data_in = spi.transfer(Config)   <span style="color:#999;font-style:italic"># write the config to IC and read the OP</span>
+   io.output(cs, io.HIGH)           <span style="color:#999;font-style:italic"># make CS high</span>
    
-def readVoltage():
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">readVoltage</span>():
 
-    &quot;&quot;&quot;
-    Returns a dictionary containing the voltages of 12 battries.
-    &quot;&quot;&quot;
+    <span style="color:#ed9d13">&#34;&#34;&#34;
+</span><span style="color:#ed9d13">    Returns a dictionary containing the voltages of 12 battries.
+</span><span style="color:#ed9d13">    &#34;&#34;&#34;</span>
 
     v = {}
-    io.output(cs, io.LOW)            # make CS low
+    io.output(cs, io.LOW)            <span style="color:#999;font-style:italic"># make CS low</span>
     data_out = [STCVAD]              
-    data_in = spi.transfer(data_out) # start all A/D 
-    time.sleep(0.02)
-    io.output(cs, io.HIGH)           # make CS high
-    io.output(cs, io.LOW)            # again make CS low
-    spi.transfer([0x80])             # write the address 0x80 to SPI
-    spi.transfer([RDCV])             # (command to) read cells
+    data_in = spi.transfer(data_out) <span style="color:#999;font-style:italic"># start all A/D </span>
+    time.sleep(<span style="color:#3677a9">0.02</span>)
+    io.output(cs, io.HIGH)           <span style="color:#999;font-style:italic"># make CS high</span>
+    io.output(cs, io.LOW)            <span style="color:#999;font-style:italic"># again make CS low</span>
+    spi.transfer([<span style="color:#3677a9">0x80</span>])             <span style="color:#999;font-style:italic"># write the address 0x80 to SPI</span>
+    spi.transfer([RDCV])             <span style="color:#999;font-style:italic"># (command to) read cells</span>
 
     data = []
 
-    for i in range(18):                   # read 18 bytes from the IC
+    <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#3677a9">18</span>):                   <span style="color:#999;font-style:italic"># read 18 bytes from the IC</span>
         data.append(spi.transfer([RDCV]))
     io.output(cs, io.HIGH)
 
 
-    # refer the datasheet of LTC6802 for conversion of ADC value to Voltages.
+    <span style="color:#999;font-style:italic"># refer the datasheet of LTC6802 for conversion of ADC value to Voltages.</span>
     
-    # here we are calculating voltages from ADC values of all 12 battries.
+    <span style="color:#999;font-style:italic"># here we are calculating voltages from ADC values of all 12 battries.</span>
 
-    v['0']  = ((data[0][0] &amp; 0xFF) | (data[1][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['1']  = ((data[1][0] &amp; 0xF0) &gt;&gt; 4 | (data[2][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
-    v['2']  = ((data[3][0] &amp; 0xFF) | (data[4][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['3']  = ((data[4][0] &amp; 0xF0) &gt;&gt; 4 | (data[5][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v[<span style="color:#ed9d13">&#39;0&#39;</span>]  = ((data[<span style="color:#3677a9">0</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">1</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;1&#39;</span>]  = ((data[<span style="color:#3677a9">1</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">2</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;2&#39;</span>]  = ((data[<span style="color:#3677a9">3</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">4</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;3&#39;</span>]  = ((data[<span style="color:#3677a9">4</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">5</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
 
-    v['4']  = ((data[6][0] &amp; 0xFF) | (data[7][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['5']  = ((data[7][0] &amp; 0xF0) &gt;&gt; 4 | (data[8][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
-    v['6']  = ((data[9][0] &amp; 0xFF) | (data[10][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['7']  = ((data[10][0] &amp; 0xF0) &gt;&gt; 4 | (data[11][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v[<span style="color:#ed9d13">&#39;4&#39;</span>]  = ((data[<span style="color:#3677a9">6</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">7</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;5&#39;</span>]  = ((data[<span style="color:#3677a9">7</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">8</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;6&#39;</span>]  = ((data[<span style="color:#3677a9">9</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">10</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;7&#39;</span>]  = ((data[<span style="color:#3677a9">10</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">11</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
 
-    v['8']  = ((data[12][0] &amp; 0xFF) | (data[13][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['9'] = ((data[13][0] &amp; 0xF0) &gt;&gt; 4 | (data[14][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
-    v['10'] = ((data[15][0] &amp; 0xFF) | (data[16][0] &amp; 0x0F) &lt;&lt; 8)*1.5*0.001
-    v['11'] = ((data[16][0] &amp; 0xF0) &gt;&gt; 4 | (data[17][0] &amp; 0xFF) &lt;&lt; 4)*1.5*0.001
+    v[<span style="color:#ed9d13">&#39;8&#39;</span>]  = ((data[<span style="color:#3677a9">12</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">13</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;9&#39;</span>] = ((data[<span style="color:#3677a9">13</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">14</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;10&#39;</span>] = ((data[<span style="color:#3677a9">15</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) | (data[<span style="color:#3677a9">16</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0x0F</span>) &lt;&lt; <span style="color:#3677a9">8</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
+    v[<span style="color:#ed9d13">&#39;11&#39;</span>] = ((data[<span style="color:#3677a9">16</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xF0</span>) &gt;&gt; <span style="color:#3677a9">4</span> | (data[<span style="color:#3677a9">17</span>][<span style="color:#3677a9">0</span>] &amp; <span style="color:#3677a9">0xFF</span>) &lt;&lt; <span style="color:#3677a9">4</span>)*<span style="color:#3677a9">1.5</span>*<span style="color:#3677a9">0.001</span>
     
-    return v
+    <span style="color:#6ab825;font-weight:bold">return</span> v
 
-def readVal():
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">readVal</span>():
 
-    while True:
+    <span style="color:#6ab825;font-weight:bold">while</span> True:
         writeCfg()
-        time.sleep(0.001)
+        time.sleep(<span style="color:#3677a9">0.001</span>)
         v = readVoltage()
-        print(v)
-        time.sleep(1)
+        <span style="color:#6ab825;font-weight:bold">print</span>(v)
+        time.sleep(<span style="color:#3677a9">1</span>)
         
-if __name__ == '__main__':
+<span style="color:#6ab825;font-weight:bold">if</span> __name__ == <span style="color:#ed9d13">&#39;__main__&#39;</span>:
 
     readVal()
-    
-</code></pre>
-
-<pre><code class="language-note">The minimum operating voltage of LTC6802 is 10V.
-Make sure that total voltage of all the battries combined together is more than 10V.
-
-</code></pre>
-
+    </code></pre></div><div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-note" data-lang="note">The minimum operating voltage of LTC6802 is 10V.
+Make sure that total voltage of all the battries combined together is more than 10V.</code></pre></div>
 <h1 id="references">References</h1>
 
 <ul>
@@ -334,28 +381,26 @@ Make sure that total voltage of all the battries combined together is more than 
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -396,6 +441,8 @@ Make sure that total voltage of all the battries combined together is more than 
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

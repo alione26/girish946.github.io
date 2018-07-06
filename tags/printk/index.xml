@@ -21,8 +21,7 @@
       <description>Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel bootup.
- Get the kernel source tree.</description>
+The Solution.</description>
     </item>
     
   </channel>
