@@ -18,8 +18,7 @@
       <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/</guid>
-      <description>This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
-The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device.</description>
+      <description>This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.</description>
     </item>
     
   </channel>

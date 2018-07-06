@@ -20,10 +20,8 @@
       <guid>http://girishjoshi.io/post/raspberrypi-gpio-python/</guid>
       <description>To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
  python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
-$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
-$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
-The sample code for taking input from a gpio pin is given below
-#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code.</description>
+$ sudo apt-get install python-dev python-pip to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.</description>
     </item>
     
     <item>
@@ -33,8 +31,7 @@ The sample code for taking input from a gpio pin is given below
       
       <guid>http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/</guid>
       <description>Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&amp;rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are:</description>
+As we didn&amp;rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.</description>
     </item>
     
   </channel>

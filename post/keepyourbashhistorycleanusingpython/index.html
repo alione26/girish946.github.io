@@ -52,7 +52,71 @@
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -74,10 +138,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -94,7 +154,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -112,7 +172,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -122,7 +182,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -152,64 +212,52 @@ use whichever language you are comfortable with).</p>
 <h2 id="add-exit-trap-to-your-bashrc">Add EXIT trap to your .bashrc</h2>
 
 <h3 id="exit-trap">EXIT trap:</h3>
-
-<pre><code class="language-text">There is a simple, useful idiom to make your bash scripts more robust -ensuring they
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">There is a simple, useful idiom to make your bash scripts more robust -ensuring they
 always perform necessary cleanup operations, even when something unexpected goes wrong. 
 The secret sauce is a pseudo-signal provided by bash, called EXIT, that you can trap;
-commands or functions trapped on it will execute when the script exits for any reason. 
-</code></pre>
-
+commands or functions trapped on it will execute when the script exits for any reason. </code></pre></div>
 <p><a href="http://redsymbol.net/articles/bash-exit-traps/">source</a></p>
 
 <p>To add this exit trap all you need to do is add the following code to your bashrc.</p>
-
-<pre><code class="language-bash">    function finish {
-      # Your cleanup code
-      ./.exit_script
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#6ab825;font-weight:bold">function</span> finish {
+      <span style="color:#999;font-style:italic"># Your cleanup code
+</span><span style="color:#999;font-style:italic"></span>      ./.exit_script
     }
-    trap finish EXIT
-</code></pre>
-
+    <span style="color:#24909d">trap</span> finish EXIT</code></pre></div>
 <p>Once this is done, your exit_script will be called each time you exit the terminal
 window.</p>
 
 <h3 id="write-an-exit-script">write an exit_script.</h3>
 
 <p>In the exit_script, (since I&rsquo;m using python) the python code looks like</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#!/usr/bin/env python</span>
+<span style="color:#999;font-style:italic"># -*- coding: utf-8 -*-</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">os</span>
 
-<pre><code class="language-python">#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import os
-
-with open('.bash_history') as bh:
+<span style="color:#6ab825;font-weight:bold">with</span> <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&#39;.bash_history&#39;</span>) <span style="color:#6ab825;font-weight:bold">as</span> bh:
 
   to_be_deleted = []
-  data = bh.read() #read the .bash_history file
-  if data:
-    lines = data.split('\n') #get the list of all commands
-    for i in range(len(lines)): #iterate over all commands
-      stripped = lines[i].strip(' ') #remove the starting spaces.
-      #print i
-      if (stripped == &quot;ls&quot; or stripped.startswith('2048')): #check if you need to delete this entry
-        to_be_deleted.append(i) #if yes then add it to the list for commands to be deleted.
+  data = bh.read() <span style="color:#999;font-style:italic">#read the .bash_history file</span>
+  <span style="color:#6ab825;font-weight:bold">if</span> data:
+    lines = data.split(<span style="color:#ed9d13">&#39;</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#39;</span>) <span style="color:#999;font-style:italic">#get the list of all commands</span>
+    <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#24909d">len</span>(lines)): <span style="color:#999;font-style:italic">#iterate over all commands</span>
+      stripped = lines[i].strip(<span style="color:#ed9d13">&#39; &#39;</span>) <span style="color:#999;font-style:italic">#remove the starting spaces.</span>
+      <span style="color:#999;font-style:italic">#print i</span>
+      <span style="color:#6ab825;font-weight:bold">if</span> (stripped == <span style="color:#ed9d13">&#34;ls&#34;</span> <span style="color:#6ab825;font-weight:bold">or</span> stripped.startswith(<span style="color:#ed9d13">&#39;2048&#39;</span>)): <span style="color:#999;font-style:italic">#check if you need to delete this entry</span>
+        to_be_deleted.append(i) <span style="color:#999;font-style:italic">#if yes then add it to the list for commands to be deleted.</span>
 
 
-#write all the entries to the bash_history except those which are in the to_be_deleted list.
-with open('.bash_history', 'w') as b_clean:
-  for i in range(len(lines)):
-    if i in to_be_deleted:
-      #print(lines[i])
-      pass
-    else:
-      if not lines[i]  == '':
-        b_clean.write(lines[i]+'\n')
-</code></pre>
-
+<span style="color:#999;font-style:italic">#write all the entries to the bash_history except those which are in the to_be_deleted list.</span>
+<span style="color:#6ab825;font-weight:bold">with</span> <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&#39;.bash_history&#39;</span>, <span style="color:#ed9d13">&#39;w&#39;</span>) <span style="color:#6ab825;font-weight:bold">as</span> b_clean:
+  <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#24909d">len</span>(lines)):
+    <span style="color:#6ab825;font-weight:bold">if</span> i <span style="color:#6ab825;font-weight:bold">in</span> to_be_deleted:
+      <span style="color:#999;font-style:italic">#print(lines[i])</span>
+      <span style="color:#6ab825;font-weight:bold">pass</span>
+    <span style="color:#6ab825;font-weight:bold">else</span>:
+      <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#6ab825;font-weight:bold">not</span> lines[i]  == <span style="color:#ed9d13">&#39;&#39;</span>:
+        b_clean.write(lines[i]+<span style="color:#ed9d13">&#39;</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#39;</span>)</code></pre></div>
 <p>Save this file as &ldquo;.exit_script&rdquo; and make this file executable using the following command.</p>
-
-<pre><code class="language-bash">chmod +x .exit_script
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x .exit_script</code></pre></div>
 <p>Now &ldquo;.exit_script&rdquo; will be executed each and every time the terminal window is closed.</p>
 
 <p>This way you can get rid of unnecessary entries in the bash history.</p>
@@ -248,28 +296,26 @@ with open('.bash_history', 'w') as b_clean:
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -310,6 +356,8 @@ with open('.bash_history', 'w') as b_clean:
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

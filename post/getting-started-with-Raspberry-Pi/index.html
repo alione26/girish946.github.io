@@ -58,7 +58,71 @@ In this post I&rsquo;ll cover
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -80,10 +144,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -100,7 +160,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -118,7 +178,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -128,7 +188,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -161,15 +221,12 @@ of that file and find the .img file in it. this is the file we are going to
 install on the SD card.</p>
 
 <p>Run following command to get the <a href="https://en.wikipedia.org/wiki/Device_file#Block_devices">block device</a> for SD card.</p>
-
-<pre><code class="language-bash">$ df
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df
 Filesystem     1K-blocks     Used Available Use% Mounted on
-udev             4032932        0   4032932   0% /dev
-/dev/sda5       39240312 19431624  17792332  53% /
-/dev/sda6       78611376 73607668    987376  99% /home
-/dev/mmcblk0    15542944        8  15542936   1% /media/x-dev/3CAC-7C20
-</code></pre>
-
+udev             <span style="color:#3677a9">4032932</span>        <span style="color:#3677a9">0</span>   <span style="color:#3677a9">4032932</span>   <span style="color:#3677a9">0</span>% /dev
+/dev/sda5       <span style="color:#3677a9">39240312</span> <span style="color:#3677a9">19431624</span>  <span style="color:#3677a9">17792332</span>  <span style="color:#3677a9">53</span>% /
+/dev/sda6       <span style="color:#3677a9">78611376</span> <span style="color:#3677a9">73607668</span>    <span style="color:#3677a9">987376</span>  <span style="color:#3677a9">99</span>% /home
+/dev/mmcblk0    <span style="color:#3677a9">15542944</span>        <span style="color:#3677a9">8</span>  <span style="color:#3677a9">15542936</span>   <span style="color:#3677a9">1</span>% /media/x-dev/3CAC-7C20</code></pre></div>
 <p>Here in the last line it says <strong>/dev/mmcblk0</strong> this is the device file for SD card.</p>
 
 <p>You will see that this device is mounted at /media/user/some-directory if you are working on ubuntu</p>
@@ -177,21 +234,15 @@ udev             4032932        0   4032932   0% /dev
 <p>or at /run/media/user/some-directory if you are working on Fedora.</p>
 
 <p>You need to unmount these partitions before you proceed by running:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># umount &lt;/path/to/device&gt;
+</span><span style="color:#999;font-style:italic"></span>
+<span style="color:#999;font-style:italic"># for example on ubuntu you have to run
+</span><span style="color:#999;font-style:italic"></span>$ umount /media/x-dev/3CAC-7C20
 
-<pre><code class="language-bash"># umount &lt;/path/to/device&gt;
-
-# for example on ubuntu you have to run
-$ umount /media/x-dev/3CAC-7C20
-
-# on fedora the command will be something like
-$ umount /run/media/&lt;user&gt;/partition
-</code></pre>
-
+<span style="color:#999;font-style:italic"># on fedora the command will be something like
+</span><span style="color:#999;font-style:italic"></span>$ umount /run/media/&lt;user&gt;/partition</code></pre></div>
 <p>Now you can install the .img that you have downloaded on to the SD card by using:</p>
-
-<pre><code class="language-bash">$ sudo dd bs=4M if=&quot;OS-Image-file.img&quot; of=/dev/mmcblk0 status=progress
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dd <span style="color:#40ffff">bs</span>=4M <span style="color:#6ab825;font-weight:bold">if</span>=<span style="color:#ed9d13">&#34;OS-Image-file.img&#34;</span> <span style="color:#40ffff">of</span>=/dev/mmcblk0 <span style="color:#40ffff">status</span>=progress</code></pre></div>
 <p><a href="https://en.wikipedia.org/wiki/Dd_(Unix)"><strong>dd</strong></a> stands for data duplicator. There is an alternative for this tool. It&rsquo;s <a href="http://dcfldd.sourceforge.net/"><strong>dcfldd</strong></a></p>
 
 <p>The <strong>dd</strong> command will take a while to complete. Once it is done you can insert the SD card in RaspberryPi and start using it.</p>
@@ -203,12 +254,9 @@ $ umount /run/media/&lt;user&gt;/partition
 <p>Keep the memory card inserted; make sure that the partitions are mounted.</p>
 
 <p>also keep in mind whatever changes we are making should be on the files in <strong>/etc</strong> in the memory card and not in the files in <strong>/etc</strong> on your computer.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> /media/user/root-of-rpi-os
 
-<pre><code class="language-bash">$ cd /media/user/root-of-rpi-os
-
-$ vim etc/network/interfaces
-</code></pre>
-
+$ vim etc/network/interfaces</code></pre></div>
 <p>add the following code to this file under wlan0 block</p>
 
 <pre><code>auto wlan0
@@ -222,12 +270,9 @@ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 <p>after this your device should connect to the wifi network automatically once it is started.</p>
 
 <h2 id="enable-ssh-on-the-raspberry-pi">Enable ssh on the raspberry pi</h2>
-
-<pre><code class="language-bash">$ cd /media/user/root-of-rpi-os
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> /media/user/root-of-rpi-os
 $ touch etc/SSHFLAG
-$ vim etc/rc.local
-</code></pre>
-
+$ vim etc/rc.local</code></pre></div>
 <p>Now add the following code just before <strong>exit 0</strong> line</p>
 
 <pre><code>if [ -e /etc/SSHFLAG ]; then  
@@ -271,28 +316,26 @@ sudo /etc/init.d/ssh start
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -333,6 +376,8 @@ sudo /etc/init.d/ssh start
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

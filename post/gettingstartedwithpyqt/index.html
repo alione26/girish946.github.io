@@ -55,7 +55,71 @@ If you have ever used any distribution of linux, you must have heard about Qt an
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -77,10 +141,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -97,7 +157,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -115,7 +175,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -125,7 +185,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -173,24 +233,15 @@ QtWidgets.</p>
 <h2 id="installation">Installation</h2>
 
 <p>On Fedora 24 and above</p>
-
-<pre><code class="language-bash">$ dnf install qt5-designer qt5-devel PyQt4-devel
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dnf install qt5-designer qt5-devel PyQt4-devel</code></pre></div>
 <p>on Ubuntu</p>
-
-<pre><code class="language-bash">$ apt-get install python-qt5 pyqt-dev-tools qt5-designer
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apt-get install python-qt5 pyqt-dev-tools qt5-designer</code></pre></div>
 <h2 id="designing-the-gui">Designing the Gui</h2>
 
 <ul>
 <li>Start the Qt-designer from launcher or use the command</li>
 </ul>
-
-<pre><code class="language-bash">$ qt-designer5
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ qt-designer5</code></pre></div>
 <p>A window like following will open.</p>
 
 <p><img src="http://girishjoshi.io/images/designer-qt5.png"></p>
@@ -212,53 +263,47 @@ and a label on the window.</p>
 <p>Now it&rsquo;s time to convert this UI into the python code which can be executed.</p>
 
 <p>To do that there is a tool provided by Qt called &ldquo;pyuic5&rdquo;.</p>
-
-<pre><code class="language-bash">$ pyuic5 -o &lt;your .py file name&gt; &lt;your .ui file name&gt;
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pyuic5 -o &lt;your .py file name&gt; &lt;your .ui file name&gt;</code></pre></div>
 <p>The python file created by <em>pyuic5</em> will contain code something like</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic"># -*- coding: utf-8 -*-</span>
 
-<pre><code class="language-python"># -*- coding: utf-8 -*-
+<span style="color:#999;font-style:italic"># Form implementation generated from reading ui file &#39;sampleWindow.ui&#39;</span>
+<span style="color:#999;font-style:italic">#</span>
+<span style="color:#999;font-style:italic"># Created by: PyQt5 UI code generator 5.9</span>
+<span style="color:#999;font-style:italic">#</span>
+<span style="color:#999;font-style:italic"># WARNING! All changes made in this file will be lost!</span>
 
-# Form implementation generated from reading ui file 'sampleWindow.ui'
-#
-# Created by: PyQt5 UI code generator 5.9
-#
-# WARNING! All changes made in this file will be lost!
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">PyQt5</span> <span style="color:#6ab825;font-weight:bold">import</span> QtCore, QtGui, QtWidgets
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName(&quot;MainWindow&quot;)
-        MainWindow.resize(481, 379)
+<span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf">Ui_MainWindow</span>(<span style="color:#24909d">object</span>):
+    <span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">setupUi</span>(self, MainWindow):
+        MainWindow.setObjectName(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>)
+        MainWindow.resize(<span style="color:#3677a9">481</span>, <span style="color:#3677a9">379</span>)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName(&quot;centralwidget&quot;)
+        self.centralwidget.setObjectName(<span style="color:#ed9d13">&#34;centralwidget&#34;</span>)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(50, 40, 92, 36))
-        self.pushButton.setObjectName(&quot;pushButton&quot;)
+        self.pushButton.setGeometry(QtCore.QRect(<span style="color:#3677a9">50</span>, <span style="color:#3677a9">40</span>, <span style="color:#3677a9">92</span>, <span style="color:#3677a9">36</span>))
+        self.pushButton.setObjectName(<span style="color:#ed9d13">&#34;pushButton&#34;</span>)
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(50, 120, 121, 21))
-        self.label.setObjectName(&quot;label&quot;)
+        self.label.setGeometry(QtCore.QRect(<span style="color:#3677a9">50</span>, <span style="color:#3677a9">120</span>, <span style="color:#3677a9">121</span>, <span style="color:#3677a9">21</span>))
+        self.label.setObjectName(<span style="color:#ed9d13">&#34;label&#34;</span>)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 28))
-        self.menubar.setObjectName(&quot;menubar&quot;)
+        self.menubar.setGeometry(QtCore.QRect(<span style="color:#3677a9">0</span>, <span style="color:#3677a9">0</span>, <span style="color:#3677a9">481</span>, <span style="color:#3677a9">28</span>))
+        self.menubar.setObjectName(<span style="color:#ed9d13">&#34;menubar&#34;</span>)
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName(&quot;statusbar&quot;)
+        self.statusbar.setObjectName(<span style="color:#ed9d13">&#34;statusbar&#34;</span>)
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, MainWindow):
+    <span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">retranslateUi</span>(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate(&quot;MainWindow&quot;, &quot;MainWindow&quot;))
-        self.pushButton.setText(_translate(&quot;MainWindow&quot;, &quot;ClickMe&quot;))
-        self.label.setText(_translate(&quot;MainWindow&quot;, &quot;Clicked 0 Times&quot;))
-</code></pre>
-
+        MainWindow.setWindowTitle(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;MainWindow&#34;</span>))
+        self.pushButton.setText(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;ClickMe&#34;</span>))
+        self.label.setText(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;Clicked 0 Times&#34;</span>))</code></pre></div>
 <p>Here in class &ldquo;Ui_MainWindow&rdquo; two methods are created,
 setupUi and retranslateUi.</p>
 
@@ -271,17 +316,14 @@ proper object names to them.</p>
 
 <p>Now you have the code to create the window and all the widgets you want,
 but to execute this code you will have to add some more code to it.</p>
-
-<pre><code class="language-python">import sys
-if __name__ == &quot;__main__&quot;:
-    app = QtWidgets.QApplication(sys.argv) #create a new instance of QApplication
-    ex = Ui_MainWindow() #create a new instance of the Ui you just cerated.
-    w = QtWidgets.QMainWindow() #create an instance of QMainWindow
-    ex.setupUi(w) #create your widgets inside the window you just created.
-    w.show() #show the window.
-    sys.exit(app.exec_()) #Exit the program when you close the application window.
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
+<span style="color:#6ab825;font-weight:bold">if</span> __name__ == <span style="color:#ed9d13">&#34;__main__&#34;</span>:
+    app = QtWidgets.QApplication(sys.argv) <span style="color:#999;font-style:italic">#create a new instance of QApplication</span>
+    ex = Ui_MainWindow() <span style="color:#999;font-style:italic">#create a new instance of the Ui you just cerated.</span>
+    w = QtWidgets.QMainWindow() <span style="color:#999;font-style:italic">#create an instance of QMainWindow</span>
+    ex.setupUi(w) <span style="color:#999;font-style:italic">#create your widgets inside the window you just created.</span>
+    w.show() <span style="color:#999;font-style:italic">#show the window.</span>
+    sys.<span style="color:#24909d">exit</span>(app.exec_()) <span style="color:#999;font-style:italic">#Exit the program when you close the application window.</span></code></pre></div>
 <p>Append this code to the end of your python file.</p>
 
 <p>After this when you run this python file a window like following will appear</p>
@@ -291,82 +333,70 @@ if __name__ == &quot;__main__&quot;:
 <h3 id="button-clicked-event">Button <em>clicked</em> event</h3>
 
 <p>To count the number of clicks, create variable &ldquo;count&rdquo; in the class.</p>
-
-<pre><code class="language-python">self.count = 0
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">self.count = <span style="color:#3677a9">0</span></code></pre></div>
 <p>To &ldquo;connect&rdquo; the clicked event of the button to a method in the class.</p>
-
-<pre><code class="language-python">self.pushButton.clicked.connect(self.incCount)
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">self.pushButton.clicked.connect(self.incCount)</code></pre></div>
 <p>and creaet a method &ldquo;incCount&rdquo; in the same class.</p>
-
-<pre><code class="language-python">def incCount(self):
-    self.label.setText(str(count))
-    self.count+=1
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">incCount</span>(self):
+    self.label.setText(<span style="color:#24909d">str</span>(count))
+    self.count+=<span style="color:#3677a9">1</span></code></pre></div>
 <p>Once done all of the above changes the code looks like.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic"># -*- coding: utf-8 -*-</span>
 
-<pre><code class="language-python"># -*- coding: utf-8 -*-
+<span style="color:#999;font-style:italic"># Form implementation generated from reading ui file &#39;sampleWindow.ui&#39;</span>
+<span style="color:#999;font-style:italic">#</span>
+<span style="color:#999;font-style:italic"># Created by: PyQt5 UI code generator 5.9</span>
+<span style="color:#999;font-style:italic">#</span>
+<span style="color:#999;font-style:italic"># WARNING! All changes made in this file will be lost!</span>
 
-# Form implementation generated from reading ui file 'sampleWindow.ui'
-#
-# Created by: PyQt5 UI code generator 5.9
-#
-# WARNING! All changes made in this file will be lost!
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">PyQt5</span> <span style="color:#6ab825;font-weight:bold">import</span> QtCore, QtGui, QtWidgets
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
-
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        self.count = 0
-        MainWindow.setObjectName(&quot;MainWindow&quot;)
-        MainWindow.resize(481, 379)
+<span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf">Ui_MainWindow</span>(<span style="color:#24909d">object</span>):
+    <span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">setupUi</span>(self, MainWindow):
+        self.count = <span style="color:#3677a9">0</span>
+        MainWindow.setObjectName(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>)
+        MainWindow.resize(<span style="color:#3677a9">481</span>, <span style="color:#3677a9">379</span>)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName(&quot;centralwidget&quot;)
+        self.centralwidget.setObjectName(<span style="color:#ed9d13">&#34;centralwidget&#34;</span>)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(50, 40, 92, 36))
-        self.pushButton.setObjectName(&quot;pushButton&quot;)
+        self.pushButton.setGeometry(QtCore.QRect(<span style="color:#3677a9">50</span>, <span style="color:#3677a9">40</span>, <span style="color:#3677a9">92</span>, <span style="color:#3677a9">36</span>))
+        self.pushButton.setObjectName(<span style="color:#ed9d13">&#34;pushButton&#34;</span>)
 
-        self.pushButton.clicked.connect(self.incCount)#connect a method to click event
+        self.pushButton.clicked.connect(self.incCount)<span style="color:#999;font-style:italic">#connect a method to click event</span>
 
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(50, 120, 121, 21))
-        self.label.setObjectName(&quot;label&quot;)
+        self.label.setGeometry(QtCore.QRect(<span style="color:#3677a9">50</span>, <span style="color:#3677a9">120</span>, <span style="color:#3677a9">121</span>, <span style="color:#3677a9">21</span>))
+        self.label.setObjectName(<span style="color:#ed9d13">&#34;label&#34;</span>)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 28))
-        self.menubar.setObjectName(&quot;menubar&quot;)
+        self.menubar.setGeometry(QtCore.QRect(<span style="color:#3677a9">0</span>, <span style="color:#3677a9">0</span>, <span style="color:#3677a9">481</span>, <span style="color:#3677a9">28</span>))
+        self.menubar.setObjectName(<span style="color:#ed9d13">&#34;menubar&#34;</span>)
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName(&quot;statusbar&quot;)
+        self.statusbar.setObjectName(<span style="color:#ed9d13">&#34;statusbar&#34;</span>)
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, MainWindow):
+    <span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">retranslateUi</span>(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate(&quot;MainWindow&quot;, &quot;MainWindow&quot;))
-        self.pushButton.setText(_translate(&quot;MainWindow&quot;, &quot;ClickMe&quot;))
-        self.label.setText(_translate(&quot;MainWindow&quot;, &quot;Clicked 0 Times&quot;))
+        MainWindow.setWindowTitle(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;MainWindow&#34;</span>))
+        self.pushButton.setText(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;ClickMe&#34;</span>))
+        self.label.setText(_translate(<span style="color:#ed9d13">&#34;MainWindow&#34;</span>, <span style="color:#ed9d13">&#34;Clicked 0 Times&#34;</span>))
 
-    def incCount(self):
-        self.label.setText(str(self.count))
-        self.count+=1
+    <span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">incCount</span>(self):
+        self.label.setText(<span style="color:#24909d">str</span>(self.count))
+        self.count+=<span style="color:#3677a9">1</span>
 
-if __name__ == &quot;__main__&quot;:
+<span style="color:#6ab825;font-weight:bold">if</span> __name__ == <span style="color:#ed9d13">&#34;__main__&#34;</span>:
     app = QtWidgets.QApplication(sys.argv)
     ex = Ui_MainWindow()
     w = QtWidgets.QMainWindow()
     ex.setupUi(w)
     w.show()
-    sys.exit(app.exec_())
-</code></pre>
-
+    sys.<span style="color:#24909d">exit</span>(app.exec_())</code></pre></div>
 <p>This way you can create beautiful Gui applications using Qt framework in python.</p>
  </div>
     <footer class="post-footer">
@@ -395,28 +425,26 @@ if __name__ == &quot;__main__&quot;:
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -457,6 +485,8 @@ if __name__ == &quot;__main__&quot;:
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

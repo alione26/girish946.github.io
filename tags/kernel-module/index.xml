@@ -19,9 +19,7 @@
       
       <guid>http://girishjoshi.io/post/linux-kernel-module-hello-world/</guid>
       <description>What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel.</description>
+The device drivers, networking stack; for almost everything you will find a module in the kernel.</description>
     </item>
     
   </channel>

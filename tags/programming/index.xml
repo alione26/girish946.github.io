@@ -18,8 +18,7 @@
       <pubDate>Tue, 30 Aug 2016 20:23:25 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/</guid>
-      <description>Plotcat Hello all, I&amp;rsquo;m writing once again after almost six months. As the title of this post suggests I&amp;rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.
-The reason I am writing this post is during past three or four months I did few small projects for Slightgen.</description>
+      <description>Plotcat Hello all, I&amp;rsquo;m writing once again after almost six months. As the title of this post suggests I&amp;rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.</description>
     </item>
     
     <item>
@@ -32,9 +31,7 @@ The reason I am writing this post is during past three or four months I did few 
 It is a general purpose Language.
 Features of Python:
 Simple:
-Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.
-Free and Open Source:
-Python is an example of a FLOSS (Free/Libré and Open Source Software).</description>
+Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.</description>
     </item>
     
     <item>

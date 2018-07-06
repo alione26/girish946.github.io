@@ -14,8 +14,7 @@
 <meta property="og:title" content="Implementing HTTP Basic Authentication in Golang" />
 <meta property="og:description" content="Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
 The specifications for basic access authentication are specified in RFC7617
-For Golang httpauth package provides HTTP Basic Authentication middleware.
-Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http." />
+For Golang httpauth package provides HTTP Basic Authentication middleware." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/" />
 
@@ -39,16 +38,14 @@ Installation $ go get github.com/goji/httpauth  Usage In this example I have use
 <meta name="twitter:title" content="Implementing HTTP Basic Authentication in Golang"/>
 <meta name="twitter:description" content="Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
 The specifications for basic access authentication are specified in RFC7617
-For Golang httpauth package provides HTTP Basic Authentication middleware.
-Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http."/>
+For Golang httpauth package provides HTTP Basic Authentication middleware."/>
 
 
 
 <meta itemprop="name" content="Implementing HTTP Basic Authentication in Golang">
 <meta itemprop="description" content="Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
 The specifications for basic access authentication are specified in RFC7617
-For Golang httpauth package provides HTTP Basic Authentication middleware.
-Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http.">
+For Golang httpauth package provides HTTP Basic Authentication middleware.">
 
 
 <meta itemprop="datePublished" content="2018-07-05T14:21:38&#43;05:30" />
@@ -61,7 +58,71 @@ Installation $ go get github.com/goji/httpauth  Usage In this example I have use
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -83,10 +144,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -103,7 +160,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -121,7 +178,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -131,7 +188,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -156,61 +213,45 @@ if (!doNotTrack) {
  Basic Authentication middleware.</p>
 
 <h2 id="installation">Installation</h2>
-
-<pre><code class="language-bash">$ go get github.com/goji/httpauth
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get github.com/goji/httpauth</code></pre></div>
 <h2 id="usage">Usage</h2>
 
 <p>In this example I have used it with vanilla <strong>net/http</strong>.
 As given in the documentation the sample code is as follows.</p>
 
 <h3 id="server">Server</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
-<pre><code class="language-go">package main
-
-import(
-    &quot;fmt&quot;
-    &quot;net/http&quot;
-    &quot;github.com/goji/httpauth&quot;
+<span style="color:#6ab825;font-weight:bold">import</span>(
+    <span style="color:#ed9d13">&#34;fmt&#34;</span>
+    <span style="color:#ed9d13">&#34;net/http&#34;</span>
+    <span style="color:#ed9d13">&#34;github.com/goji/httpauth&#34;</span>
 )
 
-func YourHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, &quot;some message to authenticated user.&quot;)
+<span style="color:#6ab825;font-weight:bold">func</span> YourHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, <span style="color:#ed9d13">&#34;some message to authenticated user.&#34;</span>)
 }
 
-func main() {
-    http.Handle(&quot;/&quot;, httpauth.SimpleBasicAuth(&quot;someuser&quot;, &quot;somepassword&quot;)(http.HandlerFunc(YourHandler)))
-    http.ListenAndServe(&quot;:7000&quot;, nil)
-}
-</code></pre>
-
+<span style="color:#6ab825;font-weight:bold">func</span> main() {
+    http.Handle(<span style="color:#ed9d13">&#34;/&#34;</span>, httpauth.SimpleBasicAuth(<span style="color:#ed9d13">&#34;someuser&#34;</span>, <span style="color:#ed9d13">&#34;somepassword&#34;</span>)(http.HandlerFunc(YourHandler)))
+    http.ListenAndServe(<span style="color:#ed9d13">&#34;:7000&#34;</span>, <span style="color:#6ab825;font-weight:bold">nil</span>)
+}</code></pre></div>
 <p>The above code creates an HTTP server on port <em>7000</em>.</p>
 
 <p>You build and run this code using following commands.</p>
-
-<pre><code class="language-bash">$ go build authserver.go
-$ ./authserver
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go build authserver.go
+$ ./authserver</code></pre></div>
 <p>To check if it is really asking for the password you can use <strong>curl</strong></p>
-
-<pre><code class="language-bash">$ curl -k -u someuser:somepassword http://0.0.0.0:7000
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -k -u someuser:somepassword http://0.0.0.0:7000</code></pre></div>
 <p>If you wish to see all the headers generated by <strong>curl</strong> command you can
 use <em>-v</em> parameter in the command.</p>
-
-<pre><code class="language-bash">$ curl -k -u someuser:somepassword http://0.0.0.0:7000 -v
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -k -u someuser:somepassword http://0.0.0.0:7000 -v</code></pre></div>
 <p>It generates the headers/output like this.</p>
-
-<pre><code class="language-text">* Rebuilt URL to: http://0.0.0.0:7000/
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">* Rebuilt URL to: http://0.0.0.0:7000/
 *   Trying 0.0.0.0...
 * TCP_NODELAY set
 * Connected to 0.0.0.0 (127.0.0.1) port 7000 (#0)
-* Server auth using Basic with user 'someuser'
+* Server auth using Basic with user &#39;someuser&#39;
 &gt; GET / HTTP/1.1
 &gt; Host: 0.0.0.0:7000
 &gt; Authorization: Basic c29tZXVzZXI6c29tZXBhc3N3b3Jk
@@ -224,14 +265,12 @@ use <em>-v</em> parameter in the command.</p>
 &lt; Content-Length: 169
 &lt; 
 &lt;pre&gt;
-&lt;a href=&quot;authclient&quot;&gt;authclient&lt;/a&gt;
-&lt;a href=&quot;authclient.go&quot;&gt;authclient.go&lt;/a&gt;
-&lt;a href=&quot;authserver&quot;&gt;authserver&lt;/a&gt;
-&lt;a href=&quot;authserver.go&quot;&gt;authserver.go&lt;/a&gt;
+&lt;a href=&#34;authclient&#34;&gt;authclient&lt;/a&gt;
+&lt;a href=&#34;authclient.go&#34;&gt;authclient.go&lt;/a&gt;
+&lt;a href=&#34;authserver&#34;&gt;authserver&lt;/a&gt;
+&lt;a href=&#34;authserver.go&#34;&gt;authserver.go&lt;/a&gt;
 &lt;/pre&gt;
-* Connection #0 to host 0.0.0.0 left intact
-</code></pre>
-
+* Connection #0 to host 0.0.0.0 left intact</code></pre></div>
 <p>If you give invalid <em>username</em> or <em>password</em> in <strong>curl</strong> command it won&rsquo;t
 return the message (which in this case is &ldquo;some message to authenticated user.&rdquo;).</p>
 
@@ -239,44 +278,38 @@ return the message (which in this case is &ldquo;some message to authenticated u
 
 <p>If you want to implement the client for this basic authentication server in
 golang here is the code for that.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
-<pre><code class="language-go">package main
-
-import(
-    &quot;fmt&quot;
-    &quot;net/http&quot;
-    &quot;io/ioutil&quot;
-    &quot;log&quot;
+<span style="color:#6ab825;font-weight:bold">import</span>(
+    <span style="color:#ed9d13">&#34;fmt&#34;</span>
+    <span style="color:#ed9d13">&#34;net/http&#34;</span>
+    <span style="color:#ed9d13">&#34;io/ioutil&#34;</span>
+    <span style="color:#ed9d13">&#34;log&#34;</span>
 )
 
-func basicAuth() string {
-    var username string = &quot;someuser&quot;
-    var passwd string = &quot;somepassword&quot;
+<span style="color:#6ab825;font-weight:bold">func</span> basicAuth() <span style="color:#6ab825;font-weight:bold">string</span> {
+    <span style="color:#6ab825;font-weight:bold">var</span> username <span style="color:#6ab825;font-weight:bold">string</span> = <span style="color:#ed9d13">&#34;someuser&#34;</span>
+    <span style="color:#6ab825;font-weight:bold">var</span> passwd <span style="color:#6ab825;font-weight:bold">string</span> = <span style="color:#ed9d13">&#34;somepassword&#34;</span>
     client := &amp;http.Client{}
-    req, err := http.NewRequest(&quot;GET&quot;, &quot;http://0.0.0.0:7000&quot;, nil)
+    req, err := http.NewRequest(<span style="color:#ed9d13">&#34;GET&#34;</span>, <span style="color:#ed9d13">&#34;http://0.0.0.0:7000&#34;</span>, <span style="color:#6ab825;font-weight:bold">nil</span>)
     req.SetBasicAuth(username, passwd)
     resp, err := client.Do(req)
-    if err != nil{
+    <span style="color:#6ab825;font-weight:bold">if</span> err != <span style="color:#6ab825;font-weight:bold">nil</span>{
         log.Fatal(err)
     }
     bodyText, err := ioutil.ReadAll(resp.Body)
-    s := string(bodyText)
-    return s
+    s := <span style="color:#24909d">string</span>(bodyText)
+    <span style="color:#6ab825;font-weight:bold">return</span> s
 }
 
-func main(){
-    fmt.Println(&quot;requesting...&quot;)
+<span style="color:#6ab825;font-weight:bold">func</span> main(){
+    fmt.Println(<span style="color:#ed9d13">&#34;requesting...&#34;</span>)
     S := basicAuth()
     fmt.Println(S)
-}
-</code></pre>
-
+}</code></pre></div>
 <p>To build and use  this client the commands are as follows.</p>
-
-<pre><code class="language-bash">$ go build authclient.go
-$ ./authclient
-</code></pre>
- </div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ go build authclient.go
+$ ./authclient</code></pre></div> </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
@@ -315,28 +348,26 @@ $ ./authclient
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -377,6 +408,8 @@ $ ./authclient
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

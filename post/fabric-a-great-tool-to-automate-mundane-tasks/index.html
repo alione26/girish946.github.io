@@ -12,8 +12,7 @@
 <link rel="canonical" href="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/">
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Fabric a Great Tool to Automate Mundane Tasks" />
-<meta property="og:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
-The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device." />
+<meta property="og:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/" />
 
@@ -35,14 +34,12 @@ The update procedure was actually simple, you login to the device using ssh, exe
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fabric a Great Tool to Automate Mundane Tasks"/>
-<meta name="twitter:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
-The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device."/>
+<meta name="twitter:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found."/>
 
 
 
 <meta itemprop="name" content="Fabric a Great Tool to Automate Mundane Tasks">
-<meta itemprop="description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
-The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device.">
+<meta itemprop="description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.">
 
 
 <meta itemprop="datePublished" content="2018-06-23T11:44:32&#43;05:30" />
@@ -55,7 +52,71 @@ The update procedure was actually simple, you login to the device using ssh, exe
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -77,10 +138,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -97,7 +154,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -115,7 +172,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -125,7 +182,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -171,27 +228,21 @@ arguments as the command line arguments.</p>
 <strong>fabfile</strong>. You have to write your deployment logic in <strong>fabfile.py</strong>
 As I had to run only one command on the remote machine it was really simple,
  the fabfile.py looked like this.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#! /usr/bin/python</span>
 
-<pre><code class="language-python">#! /usr/bin/python
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">fabric.api</span> <span style="color:#6ab825;font-weight:bold">import</span> run
+serverIp   = <span style="color:#ed9d13">&#34;192.168.1.1&#34;</span>
+serverPort = <span style="color:#ed9d13">&#34;8000&#34;</span>
+filename   = <span style="color:#ed9d13">&#34;MyFIle.tar.gz&#34;</span>
+dirName    = <span style="color:#ed9d13">&#34;MyDir&#34;</span>
 
-from fabric.api import run
-serverIp   = &quot;192.168.1.1&quot;
-serverPort = &quot;8000&quot;
-filename   = &quot;MyFIle.tar.gz&quot;
-dirName    = &quot;MyDir&quot;
-
-def makeUpdate():
-    run(&quot;/bin/update.sh {0} {1} {2} {3}&quot;.format(serverIp, serverPort, filename, dirName))
-</code></pre>
-
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">makeUpdate</span>():
+    run(<span style="color:#ed9d13">&#34;/bin/update.sh {0} {1} {2} {3}&#34;</span>.format(serverIp, serverPort, filename, dirName))</code></pre></div>
 <p>Where you import <strong>run</strong> module from <strong>fabric.api</strong> and whatever you pass it;
 gets executed on the remote machine.</p>
 
 <p>To execute this script the command is</p>
-
-<pre><code class="language-bash">fab -H &lt;remoteIP&gt; -u &lt;username&gt; -I makeUpdate
-</code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fab -H &lt;remoteIP&gt; -u &lt;username&gt; -I makeUpdate</code></pre></div>
 <p>What this command does is:</p>
 
 <ul>
@@ -209,20 +260,17 @@ gets executed on the remote machine.</p>
  using shell script).</p>
 
 <p>This python script looks like.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#! /usr/bin/python</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">os</span>
+clients =  <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&#34;clients.txt&#34;</span>).read().strip().split(<span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>)
 
-<pre><code class="language-python">#! /usr/bin/python
-import os
-clients =  open(&quot;clients.txt&quot;).read().strip().split(&quot;\n&quot;)
+<span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;updating following machines&#34;</span>)
+<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> clients:
+    <span style="color:#6ab825;font-weight:bold">if</span> i:
+        <span style="color:#6ab825;font-weight:bold">print</span>(i)
 
-print(&quot;updating following machines&quot;)
-for i in clients:
-    if i:
-        print(i)
-
-for i in clients:
-    os.system(&quot;fab -H {0} -u root -I makeUpdate&quot;.format(i))
-</code></pre>
-
+<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> clients:
+    os.system(<span style="color:#ed9d13">&#34;fab -H {0} -u root -I makeUpdate&#34;</span>.format(i))</code></pre></div>
 <p>Fabric is a great tool, really simple to understand and use; saved me a lot of time.</p>
  </div>
     <footer class="post-footer">
@@ -259,28 +307,26 @@ for i in clients:
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -321,6 +367,8 @@ for i in clients:
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

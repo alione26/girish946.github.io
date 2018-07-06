@@ -14,8 +14,7 @@
 <meta property="og:title" content="Install Armbian On Orange Pi Zero" />
 <meta property="og:description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
 If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
-In fact their web site claims that
-We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general." />
+In fact their web site claims that" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/" />
 
@@ -39,16 +38,14 @@ We are the only distribution specialized for ARM development boards. Our primary
 <meta name="twitter:title" content="Install Armbian On Orange Pi Zero"/>
 <meta name="twitter:description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
 If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
-In fact their web site claims that
-We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general."/>
+In fact their web site claims that"/>
 
 
 
 <meta itemprop="name" content="Install Armbian On Orange Pi Zero">
 <meta itemprop="description" content="Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
 If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
-In fact their web site claims that
-We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general.">
+In fact their web site claims that">
 
 
 <meta itemprop="datePublished" content="2017-12-15T09:18:40&#43;05:30" />
@@ -61,7 +58,71 @@ We are the only distribution specialized for ARM development boards. Our primary
 
 
 <link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/color-dark.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
 
 
 <script>
@@ -83,10 +144,6 @@ if (!doNotTrack) {
 
 </title>
 
-<script src="js/highlight.min.js"></script>
-<link rel="stylesheet" href="css/tomorrow-night.min.css" />
-<script>hljs.initHighlightingOnLoad();</script>
-
 </head>
 
 
@@ -103,7 +160,7 @@ if (!doNotTrack) {
 
     
     
-    <a class="nav-item" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
     
@@ -121,7 +178,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
   
 
   
@@ -131,7 +188,7 @@ if (!doNotTrack) {
   
 
   
-  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
   
 
 </div>
@@ -153,15 +210,12 @@ available for a verity of different development boards.</p>
 really concerned about the security; Armbian is for you.</p>
 
 <p>In fact their web site claims that</p>
-
-<pre><code class="language-text">    We are the only distribution specialized for ARM development boards.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">    We are the only distribution specialized for ARM development boards.
     Our primary objectives are optimizing low-level settings, kernel settings
     and its security and security in general. They lead into lowering
     consumption, provide top performance and high security at the same time.
     Not a single of those aspects is covered by board maker or any other 
-    distribution.
-</code></pre>
-
+    distribution.</code></pre></div>
 <p>That is pretty cool, right?</p>
 
 <p>So let&rsquo;s get started. In this post I will be posting the procedure for
@@ -253,28 +307,26 @@ in the next post.</p>
 </footer>
 
 
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'girishjoshi-io';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>
-  Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 </article>
@@ -315,6 +367,8 @@ in the next post.</p>
   </div>
 
   </footer>
+
+</div> 
 
 </body>
 </html>

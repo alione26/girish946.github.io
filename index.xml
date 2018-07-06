@@ -20,8 +20,7 @@
       <guid>http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/</guid>
       <description>Basic access authentication uses standard fields in the HTTP headers for providing user credentials. It is the simplest technique for enforcing access control to web resources. It does not require cookies or session identifier or login page.
 The specifications for basic access authentication are specified in RFC7617
-For Golang httpauth package provides HTTP Basic Authentication middleware.
-Installation $ go get github.com/goji/httpauth  Usage In this example I have used it with vanilla net/http.</description>
+For Golang httpauth package provides HTTP Basic Authentication middleware.</description>
     </item>
     
     <item>
@@ -30,8 +29,7 @@ Installation $ go get github.com/goji/httpauth  Usage In this example I have use
       <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/</guid>
-      <description>This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.
-The update procedure was actually simple, you login to the device using ssh, execute the update script and restart the device.</description>
+      <description>This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found.</description>
     </item>
     
     <item>
@@ -42,10 +40,8 @@ The update procedure was actually simple, you login to the device using ssh, exe
       <guid>http://girishjoshi.io/post/raspberrypi-gpio-python/</guid>
       <description>To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
  python-dev python-pip RPi.GPIO  to install python-dev and python-pip:
-$ sudo apt-get install python-dev python-pip  to install RPi.GPIO:
-$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.
-The sample code for taking input from a gpio pin is given below
-#! /usr/bin/python from RPi import GPIO as io import time #Use the actual pin numbers on the board in the code.</description>
+$ sudo apt-get install python-dev python-pip to install RPi.GPIO:
+$ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO.</description>
     </item>
     
     <item>
@@ -55,9 +51,7 @@ The sample code for taking input from a gpio pin is given below
       
       <guid>http://girishjoshi.io/post/linux-kernel-module-hello-world/</guid>
       <description>What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel.</description>
+The device drivers, networking stack; for almost everything you will find a module in the kernel.</description>
     </item>
     
     <item>
@@ -67,8 +61,7 @@ $ lsmod # List all existing modules in the kernel.</description>
       
       <guid>http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/</guid>
       <description>Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&amp;rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.
-There were a lot of different tools to implement it, some of them are:</description>
+As we didn&amp;rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.</description>
     </item>
     
     <item>
@@ -80,8 +73,7 @@ There were a lot of different tools to implement it, some of them are:</descript
       <description>Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel bootup.
- Get the kernel source tree.</description>
+The Solution.</description>
     </item>
     
     <item>
@@ -102,8 +94,7 @@ The Solution. Here are the steps to print &amp;ldquo;Hello World&amp;rdquo; as t
       <guid>http://girishjoshi.io/post/install-armbian-on-orange-pi-zero/</guid>
       <description>Armbian Armbian is the linux for ARM development boards. It is a debian based distro, available for a verity of different development boards.
 If you like to configure low level settings for your devices and if you are really concerned about the security; Armbian is for you.
-In fact their web site claims that
-We are the only distribution specialized for ARM development boards. Our primary objectives are optimizing low-level settings, kernel settings and its security and security in general.</description>
+In fact their web site claims that</description>
     </item>
     
     <item>
@@ -133,7 +124,7 @@ If you have ever used any distribution of linux, you must have heard about Qt an
       <guid>http://girishjoshi.io/post/r305-fingerprint-module-with-python/</guid>
       <description>This is the post regarding the Python-R305 package.
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
-I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi. At that time I couldn&amp;rsquo;t find a python API that covers all of the functionality provided by the module.</description>
+I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi.</description>
     </item>
     
     <item>
@@ -155,7 +146,7 @@ I came across this module about one and a half year ago. I had to use it in a sm
       
       <guid>http://girishjoshi.io/post/ltc6802-2-python/</guid>
       <description>LTC6802 The LTC6802 is a complete battery monitoring IC that includes a 12-bit ADC, a precision voltage reference, a high voltage input multiplexer and a serial interface. Each LTC6802-2 can measure up to 12 series connected bat-tery cells with an input common mode voltage up to 60V.
-LTC6802 is a great option if you want to build battry monitoring system with more accuracy. This IC operates on SPI protocol.</description>
+LTC6802 is a great option if you want to build battry monitoring system with more accuracy.</description>
     </item>
     
     <item>
@@ -175,8 +166,7 @@ In this post I&amp;rsquo;ll cover
       <pubDate>Tue, 30 Aug 2016 20:23:25 +0530</pubDate>
       
       <guid>http://girishjoshi.io/post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/</guid>
-      <description>Plotcat Hello all, I&amp;rsquo;m writing once again after almost six months. As the title of this post suggests I&amp;rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.
-The reason I am writing this post is during past three or four months I did few small projects for Slightgen.</description>
+      <description>Plotcat Hello all, I&amp;rsquo;m writing once again after almost six months. As the title of this post suggests I&amp;rsquo;ll be writing about plotting the live input data from a serial device using python. This data can be any input data that is comming through a serial port from any device such as a microcontroller, Arduino, any usart based wireless module such as HC-05 or HM-10 etc.</description>
     </item>
     
     <item>
@@ -199,9 +189,7 @@ For this meetup the ajenda was &amp;ldquo;Debugging bugs in different applicatio
 It is a general purpose Language.
 Features of Python:
 Simple:
-Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.
-Free and Open Source:
-Python is an example of a FLOSS (Free/Libré and Open Source Software).</description>
+Python is a simple and minimalistic language. Reading a good Python code feels almost like reading English. It allows you to concentrate on the solution to the problem rather than the language itself.</description>
     </item>
     
     <item>

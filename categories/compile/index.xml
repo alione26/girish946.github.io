@@ -19,9 +19,7 @@
       
       <guid>http://girishjoshi.io/post/linux-kernel-module-hello-world/</guid>
       <description>What is a kernel module? Kernel modules are the pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system.
-The device drivers, networking stack; for almost everything you will find a module in the kernel.
-To use the kernel module there are three specific tools/commands that you will need.
-$ lsmod # List all existing modules in the kernel.</description>
+The device drivers, networking stack; for almost everything you will find a module in the kernel.</description>
     </item>
     
     <item>
@@ -33,8 +31,7 @@ $ lsmod # List all existing modules in the kernel.</description>
       <description>Pune Kernel Meetup Assignment. An assignment was given at Pune Kernel Meetup-January-2018, for people to get started with linux kernel.
 The assignment was to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel boot up.
 So here is the solution to this problem that I could find.
-The Solution. Here are the steps to print &amp;ldquo;Hello World&amp;rdquo; as the first line in the kernel bootup.
- Get the kernel source tree.</description>
+The Solution.</description>
     </item>
     
     <item>
