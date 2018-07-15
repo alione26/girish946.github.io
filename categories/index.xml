@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 06 Jun 2017 00:15:03 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jul 2018 20:03:46 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>101</title>
+      <link>http://girishjoshi.io/categories/101/</link>
+      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/101/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>About Me</title>
@@ -90,6 +99,15 @@
       <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Esp8266</title>
+      <link>http://girishjoshi.io/categories/esp8266/</link>
+      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/esp8266/</guid>
       <description></description>
     </item>
     
@@ -211,6 +229,15 @@
     </item>
     
     <item>
+      <title>Micropython</title>
+      <link>http://girishjoshi.io/categories/micropython/</link>
+      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/micropython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Module</title>
       <link>http://girishjoshi.io/categories/module/</link>
       <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
@@ -240,7 +267,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/categories/python/</link>
-      <pubDate>Sat, 23 Jun 2018 11:44:32 +0530</pubDate>
+      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/python/</guid>
       <description></description>

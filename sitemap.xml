@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/esp8266-deploying-micropython-and-using-repl/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/implementing-http-basic-authentication-in-golang/</loc>
     <lastmod>2018-07-05T14:21:38+05:30</lastmod>
   </url>
@@ -105,6 +110,12 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/categories/101/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/about-me/</loc>
     <lastmod>2017-06-06T00:15:03+05:30</lastmod>
     <priority>0</priority>
@@ -202,7 +213,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/</loc>
-    <lastmod>2017-06-06T00:15:03+05:30</lastmod>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -239,6 +250,18 @@
   <url>
     <loc>http://girishjoshi.io/categories/devops/</loc>
     <lastmod>2018-06-23T11:44:32+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/esp8266/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/esp8266/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -327,6 +350,12 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/hardware/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/hello-world/</loc>
     <lastmod>2018-04-22T12:03:14+00:00</lastmod>
     <priority>0</priority>
@@ -353,6 +382,12 @@
   <url>
     <loc>http://girishjoshi.io/tags/insallation/</loc>
     <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/install/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -441,6 +476,12 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/categories/micropython/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/minidlna/</loc>
     <lastmod>2018-04-29T05:10:55+05:30</lastmod>
     <priority>0</priority>
@@ -455,6 +496,12 @@
   <url>
     <loc>http://girishjoshi.io/categories/module/</loc>
     <lastmod>2018-05-04T17:13:29+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/nodemcu/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -478,7 +525,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-07-05T14:21:38+05:30</lastmod>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -502,13 +549,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2018-06-23T11:44:32+05:30</lastmod>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2018-06-23T11:44:32+05:30</lastmod>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -551,6 +598,12 @@
   <url>
     <loc>http://girishjoshi.io/tags/readymedia/</loc>
     <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/tags/repl/</loc>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -622,7 +675,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-07-05T14:21:38+05:30</lastmod>
+    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
     <priority>0</priority>
   </url>
   

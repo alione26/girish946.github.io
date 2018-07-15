@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.43-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/esp8266-deploying-micropython-and-using-repl/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="ESP8266 Deploying Micropython and Using REPL" />
+<meta property="og:description" content="ESP8266 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Espressif Systems. One of the coolest things about this cip is it can run Micropython. If you are new to programming or hardware/embedded systems and want to get into those, ESP8266 is a good way to get started." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/esp8266-deploying-micropython-and-using-repl/" />
+
+
+
+<meta property="article:published_time" content="2018-07-13T20:03:46&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-07-13T20:03:46&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ESP8266 Deploying Micropython and Using REPL"/>
+<meta name="twitter:description" content="ESP8266 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Espressif Systems. One of the coolest things about this cip is it can run Micropython. If you are new to programming or hardware/embedded systems and want to get into those, ESP8266 is a good way to get started."/>
+
+
+
+<meta itemprop="name" content="ESP8266 Deploying Micropython and Using REPL">
+<meta itemprop="description" content="ESP8266 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Espressif Systems. One of the coolest things about this cip is it can run Micropython. If you are new to programming or hardware/embedded systems and want to get into those, ESP8266 is a good way to get started.">
+
+
+<meta itemprop="datePublished" content="2018-07-13T20:03:46&#43;05:30" />
+<meta itemprop="dateModified" content="2018-07-13T20:03:46&#43;05:30" />
+<meta itemprop="wordCount" content="660">
+
+
+
+<meta itemprop="keywords" content="Python,ESP8266,hardware,install,REPL,NodeMCU," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     ESP8266 Deploying Micropython and Using REPL 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> ESP8266 Deploying Micropython and Using REPL </h1>
+    <div class="content"> 
+
+<h2 id="esp8266">ESP8266</h2>
+
+<p>The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and
+microcontroller capability produced by Espressif Systems.
+One of the coolest things about this cip is it can run <a href="https://micropython.org/">Micropython</a>. If you are new to programming or hardware/embedded
+ systems and want to get into those, ESP8266 is a good way to get started.</p>
+
+<h2 id="micropython">Micropython</h2>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">MicroPython is a lean and efficient implementation of the Python 3 programming 
+language that includes a small subset of the Python standard library and is 
+optimised to run on microcontrollers and in constrained environments.
+- Source https://micropython.org/</code></pre></div>
+<p>As Micropython follows Python 3 coding standard. It is very easy for people
+who know python to get into hardware stuff.</p>
+
+<h2 id="let-s-get-started">Let&rsquo;s get started</h2>
+
+<p>I&rsquo;m using <a href="http://www.nodemcu.com/">NodeMCU</a> for now. If your are not from
+electronics/embedded systems background, it is better to go with development
+boards like NodeMCU than using chips and breadboards and if you are from
+electronics background; these development boards are very useful for prototyping.</p>
+
+<p><img src="http://girishjoshi.io/images/ESP8266.jpg" width=640 height=240></p>
+
+<h3 id="download-the-firmware">Download the firmware.</h3>
+
+<p>You can find the stable and nightly builds for micropython for ESP8266 in
+<a href="micropython.org/download#esp8266">MicroPython&rsquo;s Download section</a></p>
+
+<h3 id="deploy-the-firmware-on-esp8266">Deploy the firmware on ESP8266</h3>
+
+<p>To deploy the Firmware on ESP8266 there is a python tool called
+<a href="https://github.com/espressif/esptool/"><code>esptool</code></a>.</p>
+
+<p>You can install it using <code>pip</code> (this tool is written in python, so if you are
+on linux or on mac os you will already have python installed with either <code>pip</code>
+or <code>easy_install</code>. If you are on windows, you need to install python first to
+use this tool.)</p>
+
+<p>or you can install the latest version from it&rsquo;s
+<a href="https://github.com/espressif/esptool/">github repo</a></p>
+
+<p>To install <code>esptool</code> using pip</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ pip install esptool</code></pre></div>
+<p>To install <code>esptool</code> from github repo</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/espressif/esptool/
+$ <span style="color:#24909d">cd</span> esptool
+$ python setup.py build
+$ python setup.py install</code></pre></div>
+<p>Once this tool is installed you first need to erase the flash of
+ESP8266 modeule using following command.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ esptool.py --port /dev/ttyUSB0 erase_flash</code></pre></div>
+<p>To deploy the firmware you have just downloaded</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ esptool.py --port /dev/ttyUSB0 --baud <span style="color:#3677a9">460800</span> write_flash --flash_size=detect <span style="color:#3677a9">0</span> esp8266-20180511-v1.9.4.bin</code></pre></div>
+<p>For some boards with a particular FlashROM configuration (e.g. some variants
+of a NodeMCU board) you may need to use the following command to deploy the
+firmware (note the -fm dio option):</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ esptool.py --port /dev/ttyUSB0 --baud <span style="color:#3677a9">460800</span> write_flash --flash_size=detect -fm dio <span style="color:#3677a9">0</span> esp8266-20180511-v1.9.4.bin </code></pre></div>
+<p>After you successfully deployed the firmware the controller will reset itself
+and then you are ready to use the REPL.</p>
+
+<pre><code>For those who don't know about REPL, it stands for Read–Eval–Print Loop it
+is the &quot;language shell&quot;. If you have used the python intepreter before; that
+is REPL.
+</code></pre>
+
+<h3 id="using-repl">Using REPL</h3>
+
+<p>You can access the MicroPython REPL on ESP8266 in two different ways.</p>
+
+<ul>
+<li>Over <code>Serial or tty Port</code></li>
+<li>Web REPL</li>
+</ul>
+
+<h4 id="repl-over-serial-port">REPL Over Serial Port</h4>
+
+<p>To access the prompt over USB-serial you need to use a terminal emulator program.
+There are various good tools available for this purpose.</p>
+
+<ul>
+<li><p>Windows</p>
+
+<ul>
+<li>TeraTerm</li>
+<li>Putty</li>
+</ul></li>
+
+<li><p>Linux</p>
+
+<ul>
+<li>Minicom</li>
+<li>PicoCom</li>
+<li>Screen</li>
+<li>GtkTerm</li>
+</ul></li>
+
+<li><p>MacOs</p>
+
+<ul>
+<li>Screen</li>
+</ul></li>
+</ul>
+
+<p>There are plenty of other tools avalable for each of these platforms you can
+choose whichever you like.</p>
+
+<p>The default baudrate for the module is <code>115200</code>.</p>
+
+<h4 id="webrepl">WebREPL</h4>
+
+<p>WebREPL allows you to use the Python prompt over WiFi, connecting through a
+browser. The latest versions of Firefox and Chrome are supported.</p>
+
+<ul>
+<li><p>Connect the module using USB Serial and set password for WebREPL</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">webrepl_setup</span></code></pre></div></li>
+
+<li><p>Go to <a href="http://www.micropython.org/webrepl/">WebREPL client</a> from browser.</p></li>
+
+<li><p>Then Connect to the NodeMCU&rsquo;s accesspoint.</p>
+
+<p>The ESSID is of the form <code>MicroPython-xxxxxx</code> where the <code>x</code>’s are
+replaced with part of the MAC address of your device (so will be the same
+everytime, and most likely different for all ESP8266 chips). The password
+for the WiFi is <code>micropythoN</code></p></li>
+
+<li><p>Enter IP:<code>ws://192.168.4.1:8266/</code> and click connect.</p>
+
+<p><img src="images/MicroPython_WebREPL.png"></p></li>
+
+<li><p>Enter the password you just set in the terminal screen on your browser.</p></li>
+
+<li><p>Once this is done you will see the &ldquo;<code>&gt;&gt;&gt;</code>&rdquo; prompt, now you can use your ESP8266
+module from your web browser itself.</p></li>
+</ul>
+
+<p>In the next post I&rsquo;ll be writing about networking with ESP8266 (connecting
+8266 module to a wifi network and making http requests from and to ESP8266).</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#Python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/esp8266">#ESP8266</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/hardware">#hardware</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/install">#install</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/repl">#REPL</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/nodemcu">#NodeMCU</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jul 13, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
