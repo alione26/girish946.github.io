@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/</loc>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/esp8266-deploying-micropython-and-using-repl/</loc>
     <lastmod>2018-07-13T20:03:46+05:30</lastmod>
   </url>
@@ -255,13 +260,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/esp8266/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/esp8266/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -351,7 +356,7 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/hardware/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,7 +482,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/micropython/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -500,8 +505,20 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/network/</loc>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/networking/</loc>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/nodemcu/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -525,7 +542,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -549,13 +566,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -674,8 +691,14 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/wifi/</loc>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-07-13T20:03:46+05:30</lastmod>
+    <lastmod>2018-07-26T00:14:15+05:30</lastmod>
     <priority>0</priority>
   </url>
   

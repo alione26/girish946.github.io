@@ -105,7 +105,7 @@
     <item>
       <title>Esp8266</title>
       <link>http://girishjoshi.io/categories/esp8266/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/esp8266/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Micropython</title>
       <link>http://girishjoshi.io/categories/micropython/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/micropython/</guid>
       <description></description>
@@ -243,6 +243,15 @@
       <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/module/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://girishjoshi.io/categories/networking/</link>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/networking/</guid>
       <description></description>
     </item>
     
@@ -267,7 +276,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/categories/python/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/python/</guid>
       <description></description>

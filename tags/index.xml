@@ -150,7 +150,7 @@
     <item>
       <title>Esp8266</title>
       <link>http://girishjoshi.io/tags/esp8266/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/esp8266/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Hardware</title>
       <link>http://girishjoshi.io/tags/hardware/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/hardware/</guid>
       <description></description>
@@ -373,9 +373,18 @@
     </item>
     
     <item>
+      <title>Network</title>
+      <link>http://girishjoshi.io/tags/network/</link>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nodemcu</title>
       <link>http://girishjoshi.io/tags/nodemcu/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/nodemcu/</guid>
       <description></description>
@@ -420,7 +429,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/tags/python/</link>
-      <pubDate>Fri, 13 Jul 2018 20:03:46 +0530</pubDate>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/python/</guid>
       <description></description>
@@ -522,6 +531,15 @@
       <pubDate>Fri, 15 Dec 2017 09:18:40 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wifi</title>
+      <link>http://girishjoshi.io/tags/wifi/</link>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/wifi/</guid>
       <description></description>
     </item>
     

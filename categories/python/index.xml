@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Fri, 13 Jul 2018 20:03:46 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jul 2018 00:14:15 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ESP8266 Connecting to WIFI and Making HTTP Requests using MicroPython</title>
+      <link>http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/</link>
+      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/</guid>
+      <description>There are two WiFi interfaces, one for the station (when the ESP8266 connects to a router) and one for the access point (for other devices to connect to the ESP8266).
+Here is an example to connect ESP8266 to your wifi router.
+&amp;gt;&amp;gt;&amp;gt; import network &amp;gt;&amp;gt;&amp;gt; sta_if = network.WLAN(network.STA_IF) &amp;gt;&amp;gt;&amp;gt; sta_if.active() # check if station mode is activated or not.</description>
+    </item>
     
     <item>
       <title>ESP8266 Deploying Micropython and Using REPL</title>
