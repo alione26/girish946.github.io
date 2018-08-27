@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.48-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/esp8266-access-gpio-using-micropython/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="ESP8266 Access GPIO Using Micropython" />
+<meta property="og:description" content="In this post I&rsquo;ll be writing about accessing GPIO ports on ESP8266.
+Module machine contains the apis for the GPIO on ESP8266.
+import machine pin = machine.Pin(2, machine.Pin.IN, machine.Pin.PULL_UP) To use a GPIO we need to configure it as either input or output. In the above example machine.Pin.IN configures the GPIO pin as an input, meaning you can connect a button like the one shown below to it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/esp8266-access-gpio-using-micropython/" /><meta property="article:published_time" content="2018-08-01T23:36:28&#43;05:30"/>
+<meta property="article:modified_time" content="2018-08-01T23:36:28&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ESP8266 Access GPIO Using Micropython"/>
+<meta name="twitter:description" content="In this post I&rsquo;ll be writing about accessing GPIO ports on ESP8266.
+Module machine contains the apis for the GPIO on ESP8266.
+import machine pin = machine.Pin(2, machine.Pin.IN, machine.Pin.PULL_UP) To use a GPIO we need to configure it as either input or output. In the above example machine.Pin.IN configures the GPIO pin as an input, meaning you can connect a button like the one shown below to it."/>
+
+
+
+<meta itemprop="name" content="ESP8266 Access GPIO Using Micropython">
+<meta itemprop="description" content="In this post I&rsquo;ll be writing about accessing GPIO ports on ESP8266.
+Module machine contains the apis for the GPIO on ESP8266.
+import machine pin = machine.Pin(2, machine.Pin.IN, machine.Pin.PULL_UP) To use a GPIO we need to configure it as either input or output. In the above example machine.Pin.IN configures the GPIO pin as an input, meaning you can connect a button like the one shown below to it.">
+
+
+<meta itemprop="datePublished" content="2018-08-01T23:36:28&#43;05:30" />
+<meta itemprop="dateModified" content="2018-08-01T23:36:28&#43;05:30" />
+<meta itemprop="wordCount" content="211">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     ESP8266 Access GPIO Using Micropython 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> ESP8266 Access GPIO Using Micropython </h1>
+    <div class="content"> <p>In this post I&rsquo;ll be writing about accessing GPIO ports on ESP8266.</p>
+
+<p>Module <code>machine</code> contains the apis for the <code>GPIO</code> on ESP8266.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">machine</span>
+pin = machine.Pin(<span style="color:#3677a9">2</span>, machine.Pin.IN, machine.Pin.PULL_UP)</code></pre></div>
+<p>To use a GPIO we need to configure it as either input or output. In the above
+example <code>machine.Pin.IN</code> configures the <code>GPIO</code> pin as an input, meaning you can
+connect a button like the one shown below to it.</p>
+
+<p><img src="images/Button.jpg" height=150 width=150></p>
+
+<p>The <code>machine.Pin.PULL_UP</code> indicates that, the input pin will give <code>1</code>
+when the button is not pressed, and you will get the output <code>0</code> when button is
+pressed.</p>
+
+<p>Now when you need to use the pin as an output pin, you need to</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pin = machine.Pin(<span style="color:#3677a9">2</span>, machine.Pin.OUT)</code></pre></div>
+<p>This will make the pin an output pin.</p>
+
+<p>you can control the output of the pin by using <code>Pin.on()</code> and <code>Pin.off()</code>
+methods.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&gt;&gt;&gt; <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">machine</span>
+&gt;&gt;&gt; pin = machine.Pin(<span style="color:#3677a9">2</span>, machine.Pin.OUT)
+&gt;&gt;&gt; <span style="color:#24909d">dir</span>(pin)
+[<span style="color:#ed9d13">&#39;__class__&#39;</span>, <span style="color:#ed9d13">&#39;IN&#39;</span>, <span style="color:#ed9d13">&#39;IRQ_FALLING&#39;</span>, <span style="color:#ed9d13">&#39;IRQ_RISING&#39;</span>, <span style="color:#ed9d13">&#39;OPEN_DRAIN&#39;</span>, <span style="color:#ed9d13">&#39;OUT&#39;</span>, <span style="color:#ed9d13">&#39;PULL_UP&#39;</span>, <span style="color:#ed9d13">&#39;init&#39;</span>, <span style="color:#ed9d13">&#39;irq&#39;</span>, <span style="color:#ed9d13">&#39;off&#39;</span>, <span style="color:#ed9d13">&#39;on&#39;</span>, <span style="color:#ed9d13">&#39;value&#39;</span>]
+&gt;&gt;&gt; </code></pre></div>
+<p>Following is the program to turn on an led when the button is pressed.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">machine</span>
+
+inputPin  = machine.Pin(<span style="color:#3677a9">15</span>, machine.Pin.IN)
+outputPin = machine.Pin(<span style="color:#3677a9">2</span>, machine.pin.OUT)
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">main</span>():
+    <span style="color:#6ab825;font-weight:bold">while</span> True:
+        <span style="color:#6ab825;font-weight:bold">if</span> inputPin.value() == <span style="color:#3677a9">1</span>:
+            outputPin.on()
+        <span style="color:#6ab825;font-weight:bold">else</span>:
+            outputPin.off()
+
+main()</code></pre></div>
+<p>In the next post I&rsquo;ll be writing about sending data from and to ESP8266
+using <a href="http://www.mqtt.org/">MQTT</a>.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Aug 1, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

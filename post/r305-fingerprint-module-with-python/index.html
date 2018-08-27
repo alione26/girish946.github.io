@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.43-DEV" />
+<meta name="generator" content="Hugo 0.48-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/r305-fingerprint-module-with-python/">
 <base href="http://girishjoshi.io" />
@@ -16,24 +16,8 @@
 R305 is a very common finger print sensor. It is quite cheap, has a storage capacity of 250 fingerprints.
 I came across this module about one and a half year ago. I had to use it in a small project with Raspberry-Pi." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://girishjoshi.io/post/r305-fingerprint-module-with-python/" />
-
-
-
-<meta property="article:published_time" content="2017-06-19T21:55:23&#43;05:30"/>
-
+<meta property="og:url" content="http://girishjoshi.io/post/r305-fingerprint-module-with-python/" /><meta property="article:published_time" content="2017-06-19T21:55:23&#43;05:30"/>
 <meta property="article:modified_time" content="2017-06-19T21:55:23&#43;05:30"/>
-
-
-
-
-
-
-
-
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="R305 fingerprint module &#43; python"/>
 <meta name="twitter:description" content="This is the post regarding the Python-R305 package.
@@ -125,7 +109,7 @@ th {
 </style>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -308,8 +292,8 @@ you can use Tx and Rx Pins of the board itself instead of using USB to TTL.</p>
 <h3 id="the-code">The Code</h3>
 
 <p>To store the fingerprint into the module</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sys</span>
 
 device   = sys.argv[<span style="color:#3677a9">1</span>] <span style="color:#999;font-style:italic"># the serial port to which the module is connected</span>
 baudrate = sys.argv[<span style="color:#3677a9">2</span>] <span style="color:#999;font-style:italic"># the default baudrate for this module is 57600</span>
@@ -326,8 +310,8 @@ dev = R305(device, baudrate)
 result = dev.StoreFingerPrint(IgnoreChecksum=True, callback=callback)
 <span style="color:#6ab825;font-weight:bold">print</span>(result)</code></pre></div>
 <p>To search fingerprint in the module</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">sys</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">r305</span> <span style="color:#6ab825;font-weight:bold">import</span> R305
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sys</span>
 
 device   = sys.argv[<span style="color:#3677a9">1</span>] <span style="color:#999;font-style:italic"># the serial port to which the module is connected</span>
 baudrate = sys.argv[<span style="color:#3677a9">2</span>] <span style="color:#999;font-style:italic"># the default baudrate for this module is 57600</span>
@@ -391,7 +375,7 @@ place, thanks to him the documentation is there on <a href="http://python-r305-d
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

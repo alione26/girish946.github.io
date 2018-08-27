@@ -7,31 +7,15 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.43-DEV" />
+<meta name="generator" content="Hugo 0.48-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/">
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Keep your bash history clean using python" />
 <meta property="og:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/" />
-
-
-
-<meta property="article:published_time" content="2017-11-21T14:20:08&#43;05:30"/>
-
+<meta property="og:url" content="http://girishjoshi.io/post/keepyourbashhistorycleanusingpython/" /><meta property="article:published_time" content="2017-11-21T14:20:08&#43;05:30"/>
 <meta property="article:modified_time" content="2017-11-21T14:20:08&#43;05:30"/>
-
-
-
-
-
-
-
-
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Keep your bash history clean using python"/>
 <meta name="twitter:description" content="If you are someone who spend a lot of time in terminal, you might want not to have certain commands that you&rsquo;ve used, in your bash history. The commands like &lsquo;ls&rsquo; which prints the contents of the directory to the standard output, or the terminal based games like &ldquo;Moon Buggy&rdquo; or &ldquo;2048-cli&rdquo; etc, the things which are not important enough and don&rsquo;t have too complex commands to be stored in the bash history."/>
@@ -119,7 +103,7 @@ th {
 </style>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -232,7 +216,7 @@ window.</p>
 <p>In the exit_script, (since I&rsquo;m using python) the python code looks like</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#!/usr/bin/env python</span>
 <span style="color:#999;font-style:italic"># -*- coding: utf-8 -*-</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">os</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">os</span>
 
 <span style="color:#6ab825;font-weight:bold">with</span> <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&#39;.bash_history&#39;</span>) <span style="color:#6ab825;font-weight:bold">as</span> bh:
 
@@ -297,7 +281,7 @@ window.</p>
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.43-DEV" />
+<meta name="generator" content="Hugo 0.48-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/">
 <base href="http://girishjoshi.io" />
@@ -16,24 +16,8 @@
 Here is an example to connect ESP8266 to your wifi router.
 &gt;&gt;&gt; import network &gt;&gt;&gt; sta_if = network.WLAN(network.STA_IF) &gt;&gt;&gt; sta_if.active() # check if station mode is activated or not." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/" />
-
-
-
-<meta property="article:published_time" content="2018-07-26T00:14:15&#43;05:30"/>
-
+<meta property="og:url" content="http://girishjoshi.io/post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/" /><meta property="article:published_time" content="2018-07-26T00:14:15&#43;05:30"/>
 <meta property="article:modified_time" content="2018-07-26T00:14:15&#43;05:30"/>
-
-
-
-
-
-
-
-
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ESP8266 Connecting to WIFI and Making HTTP Requests using MicroPython"/>
 <meta name="twitter:description" content="There are two WiFi interfaces, one for the station (when the ESP8266 connects to a router) and one for the access point (for other devices to connect to the ESP8266).
@@ -125,7 +109,7 @@ th {
 </style>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -202,7 +186,7 @@ if (!doNotTrack) {
     <div class="content"> <p>There are two WiFi interfaces, one for the station (when the ESP8266 connects to a router) and one for the access point (for other devices to connect to the ESP8266).</p>
 
 <p>Here is an example to connect ESP8266 to your wifi router.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&gt;&gt;&gt; <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">network</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&gt;&gt;&gt; <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">network</span>
 &gt;&gt;&gt; sta_if = network.WLAN(network.STA_IF)
 &gt;&gt;&gt; sta_if.active() <span style="color:#999;font-style:italic"># check if station mode is activated or not.</span>
 False
@@ -213,7 +197,7 @@ False
 (<span style="color:#ed9d13">&#39;192.168.0.2&#39;</span>, <span style="color:#ed9d13">&#39;255.255.255.0&#39;</span>, <span style="color:#ed9d13">&#39;192.168.0.1&#39;</span>, <span style="color:#ed9d13">&#39;8.8.8.8&#39;</span>)</code></pre></div>
 <p>You can create a function and use it in the code instead of writing all of these lines again and again.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">do_connect</span>():
-    <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">network</span>
+    <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">network</span>
     sta_if = network.WLAN(network.STA_IF)
     <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#6ab825;font-weight:bold">not</span> sta_if.isconnected():
         <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#39;connecting to network...&#39;</span>)
@@ -287,7 +271,7 @@ All of the above codes are directly taken from the official documentation of Esp
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

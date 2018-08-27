@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.43-DEV" />
+<meta name="generator" content="Hugo 0.48-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/raspberrypi-gpio-python/">
 <base href="http://girishjoshi.io" />
@@ -17,24 +17,8 @@
 $ sudo apt-get install python-dev python-pip to install RPi.GPIO:
 $ pip install RPi.GPIO  Once this is done you are all set to use the RPi GPIO." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://girishjoshi.io/post/raspberrypi-gpio-python/" />
-
-
-
-<meta property="article:published_time" content="2018-06-10T12:05:38&#43;05:30"/>
-
+<meta property="og:url" content="http://girishjoshi.io/post/raspberrypi-gpio-python/" /><meta property="article:published_time" content="2018-06-10T12:05:38&#43;05:30"/>
 <meta property="article:modified_time" content="2018-06-10T12:05:38&#43;05:30"/>
-
-
-
-
-
-
-
-
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="RaspberryPi GPIO Python"/>
 <meta name="twitter:description" content="To access GPIO of Raspberry Pi using python, you need to have following dependencies installed.
@@ -128,7 +112,7 @@ th {
 </style>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -220,8 +204,8 @@ dependencies installed.</p>
 <p>The sample code for taking input from a gpio pin is given below</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#! /usr/bin/python</span>
 
-<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">RPi</span> <span style="color:#6ab825;font-weight:bold">import</span> GPIO <span style="color:#6ab825;font-weight:bold">as</span> io
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">time</span>
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">RPi</span> <span style="color:#6ab825;font-weight:bold">import</span> GPIO <span style="color:#6ab825;font-weight:bold">as</span> io
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">time</span>
 
 <span style="color:#999;font-style:italic">#Use the actual pin numbers on the board in the code.</span>
 io.setmode(io.BOARD)
@@ -279,7 +263,7 @@ io.setup(<span style="color:#3677a9">18</span>, io.IN, pull_up_down=io.PUD_DOWN)
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

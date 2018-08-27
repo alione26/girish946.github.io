@@ -7,31 +7,15 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="blog, tech" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.43-DEV" />
+<meta name="generator" content="Hugo 0.48-DEV" />
 
 <link rel="canonical" href="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/">
 <base href="http://girishjoshi.io" />
 <meta property="og:title" content="Fabric a Great Tool to Automate Mundane Tasks" />
 <meta property="og:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/" />
-
-
-
-<meta property="article:published_time" content="2018-06-23T11:44:32&#43;05:30"/>
-
+<meta property="og:url" content="http://girishjoshi.io/post/fabric-a-great-tool-to-automate-mundane-tasks/" /><meta property="article:published_time" content="2018-06-23T11:44:32&#43;05:30"/>
 <meta property="article:modified_time" content="2018-06-23T11:44:32&#43;05:30"/>
-
-
-
-
-
-
-
-
-
-
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fabric a Great Tool to Automate Mundane Tasks"/>
 <meta name="twitter:description" content="This is a late post, few months back I had to update a certain firmware for a logger device on to hundreds of the devices. For some reason at that time the OTA update mechanism which was already implemented on those devices did not work. As it was crucial to update all the devices as soon as possible, some work around for this problem had to be found."/>
@@ -119,7 +103,7 @@ th {
 </style>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -230,7 +214,7 @@ As I had to run only one command on the remote machine it was really simple,
  the fabfile.py looked like this.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#! /usr/bin/python</span>
 
-<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf">fabric.api</span> <span style="color:#6ab825;font-weight:bold">import</span> run
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">fabric.api</span> <span style="color:#6ab825;font-weight:bold">import</span> run
 serverIp   = <span style="color:#ed9d13">&#34;192.168.1.1&#34;</span>
 serverPort = <span style="color:#ed9d13">&#34;8000&#34;</span>
 filename   = <span style="color:#ed9d13">&#34;MyFIle.tar.gz&#34;</span>
@@ -261,7 +245,7 @@ gets executed on the remote machine.</p>
 
 <p>This python script looks like.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#999;font-style:italic">#! /usr/bin/python</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf">os</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">os</span>
 clients =  <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&#34;clients.txt&#34;</span>).read().strip().split(<span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>)
 
 <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;updating following machines&#34;</span>)
@@ -308,7 +292,7 @@ clients =  <span style="color:#24909d">open</span>(<span style="color:#ed9d13">&
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
