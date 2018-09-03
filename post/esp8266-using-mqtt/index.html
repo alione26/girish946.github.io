@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.48-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/esp8266-using-mqtt/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="ESP8266 Using MQTT" />
+<meta property="og:description" content="MQTT MQTT is a lightweight publish/subscribe messaging transport designed for machine-to-machine “Internet of Things” connectivity. It’s been used in all sorts of industries from home automation and Facebook Messenger mobile app to health care and remote monitoring over satellite links.
+Installing MQTT Broker On Fedora
+$ sudo dnf install mosquitto On Debian based systems" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/esp8266-using-mqtt/" /><meta property="article:published_time" content="2018-08-23T01:02:18&#43;05:30"/>
+<meta property="article:modified_time" content="2018-08-23T01:02:18&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ESP8266 Using MQTT"/>
+<meta name="twitter:description" content="MQTT MQTT is a lightweight publish/subscribe messaging transport designed for machine-to-machine “Internet of Things” connectivity. It’s been used in all sorts of industries from home automation and Facebook Messenger mobile app to health care and remote monitoring over satellite links.
+Installing MQTT Broker On Fedora
+$ sudo dnf install mosquitto On Debian based systems"/>
+
+
+
+<meta itemprop="name" content="ESP8266 Using MQTT">
+<meta itemprop="description" content="MQTT MQTT is a lightweight publish/subscribe messaging transport designed for machine-to-machine “Internet of Things” connectivity. It’s been used in all sorts of industries from home automation and Facebook Messenger mobile app to health care and remote monitoring over satellite links.
+Installing MQTT Broker On Fedora
+$ sudo dnf install mosquitto On Debian based systems">
+
+
+<meta itemprop="datePublished" content="2018-08-23T01:02:18&#43;05:30" />
+<meta itemprop="dateModified" content="2018-08-23T01:02:18&#43;05:30" />
+<meta itemprop="wordCount" content="573">
+
+
+
+<meta itemprop="keywords" content="Python,ESP8266,hardware,WIFI,Network,NodeMCU,MQTT," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     ESP8266 Using MQTT 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> ESP8266 Using MQTT </h1>
+    <div class="content"> 
+
+<h2 id="mqtt">MQTT</h2>
+
+<p><a href="http://www.mqtt.org/">MQTT</a> is a lightweight publish/subscribe messaging transport designed for
+machine-to-machine “Internet of Things” connectivity. It’s been used in
+all sorts of industries from home automation and Facebook Messenger mobile
+app to health care and remote monitoring over satellite links.</p>
+
+<h2 id="installing-mqtt-broker">Installing MQTT Broker</h2>
+
+<p>On Fedora</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf install mosquitto</code></pre></div>
+<p>On Debian based systems</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install mosquitto</code></pre></div>
+<h2 id="starting-mosqiotto-and-testing">Starting Mosqiotto and testing</h2>
+
+<p>To start mosquitto MQTT broker,</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto</code></pre></div>
+<p>It will start the service on your system. You can configure a proper
+systemd service, for now I&rsquo;m not doing that.</p>
+
+<p>To test if the broker is working,</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_sub -h localhost -t <span style="color:#ed9d13">&#34;Node/msg&#34;</span> </code></pre></div>
+<p>This will listen for the messages on topic <code>Node/msg</code>.</p>
+
+<p>To publish something on <code>Node/msg</code> topic, run following command in
+another terminal.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mosquitto_pub -h localhost -t <span style="color:#ed9d13">&#34;Node/msg&#34;</span> -m <span style="color:#ed9d13">&#34;Hello World!&#34;</span></code></pre></div>
+<p>After this you will see the message &ldquo;Hello World&rdquo; printed on the screen where
+you had executed <code>mosquitto_sub</code>.</p>
+
+<p>This way you can send and recieve the messages using MQTT.</p>
+
+<h2 id="using-mqtt-on-esp8266-with-micropython">Using MQTT on ESP8266 with micropython</h2>
+
+<p>There is a module called <code>umqtt</code> already ther in micropython.
+To use <code>umqtt</code>, the basic things you have to do are.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">umqtt.simple</span> <span style="color:#6ab825;font-weight:bold">import</span> MQTTClient <span style="color:#999;font-style:italic"># Import MQTT Client.</span>
+
+config = {<span style="color:#ed9d13">&#34;server&#34;</span>: <span style="color:#ed9d13">&#34;192.168.1.2&#34;</span>, <span style="color:#999;font-style:italic">#IP address of MQTT Broker</span>
+          <span style="color:#ed9d13">&#34;nodeId&#34;</span>: <span style="color:#ed9d13">&#34;Node&#34;</span>        <span style="color:#999;font-style:italic">#Topic which we need to subscribe to.</span>
+         }
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">sub_cb</span>(topic, msg):
+    <span style="color:#6ab825;font-weight:bold">print</span>(topic, msg)
+
+c = MQTTClient(<span style="color:#ed9d13">&#39;umqtt_client&#39;</span>, config[<span style="color:#ed9d13">&#34;server&#34;</span>]) <span style="color:#999;font-style:italic"># Initializing the MQTTClient</span>
+c.set_callback(sub_cb) <span style="color:#999;font-style:italic">#this function will be called when a message is received.</span>
+c.connect() <span style="color:#999;font-style:italic">#connect to the MQTT Broker/Server.</span>
+c.subscribe(<span style="color:#ed9d13">b</span><span style="color:#ed9d13">&#39;{}/msg&#39;</span>.format(config[<span style="color:#ed9d13">&#39;nodeId&#39;</span>])) <span style="color:#999;font-style:italic">#subscribe to the specific topic.</span>
+
+<span style="color:#999;font-style:italic"># Check for the new mesages that are published.</span>
+<span style="color:#6ab825;font-weight:bold">while</span> True:
+    c.check_msg()
+    time.sleep(<span style="color:#3677a9">1</span>)
+c.disconnect() <span style="color:#999;font-style:italic">#once everything is done disconnect from the server.</span></code></pre></div>
+<p>Now this code will not work until and unless you are connected to the same
+network as the MQTT Server. So first you need to connect to the network
+and then connect to the MQTT Server.</p>
+
+<p>Here is the code to connect to the network and then initialize <code>MQTTClient</code>.
+This code will also publish a message on the given topic when a button is
+pressed.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">umqtt.simple</span> <span style="color:#6ab825;font-weight:bold">import</span> MQTTClient
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">time</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">network</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">machine</span>
+
+
+config = {<span style="color:#ed9d13">&#34;wifiSSID&#34;</span>: <span style="color:#ed9d13">&#34;&lt;your SSID&gt;&#34;</span>,
+          <span style="color:#ed9d13">&#34;wifiPass&#34;</span>: <span style="color:#ed9d13">&#34;&lt;your password&gt;&#34;</span>,
+          <span style="color:#ed9d13">&#34;ip&#34;</span>: <span style="color:#ed9d13">&#34;192.168.1.115&#34;</span>,
+          <span style="color:#ed9d13">&#34;nodeId&#34;</span>: <span style="color:#ed9d13">&#34;Node3&#34;</span>}
+
+inputPin = machine.Pin(<span style="color:#3677a9">15</span>, machine.Pin.IN)
+sta = network.WLAN(network.STA_IF)
+sta.active(True)
+sta.connect(config[<span style="color:#ed9d13">&#39;wifiSSID&#39;</span>], config[<span style="color:#ed9d13">&#39;wifiPass&#39;</span>])
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">sub_cb</span>(topic, msg):
+    <span style="color:#6ab825;font-weight:bold">print</span>(msg, topic)
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">main</span>(server=config[<span style="color:#ed9d13">&#39;ip&#39;</span>]):
+    time.sleep(<span style="color:#3677a9">5</span>)
+    c = MQTTClient(<span style="color:#ed9d13">&#39;umqtt_client&#39;</span>, server)
+    c.set_callback(sub_cb)
+    <span style="color:#6ab825;font-weight:bold">try</span>:
+        c.connect()
+        <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">b</span><span style="color:#ed9d13">&#39;{}/msg&#39;</span>.format(config[<span style="color:#ed9d13">&#39;nodeId&#39;</span>]))
+        c.subscribe(<span style="color:#ed9d13">b</span><span style="color:#ed9d13">&#39;{}/msg&#39;</span>.format(config[<span style="color:#ed9d13">&#39;nodeId&#39;</span>]))
+    <span style="color:#6ab825;font-weight:bold">except</span> <span style="color:#bbb">OSError</span>:
+        main()
+
+    <span style="color:#6ab825;font-weight:bold">while</span> True:
+        c.check_msg()
+        <span style="color:#6ab825;font-weight:bold">if</span> inputPin.value() == <span style="color:#3677a9">1</span>:
+            c.publish(<span style="color:#ed9d13">&#34;Node3/msg&#34;</span>, <span style="color:#ed9d13">&#34;Button Is Pressed&#34;</span>)
+        <span style="color:#6ab825;font-weight:bold">else</span>:
+            c.publish(<span style="color:#ed9d13">&#34;Node3/msg&#34;</span>, <span style="color:#ed9d13">&#34;Button Is Released&#34;</span>)
+        time.sleep(<span style="color:#3677a9">1</span>)
+
+    c.disconnect()
+
+
+main()</code></pre></div>
+<h2 id="listening-to-messages-on-gateway-in-python-program">Listening to messages on gateway in python program.</h2>
+
+<p>Now that your ESP8266 node and Mqtt server is set, you might want to
+access these messages on your edge device which is connected to the internet.</p>
+
+<h3 id="installing-paho-mqtt">Installing paho-mqtt</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install paho-mqtt</code></pre></div>
+<h3 id="using-paho-mqtt">Using paho-mqtt</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">paho.mqtt.client</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">mqtt</span>
+
+<span style="color:#999;font-style:italic"># The callback for when the client receives a CONNACK response from the server.</span>
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">on_connect</span>(client, userdata, flags, rc):
+    <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">&#34;Connected with result code &#34;</span>+<span style="color:#24909d">str</span>(rc))
+
+    <span style="color:#999;font-style:italic"># Subscribing in on_connect() means that if we lose the connection and</span>
+    <span style="color:#999;font-style:italic"># reconnect then subscriptions will be renewed.</span>
+    client.subscribe(<span style="color:#ed9d13">&#34;Node3/msg&#34;</span>)
+
+<span style="color:#999;font-style:italic"># The callback for when a PUBLISH message is received from the server.</span>
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">on_message</span>(client, userdata, msg):
+    <span style="color:#6ab825;font-weight:bold">print</span>(msg.topic+<span style="color:#ed9d13">&#34; &#34;</span>+<span style="color:#24909d">str</span>(msg.payload))
+
+config = {<span style="color:#ed9d13">&#34;ip&#34;</span>: <span style="color:#ed9d13">&#34;192.168.1.115&#34;</span>}
+
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+
+client.connect(config[<span style="color:#ed9d13">&#39;ip&#39;</span>], <span style="color:#3677a9">1883</span>)
+client.loop_forever()</code></pre></div>
+<p>To publish the message from python you can use</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">paho.mqtt.publish</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">publish</span>
+config = {<span style="color:#ed9d13">&#34;ip&#34;</span>: <span style="color:#ed9d13">&#34;192.168.1.115&#34;</span>,
+          <span style="color:#ed9d13">&#34;nodeId&#34;</span>: <span style="color:#ed9d13">&#34;Node3&#34;</span>}
+publish.single(topic=<span style="color:#ed9d13">&#39;{}/msg&#39;</span>.format(config[<span style="color:#ed9d13">&#39;nodeId&#39;</span>]), payload=<span style="color:#ed9d13">&#39;Hello From Gateway&#39;</span>, hostname=config[<span style="color:#ed9d13">&#39;ip&#39;</span>])</code></pre></div>
+<p>This way you can communicate between ESP8266 and other devices using MQTT.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/python">#Python</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/esp8266">#ESP8266</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/hardware">#hardware</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/wifi">#WIFI</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/network">#Network</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/nodemcu">#NodeMCU</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/mqtt">#MQTT</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Aug 23, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

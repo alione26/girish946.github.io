@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Thu, 26 Jul 2018 00:14:15 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 23 Aug 2018 01:02:18 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ESP8266 Using MQTT</title>
+      <link>http://girishjoshi.io/post/esp8266-using-mqtt/</link>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/esp8266-using-mqtt/</guid>
+      <description>MQTT MQTT is a lightweight publish/subscribe messaging transport designed for machine-to-machine “Internet of Things” connectivity. It’s been used in all sorts of industries from home automation and Facebook Messenger mobile app to health care and remote monitoring over satellite links.
+Installing MQTT Broker On Fedora
+$ sudo dnf install mosquitto On Debian based systems</description>
+    </item>
     
     <item>
       <title>ESP8266 Connecting to WIFI and Making HTTP Requests using MicroPython</title>

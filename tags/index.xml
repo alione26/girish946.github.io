@@ -150,7 +150,7 @@
     <item>
       <title>Esp8266</title>
       <link>http://girishjoshi.io/tags/esp8266/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/esp8266/</guid>
       <description></description>
@@ -222,7 +222,7 @@
     <item>
       <title>Gpio</title>
       <link>http://girishjoshi.io/tags/gpio/</link>
-      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      <pubDate>Wed, 01 Aug 2018 23:36:28 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/gpio/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Hardware</title>
       <link>http://girishjoshi.io/tags/hardware/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/hardware/</guid>
       <description></description>
@@ -373,9 +373,18 @@
     </item>
     
     <item>
+      <title>Mqtt</title>
+      <link>http://girishjoshi.io/tags/mqtt/</link>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/mqtt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Network</title>
       <link>http://girishjoshi.io/tags/network/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/network/</guid>
       <description></description>
@@ -384,7 +393,7 @@
     <item>
       <title>Nodemcu</title>
       <link>http://girishjoshi.io/tags/nodemcu/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/nodemcu/</guid>
       <description></description>
@@ -429,7 +438,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/tags/python/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/python/</guid>
       <description></description>
@@ -537,7 +546,7 @@
     <item>
       <title>Wifi</title>
       <link>http://girishjoshi.io/tags/wifi/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/wifi/</guid>
       <description></description>

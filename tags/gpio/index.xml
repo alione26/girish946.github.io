@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Jun 2018 12:05:38 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 01 Aug 2018 23:36:28 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/tags/gpio/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ESP8266 Access GPIO Using Micropython</title>
+      <link>http://girishjoshi.io/post/esp8266-access-gpio-using-micropython/</link>
+      <pubDate>Wed, 01 Aug 2018 23:36:28 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/esp8266-access-gpio-using-micropython/</guid>
+      <description>In this post I&amp;rsquo;ll be writing about accessing GPIO ports on ESP8266.
+Module machine contains the apis for the GPIO on ESP8266.
+import machine pin = machine.Pin(2, machine.Pin.IN, machine.Pin.PULL_UP) To use a GPIO we need to configure it as either input or output. In the above example machine.Pin.IN configures the GPIO pin as an input, meaning you can connect a button like the one shown below to it.</description>
+    </item>
     
     <item>
       <title>RaspberryPi GPIO Python</title>

@@ -105,7 +105,7 @@
     <item>
       <title>Esp8266</title>
       <link>http://girishjoshi.io/categories/esp8266/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/esp8266/</guid>
       <description></description>
@@ -150,7 +150,7 @@
     <item>
       <title>Gpio</title>
       <link>http://girishjoshi.io/categories/gpio/</link>
-      <pubDate>Sun, 10 Jun 2018 12:05:38 +0530</pubDate>
+      <pubDate>Wed, 01 Aug 2018 23:36:28 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/gpio/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Micropython</title>
       <link>http://girishjoshi.io/categories/micropython/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/micropython/</guid>
       <description></description>
@@ -247,9 +247,18 @@
     </item>
     
     <item>
+      <title>Mqtt</title>
+      <link>http://girishjoshi.io/categories/mqtt/</link>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/mqtt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Networking</title>
       <link>http://girishjoshi.io/categories/networking/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/networking/</guid>
       <description></description>
@@ -276,7 +285,7 @@
     <item>
       <title>Python</title>
       <link>http://girishjoshi.io/categories/python/</link>
-      <pubDate>Thu, 26 Jul 2018 00:14:15 +0530</pubDate>
+      <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/python/</guid>
       <description></description>
