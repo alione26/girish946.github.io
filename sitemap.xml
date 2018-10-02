@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/esp8266-read-adc-values-micropython/</loc>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/esp8266-using-mqtt/</loc>
     <lastmod>2018-08-23T01:02:18+05:30</lastmod>
   </url>
@@ -144,7 +149,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/adc/</loc>
-    <lastmod>2017-06-05T17:31:50+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/adc/</loc>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -270,13 +281,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/esp8266/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/esp8266/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -366,7 +377,7 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/hardware/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -432,7 +443,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/iot/</loc>
-    <lastmod>2017-12-15T09:18:40+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -492,7 +503,7 @@
   
   <url>
     <loc>http://girishjoshi.io/categories/micropython/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -516,13 +527,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/mqtt/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/mqtt/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -540,7 +551,7 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/nodemcu/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -564,7 +575,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -588,13 +599,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/python/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/python/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -720,7 +731,7 @@
   
   <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-08-23T01:02:18+05:30</lastmod>
+    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
     <priority>0</priority>
   </url>
   
