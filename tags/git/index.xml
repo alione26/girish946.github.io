@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Installation on girishjoshi.io</title>
-    <link>http://girishjoshi.io/tags/installation/</link>
-    <description>Recent content in Installation on girishjoshi.io</description>
+    <title>Git on girishjoshi.io</title>
+    <link>http://girishjoshi.io/tags/git/</link>
+    <description>Recent content in Git on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Tue, 09 Oct 2018 00:50:08 +0530</lastBuildDate>
     
-	<atom:link href="http://girishjoshi.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://girishjoshi.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,17 +21,6 @@
       <description>To setup a local git server on a RaspberryPi, the procedure is actually very simple.
 You need following things configured on the system on which you are setting up the git server.
  SSH needs to be enabled. git-core needs to be installed. git repo needs to be initialized. This repo will be cloned and mentained.</description>
-    </item>
-    
-    <item>
-      <title>Getting started with Raspberry Pi</title>
-      <link>http://girishjoshi.io/post/getting-started-with-raspberry-pi/</link>
-      <pubDate>Wed, 12 Apr 2017 16:42:34 +0530</pubDate>
-      
-      <guid>http://girishjoshi.io/post/getting-started-with-raspberry-pi/</guid>
-      <description>If you are using raspberry pi for the first time; then this post might be helpful to setup the device.
-In this post I&amp;rsquo;ll cover
- installing raspbian/ubuntu on the sd card for raspberry pi. configuring ssh. configuring wifi to connect to the network automatically.  Installing Raspbian/Ubuntu on the SD card First of all download the image of the os you want to install on the SD card from raspberrypi.</description>
     </item>
     
   </channel>

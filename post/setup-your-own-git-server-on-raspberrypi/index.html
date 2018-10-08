@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.48-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/setup-your-own-git-server-on-raspberrypi/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Setup Your Own Git Server on RaspberryPi" />
+<meta property="og:description" content="To setup a local git server on a RaspberryPi, the procedure is actually very simple.
+You need following things configured on the system on which you are setting up the git server.
+ SSH needs to be enabled. git-core needs to be installed. git repo needs to be initialized. This repo will be cloned and mentained." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/setup-your-own-git-server-on-raspberrypi/" /><meta property="article:published_time" content="2018-10-09T00:50:08&#43;05:30"/>
+<meta property="article:modified_time" content="2018-10-09T00:50:08&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup Your Own Git Server on RaspberryPi"/>
+<meta name="twitter:description" content="To setup a local git server on a RaspberryPi, the procedure is actually very simple.
+You need following things configured on the system on which you are setting up the git server.
+ SSH needs to be enabled. git-core needs to be installed. git repo needs to be initialized. This repo will be cloned and mentained."/>
+
+
+
+<meta itemprop="name" content="Setup Your Own Git Server on RaspberryPi">
+<meta itemprop="description" content="To setup a local git server on a RaspberryPi, the procedure is actually very simple.
+You need following things configured on the system on which you are setting up the git server.
+ SSH needs to be enabled. git-core needs to be installed. git repo needs to be initialized. This repo will be cloned and mentained.">
+
+
+<meta itemprop="datePublished" content="2018-10-09T00:50:08&#43;05:30" />
+<meta itemprop="dateModified" content="2018-10-09T00:50:08&#43;05:30" />
+<meta itemprop="wordCount" content="187">
+
+
+
+<meta itemprop="keywords" content="RaspberryPi,git,installation," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Setup Your Own Git Server on RaspberryPi 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Setup Your Own Git Server on RaspberryPi </h1>
+    <div class="content"> 
+
+<p>To setup a local git server on a RaspberryPi, the procedure is actually very
+simple.</p>
+
+<p>You need following things configured on the system on which you are setting up
+the git server.</p>
+
+<ul>
+<li>SSH needs to be enabled.</li>
+<li>git-core needs to be installed.</li>
+<li>git repo needs to be initialized. This repo will be cloned and mentained.</li>
+</ul>
+
+<h2 id="enable-ssh-on-raspberrypi">Enable SSH on RaspberryPi</h2>
+
+<p>Add following line to <code>/etc/rc.local</code> before <code>exit 0</code>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /etc/init.d/ssh start</code></pre></div>
+<p>This will start the ssh daemon on your device once it is started and you will
+be able to log in to the device over ssh.</p>
+
+<h2 id="install-git-core">Install git-core</h2>
+
+<p>Following command will install git core on the raspberrypi(raspbian).</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install git-core</code></pre></div>
+<h2 id="initialize-the-git-repo">Initialize the git repo</h2>
+
+<p>create a directory for repositories and initialize a git repo in that.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir git
+$ mkdir git/hello.git
+$ <span style="color:#24909d">cd</span> git/hello.git</code></pre></div>
+<p>To initialize the git repo.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init --bare</code></pre></div>
+<h2 id="use-the-git-repo">Use the git repo</h2>
+
+<p>Once this is done; you are good to go. Now you can clone the repo using
+following command.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone pi@raspberrypi.local:/home/pi/git/hello.git </code></pre></div>
+<p>If you need to add a remote to your existing repo.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> git remote add pi pi@raspberrypi.local:/home/pi/git/hello.git </code></pre></div> </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/raspberrypi">#RaspberryPi</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/git">#git</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/installation">#installation</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Oct 9, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

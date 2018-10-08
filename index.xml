@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 02 Oct 2018 15:19:28 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 09 Oct 2018 00:50:08 +0530</lastBuildDate>
     
 	<atom:link href="http://girishjoshi.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setup Your Own Git Server on RaspberryPi</title>
+      <link>http://girishjoshi.io/post/setup-your-own-git-server-on-raspberrypi/</link>
+      <pubDate>Tue, 09 Oct 2018 00:50:08 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/post/setup-your-own-git-server-on-raspberrypi/</guid>
+      <description>To setup a local git server on a RaspberryPi, the procedure is actually very simple.
+You need following things configured on the system on which you are setting up the git server.
+ SSH needs to be enabled. git-core needs to be installed. git repo needs to be initialized. This repo will be cloned and mentained.</description>
+    </item>
     
     <item>
       <title>ESP8266 Read ADC Values Micropython</title>
