@@ -148,6 +148,15 @@
     </item>
     
     <item>
+      <title>Getting Started</title>
+      <link>http://girishjoshi.io/categories/getting-started/</link>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>http://girishjoshi.io/categories/git/</link>
       <pubDate>Tue, 09 Oct 2018 00:50:08 +0530</pubDate>
@@ -213,7 +222,7 @@
     <item>
       <title>Iot</title>
       <link>http://girishjoshi.io/categories/iot/</link>
-      <pubDate>Tue, 02 Oct 2018 15:19:28 +0530</pubDate>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/iot/</guid>
       <description></description>
@@ -330,7 +339,7 @@
     <item>
       <title>Setup</title>
       <link>http://girishjoshi.io/categories/setup/</link>
-      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/setup/</guid>
       <description></description>
@@ -369,6 +378,15 @@
       <pubDate>Thu, 05 Jul 2018 14:21:38 +0530</pubDate>
       
       <guid>http://girishjoshi.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zephyr Dev</title>
+      <link>http://girishjoshi.io/categories/zephyr-dev/</link>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/categories/zephyr-dev/</guid>
       <description></description>
     </item>
     

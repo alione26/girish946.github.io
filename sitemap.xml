@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://girishjoshi.io/post/setup-zephyr-development-env-on-manjaro-linux-and-building-sample-application-for-x86-qemu/</loc>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/post/setup-your-own-git-server-on-raspberrypi/</loc>
     <lastmod>2018-10-09T00:50:08+05:30</lastmod>
   </url>
@@ -345,6 +350,12 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/categories/getting-started/</loc>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/tags/git/</loc>
     <lastmod>2018-10-09T00:50:08+05:30</lastmod>
     <priority>0</priority>
@@ -454,13 +465,13 @@
   
   <url>
     <loc>http://girishjoshi.io/tags/iot/</loc>
-    <lastmod>2015-12-17T17:14:28+05:30</lastmod>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://girishjoshi.io/categories/iot/</loc>
-    <lastmod>2018-10-02T15:19:28+05:30</lastmod>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -592,7 +603,7 @@
   
   <url>
     <loc>http://girishjoshi.io/post/</loc>
-    <lastmod>2018-10-09T00:50:08+05:30</lastmod>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -675,8 +686,14 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/rtos/</loc>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/categories/setup/</loc>
-    <lastmod>2018-04-29T05:10:55+05:30</lastmod>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -747,8 +764,20 @@
   </url>
   
   <url>
+    <loc>http://girishjoshi.io/tags/zephyr/</loc>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://girishjoshi.io/categories/zephyr-dev/</loc>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://girishjoshi.io/</loc>
-    <lastmod>2018-10-09T00:50:08+05:30</lastmod>
+    <lastmod>2018-10-14T22:02:20+05:30</lastmod>
     <priority>0</priority>
   </url>
   

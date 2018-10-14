@@ -303,7 +303,7 @@
     <item>
       <title>Iot</title>
       <link>http://girishjoshi.io/tags/iot/</link>
-      <pubDate>Thu, 17 Dec 2015 17:14:28 +0530</pubDate>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/iot/</guid>
       <description></description>
@@ -508,6 +508,15 @@
     </item>
     
     <item>
+      <title>Rtos</title>
+      <link>http://girishjoshi.io/tags/rtos/</link>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/rtos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shell Scripting</title>
       <link>http://girishjoshi.io/tags/shell-scripting/</link>
       <pubDate>Tue, 21 Nov 2017 14:20:08 +0530</pubDate>
@@ -558,6 +567,15 @@
       <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/wifi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zephyr</title>
+      <link>http://girishjoshi.io/tags/zephyr/</link>
+      <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/zephyr/</guid>
       <description></description>
     </item>
     

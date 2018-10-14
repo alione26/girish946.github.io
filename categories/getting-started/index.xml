@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Setup on girishjoshi.io</title>
-    <link>http://girishjoshi.io/categories/setup/</link>
-    <description>Recent content in Setup on girishjoshi.io</description>
+    <title>Getting Started on girishjoshi.io</title>
+    <link>http://girishjoshi.io/categories/getting-started/</link>
+    <description>Recent content in Getting Started on girishjoshi.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2015 - 2017 Girish Joshi, all rights reserved.</copyright>
     <lastBuildDate>Sun, 14 Oct 2018 22:02:20 +0530</lastBuildDate>
     
-	<atom:link href="http://girishjoshi.io/categories/setup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://girishjoshi.io/categories/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,16 +22,6 @@
 $ yaourt -S ninja ccache cmake gperf doxygen dfu-util dtc autoconf automake libtool Clone the zephyr repo and install requirements.
 $ cd ~ $ git clone https://github.com/zephyrproject-rtos/zephyr.git $ cd zephyr/ $ pip3 install --user -r scripts/requirements.txt $ cd .. download the zephyr sdk.
 $ wget https://github.</description>
-    </item>
-    
-    <item>
-      <title>Setup Personal MediaServer Using RaspberryPi and MiniDLNA</title>
-      <link>http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/</link>
-      <pubDate>Sun, 29 Apr 2018 05:10:55 +0530</pubDate>
-      
-      <guid>http://girishjoshi.io/post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/</guid>
-      <description>Few weeks back my sister ordered a raspberry pi so that she could get started with linux and small DIY projects in electronics.
-As we didn&amp;rsquo;t have any modules/sensors/components needed for electronics projects; we decided that we will setup a media server using the RPi, we already have a 1TB external Hard Disk drive; which can be used for the storage.</description>
     </item>
     
   </channel>

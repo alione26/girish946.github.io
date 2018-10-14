@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.48-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/setup-zephyr-development-env-on-manjaro-linux-and-building-sample-application-for-x86-qemu/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Setup Zephyr Development Env on Manjaro Linux and Building Sample Application for X86 Qemu" />
+<meta property="og:description" content="Install the dependuncies using yaourt:
+$ yaourt -S ninja ccache cmake gperf doxygen dfu-util dtc autoconf automake libtool Clone the zephyr repo and install requirements.
+$ cd ~ $ git clone https://github.com/zephyrproject-rtos/zephyr.git $ cd zephyr/ $ pip3 install --user -r scripts/requirements.txt $ cd .. download the zephyr sdk.
+$ wget https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/setup-zephyr-development-env-on-manjaro-linux-and-building-sample-application-for-x86-qemu/" /><meta property="article:published_time" content="2018-10-14T22:02:20&#43;05:30"/>
+<meta property="article:modified_time" content="2018-10-14T22:02:20&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup Zephyr Development Env on Manjaro Linux and Building Sample Application for X86 Qemu"/>
+<meta name="twitter:description" content="Install the dependuncies using yaourt:
+$ yaourt -S ninja ccache cmake gperf doxygen dfu-util dtc autoconf automake libtool Clone the zephyr repo and install requirements.
+$ cd ~ $ git clone https://github.com/zephyrproject-rtos/zephyr.git $ cd zephyr/ $ pip3 install --user -r scripts/requirements.txt $ cd .. download the zephyr sdk.
+$ wget https://github."/>
+
+
+
+<meta itemprop="name" content="Setup Zephyr Development Env on Manjaro Linux and Building Sample Application for X86 Qemu">
+<meta itemprop="description" content="Install the dependuncies using yaourt:
+$ yaourt -S ninja ccache cmake gperf doxygen dfu-util dtc autoconf automake libtool Clone the zephyr repo and install requirements.
+$ cd ~ $ git clone https://github.com/zephyrproject-rtos/zephyr.git $ cd zephyr/ $ pip3 install --user -r scripts/requirements.txt $ cd .. download the zephyr sdk.
+$ wget https://github.">
+
+
+<meta itemprop="datePublished" content="2018-10-14T22:02:20&#43;05:30" />
+<meta itemprop="dateModified" content="2018-10-14T22:02:20&#43;05:30" />
+<meta itemprop="wordCount" content="201">
+
+
+
+<meta itemprop="keywords" content="RTOS,Zephyr,IoT," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Setup Zephyr Development Env on Manjaro Linux and Building Sample Application for X86 Qemu 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Setup Zephyr Development Env on Manjaro Linux and Building Sample Application for X86 Qemu </h1>
+    <div class="content"> <p>Install the dependuncies using <code>yaourt</code>:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yaourt -S ninja ccache cmake gperf doxygen dfu-util dtc autoconf automake libtool</code></pre></div>
+<p>Clone the zephyr repo and install requirements.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> ~
+$ git clone https://github.com/zephyrproject-rtos/zephyr.git
+$ <span style="color:#24909d">cd</span> zephyr/
+$ pip3 install --user -r scripts/requirements.txt
+$ <span style="color:#24909d">cd</span> ..</code></pre></div>
+<p>download the zephyr sdk.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://github.com/zephyrproject-rtos/meta-zephyr-sdk/releases/download/0.9.3/zephyr-sdk-0.9.3-setup.run</code></pre></div>
+<p>After downloading the zephyr sdk installer, run the setup and install the sdk in <code>~/.zephyr</code></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo zephyr-sdk-0.9.3-setup.run</code></pre></div>
+<p>This will ask for the path of directory to install zephyr sdk.</p>
+
+<p>Create <code>~/.zephyrrc</code>  and put following data into it.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/.zephyr/</code></pre></div>
+<p>to use these environment variables,</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">source</span> .zephyrrc</code></pre></div>
+<p>To start zephyr development, go to the zephyr repo that you have just cloned and run <code>zephyr-env.sh</code></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> ~/zephyr
+$ <span style="color:#24909d">source</span> zephyr-env.sh</code></pre></div>
+<p>Once this is done, you can now start building zephyr projects.
+To build the <code>hello_world</code> for <code>x86_qemu</code>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#24909d">cd</span> samples/hello_world
+$ mkdir build &amp;&amp; <span style="color:#24909d">cd</span> build
+$ cmake -GNinja -DBOARD=qemu_x86 ..
+$ ninja</code></pre></div>
+<p>Now run this using,</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ninja run
+[<span style="color:#3677a9">0</span>/1] To <span style="color:#24909d">exit</span> from QEMU enter: <span style="color:#ed9d13">&#39;CTRL+a, x&#39;</span>[QEMU] CPU: qemu32,+nx,+pae
+qemu-system-i386: warning: Unknown firmware file in legacy mode: genroms/multiboot.bin
+
+***** Booting Zephyr OS zephyr-v1.13.0-954-gd696a56cf *****
+Hello World! qemu_x86</code></pre></div>
+<p>To exit from <code>qemu</code> hit <code>ctrl+a</code> and then <code>x</code>.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/rtos">#RTOS</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/zephyr">#Zephyr</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/iot">#IoT</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Oct 14, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
