@@ -148,9 +148,18 @@
     </item>
     
     <item>
+      <title>Electronjs</title>
+      <link>http://girishjoshi.io/tags/electronjs/</link>
+      <pubDate>Thu, 08 Nov 2018 19:55:14 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/electronjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Esp8266</title>
       <link>http://girishjoshi.io/tags/esp8266/</link>
-      <pubDate>Tue, 02 Oct 2018 15:19:28 +0530</pubDate>
+      <pubDate>Thu, 08 Nov 2018 19:55:14 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/esp8266/</guid>
       <description></description>
@@ -310,6 +319,15 @@
     </item>
     
     <item>
+      <title>Javascript</title>
+      <link>http://girishjoshi.io/tags/javascript/</link>
+      <pubDate>Thu, 08 Nov 2018 19:55:14 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kernel</title>
       <link>http://girishjoshi.io/tags/kernel/</link>
       <pubDate>Fri, 04 May 2018 17:13:29 +0530</pubDate>
@@ -396,6 +414,15 @@
       <pubDate>Thu, 23 Aug 2018 01:02:18 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>http://girishjoshi.io/tags/nodejs/</link>
+      <pubDate>Thu, 08 Nov 2018 19:55:14 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/nodejs/</guid>
       <description></description>
     </item>
     
@@ -513,6 +540,15 @@
       <pubDate>Sun, 14 Oct 2018 22:02:20 +0530</pubDate>
       
       <guid>http://girishjoshi.io/tags/rtos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serialport</title>
+      <link>http://girishjoshi.io/tags/serialport/</link>
+      <pubDate>Thu, 08 Nov 2018 19:55:14 +0530</pubDate>
+      
+      <guid>http://girishjoshi.io/tags/serialport/</guid>
       <description></description>
     </item>
     

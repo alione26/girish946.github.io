@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="girish joshi" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="blog, tech" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.48-DEV" />
+
+<link rel="canonical" href="http://girishjoshi.io/post/access-serialport-from-electron-application-and-creating-gui-for-micropython-repl-on-esp8266/">
+<base href="http://girishjoshi.io" />
+<meta property="og:title" content="Access Serialport From Electron Application and Creating GUI for Micropython REPL on ESP8266" />
+<meta property="og:description" content="I&rsquo;ve always been curious about javascript because of the awesome community it has around it and the sheer number of frameworks that are available for it is huge. To learn javascript I was looking for a project. One project I could find to get started with javascript and nodejs was to create a GUI tool for using REPL on ESP8266." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://girishjoshi.io/post/access-serialport-from-electron-application-and-creating-gui-for-micropython-repl-on-esp8266/" /><meta property="article:published_time" content="2018-11-08T19:55:14&#43;05:30"/>
+<meta property="article:modified_time" content="2018-11-08T19:55:14&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Access Serialport From Electron Application and Creating GUI for Micropython REPL on ESP8266"/>
+<meta name="twitter:description" content="I&rsquo;ve always been curious about javascript because of the awesome community it has around it and the sheer number of frameworks that are available for it is huge. To learn javascript I was looking for a project. One project I could find to get started with javascript and nodejs was to create a GUI tool for using REPL on ESP8266."/>
+
+
+
+<meta itemprop="name" content="Access Serialport From Electron Application and Creating GUI for Micropython REPL on ESP8266">
+<meta itemprop="description" content="I&rsquo;ve always been curious about javascript because of the awesome community it has around it and the sheer number of frameworks that are available for it is huge. To learn javascript I was looking for a project. One project I could find to get started with javascript and nodejs was to create a GUI tool for using REPL on ESP8266.">
+
+
+<meta itemprop="datePublished" content="2018-11-08T19:55:14&#43;05:30" />
+<meta itemprop="dateModified" content="2018-11-08T19:55:14&#43;05:30" />
+<meta itemprop="wordCount" content="476">
+
+
+
+<meta itemprop="keywords" content="javascript,serialport,ESP8266,Electronjs,nodejs," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: <no value>;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: <no value>;
+}
+
+blockquote {
+  background: <no value>;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: #99cc66; }
+
+.post .content h1{ color: #99cc66; }
+.post .content h2{ color: #99cc66; }
+.post .content h3{ color: #99cc66; }
+.post .content h4{ color: #99cc66; }
+.post .content h5{ color: #99cc66; }
+.post .content h6{ color: #99cc66; }
+.post .content a:hover { color: #99cc66; }
+.social-link:hover { color: #99cc66; }
+.nav-item-title:hover { color: #99cc66; }
+.tag a:hover { color: #99cc66; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: #99cc66; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: #99cc66;
+}
+.post-list .title { color: #99cc66; }
+.rmore { color: #99cc66; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: #99cc66;
+}
+
+</style>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110079903-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Access Serialport From Electron Application and Creating GUI for Micropython REPL on ESP8266 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="http://girishjoshi.io">girishjoshi.io</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="http://girishjoshi.io/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="http://girishjoshi.io/about-me/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">Github</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">Linkedin</div></a>
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Access Serialport From Electron Application and Creating GUI for Micropython REPL on ESP8266 </h1>
+    <div class="content"> 
+
+<p>I&rsquo;ve always been curious about javascript because of the awesome community it
+has around it and the sheer number of frameworks that are available for it is
+huge. To learn javascript I was looking for a project. One project I could find
+to get started with javascript and nodejs was to create a GUI tool for using
+REPL on ESP8266. Where I could use <a href="https://electronjs.org/">electronjs</a> to
+create desktop application and
+<a href="https://www.npmjs.com/package/serialport">serialport</a> node module for the
+serial communication.</p>
+
+<p>It was really easy to implement this using javascript, you could get it done
+within an hour literally from the scratch. Following are the steps to do that.</p>
+
+<h3 id="install-node">Install Node</h3>
+
+<p>Firstly we need to install <a href="https://nodejs.org/en/">Nodejs</a>.</p>
+
+<h3 id="clone-electron-hello-world-project">Clone electron Hello-World project.</h3>
+
+<p>After installing <code>node</code>, clone the hello world repo for electron and get that
+code running.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># Clone the Quick Start repository
+</span><span style="color:#999;font-style:italic"></span>$ git clone https://github.com/electron/electron-quick-start
+<span style="color:#999;font-style:italic"># Go into the repository
+</span><span style="color:#999;font-style:italic"></span>$ <span style="color:#24909d">cd</span> electron-quick-start
+<span style="color:#999;font-style:italic"># Install the dependencies and run
+</span><span style="color:#999;font-style:italic"></span>$ npm install &amp;&amp; npm start</code></pre></div>
+<h3 id="install-serialport">Install Serialport</h3>
+
+<p>Once that is done. Install <code>serialport</code> library.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save serialport </code></pre></div>
+<p>At this point you might need to rebuild the library if it is compiled with a
+different version of npm previously.
+for this you will need electron-rebuild tool.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install --save-dev electron-rebuild  
+$ ./node_modules/.bin/electron-rebuild
+$ npm rebuild</code></pre></div>
+<h3 id="modify-index-html">Modify index.html</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#cd2828;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#6ab825;font-weight:bold">html</span>&gt;
+  &lt;<span style="color:#6ab825;font-weight:bold">head</span>&gt;
+    &lt;<span style="color:#6ab825;font-weight:bold">meta</span> <span style="color:#bbb">charset</span>=<span style="color:#ed9d13">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#6ab825;font-weight:bold">title</span>&gt;Electron based gui for micropython REPL over serialport!&lt;/<span style="color:#6ab825;font-weight:bold">title</span>&gt;
+  &lt;/<span style="color:#6ab825;font-weight:bold">head</span>&gt;
+  &lt;<span style="color:#6ab825;font-weight:bold">body</span>&gt;
+    &lt;<span style="color:#6ab825;font-weight:bold">h1</span>&gt;Serial terminal&lt;/<span style="color:#6ab825;font-weight:bold">h1</span>&gt;
+     &lt;<span style="color:#6ab825;font-weight:bold">textarea</span> <span style="color:#bbb">rows</span>=<span style="color:#ed9d13">&#34;30&#34;</span> <span style="color:#bbb">cols</span>=<span style="color:#ed9d13">&#34;50&#34;</span> <span style="color:#bbb">id</span>=<span style="color:#ed9d13">&#34;incomingData&#34;</span>&gt;&lt;/<span style="color:#6ab825;font-weight:bold">textarea</span>&gt;
+     &lt;/<span style="color:#6ab825;font-weight:bold">br</span>&gt;
+     &lt;<span style="color:#6ab825;font-weight:bold">textarea</span> <span style="color:#bbb">rows</span>=<span style="color:#ed9d13">&#34;1&#34;</span> <span style="color:#bbb">cols</span>=<span style="color:#ed9d13">&#34;50&#34;</span> <span style="color:#bbb">id</span>=<span style="color:#ed9d13">&#34;inputText&#34;</span>&gt;&lt;/<span style="color:#6ab825;font-weight:bold">textarea</span>&gt;
+     &lt;/<span style="color:#6ab825;font-weight:bold">br</span>&gt;
+     &lt;<span style="color:#6ab825;font-weight:bold">input</span> <span style="color:#bbb">id</span>=<span style="color:#ed9d13">&#34;button&#34;</span> <span style="color:#bbb">type</span>=<span style="color:#ed9d13">&#34;submit&#34;</span> <span style="color:#bbb">name</span>=<span style="color:#ed9d13">&#34;button&#34;</span> <span style="color:#bbb">value</span>=<span style="color:#ed9d13">&#34;Ctrl+c&#34;</span>/&gt;
+
+    &lt;<span style="color:#6ab825;font-weight:bold">script</span>&gt;
+
+        <span style="color:#999;font-style:italic">//load serialport module
+</span><span style="color:#999;font-style:italic"></span>        serialPort = require(<span style="color:#ed9d13">&#39;serialport&#39;</span>);
+        <span style="color:#6ab825;font-weight:bold">const</span> Readline = serialPort.parsers.Readline;
+
+        <span style="color:#999;font-style:italic">//initialize serialport with 115200 baudrate.
+</span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">var</span> sp = <span style="color:#6ab825;font-weight:bold">new</span> serialPort(<span style="color:#ed9d13">&#39;/dev/ttyUSB0&#39;</span>, {
+            baudRate: <span style="color:#3677a9">115200</span>,
+        });
+        
+        <span style="color:#999;font-style:italic">//parse incoming data line-by-line from serial port.
+</span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">const</span> parser = sp.pipe(<span style="color:#6ab825;font-weight:bold">new</span> Readline({ delimiter: <span style="color:#ed9d13">&#39;\r\n&#39;</span> }));
+        parser.on(<span style="color:#ed9d13">&#39;data&#39;</span>, addText);
+
+        <span style="color:#999;font-style:italic">//append incoming data to the textarea.
+</span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">function</span> addText(event) {
+            <span style="color:#24909d">document</span>.getElementById(<span style="color:#ed9d13">&#34;incomingData&#34;</span>).value += <span style="color:#ed9d13">&#34;\n&#34;</span>+event;
+        }
+    
+        <span style="color:#6ab825;font-weight:bold">function</span> writeonSer(data){
+            <span style="color:#999;font-style:italic">//Write the data to serial port.
+</span><span style="color:#999;font-style:italic"></span>            sp.write( data, <span style="color:#6ab825;font-weight:bold">function</span>(err) {
+                <span style="color:#6ab825;font-weight:bold">if</span> (err) {
+                    <span style="color:#6ab825;font-weight:bold">return</span> console.log(<span style="color:#ed9d13">&#39;Error on write: &#39;</span>, err.message);
+                }
+                console.log(<span style="color:#ed9d13">&#39;message written&#39;</span>);
+            });
+    
+        }
+    
+        <span style="color:#24909d">document</span>.getElementById(<span style="color:#ed9d13">&#39;in&#39;</span>).onkeypress = <span style="color:#6ab825;font-weight:bold">function</span>(e){
+            <span style="color:#6ab825;font-weight:bold">if</span> (!e) e = <span style="color:#24909d">window</span>.event;
+            <span style="color:#6ab825;font-weight:bold">var</span> keyCode = e.keyCode || e.which;
+            <span style="color:#999;font-style:italic">//write the data to serial when enter key is pressed.
+</span><span style="color:#999;font-style:italic"></span>            <span style="color:#6ab825;font-weight:bold">if</span> (keyCode == <span style="color:#ed9d13">&#39;13&#39;</span>){
+                <span style="color:#999;font-style:italic">//console.log(&#34;enter pressed&#34;, document.getElementById(&#34;inputText&#34;).value);
+</span><span style="color:#999;font-style:italic"></span>                writeonSer(<span style="color:#24909d">document</span>.getElementById(<span style="color:#ed9d13">&#34;inputText&#34;</span>).value+<span style="color:#ed9d13">&#34;\r\n&#34;</span>);
+                <span style="color:#24909d">document</span>.getElementById(<span style="color:#ed9d13">&#39;in&#39;</span>).value = <span style="color:#ed9d13">&#34;&#34;</span>;
+                <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">false</span>;
+            }
+        }
+    
+        <span style="color:#24909d">document</span>.getElementById(<span style="color:#ed9d13">&#39;button&#39;</span>).onclick = <span style="color:#6ab825;font-weight:bold">function</span>(e){
+            <span style="color:#999;font-style:italic">//send ctrl+c to serialport
+</span><span style="color:#999;font-style:italic"></span>            writeonSer(<span style="color:#ed9d13">&#39;\x03&#39;</span>);
+        }
+    &lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;
+    &lt;<span style="color:#6ab825;font-weight:bold">script</span>&gt;
+        <span style="color:#999;font-style:italic">// You can also require other files to run in this process
+</span><span style="color:#999;font-style:italic"></span>        require(<span style="color:#ed9d13">&#39;./renderer.js&#39;</span>)
+    &lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;
+  &lt;/<span style="color:#6ab825;font-weight:bold">body</span>&gt;
+&lt;/<span style="color:#6ab825;font-weight:bold">html</span>&gt;</code></pre></div>
+<p>Once this is done, connect the device that you are using for serial
+communication to your computer and run the following command.
+Just make sure the file name at which the device is mounted is correct in the
+above code.
+in this example the file name was <code>/dev/ttyUSB0</code></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">var sp = new serialPort(&#39;/dev/ttyUSB0&#39;, {
+    baudRate: 115200,
+});</code></pre></div>
+<h3 id="run-the-application">Run the application</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm start</code></pre></div>
+<p>You will see the output like this:
+<img src="images/Electron-micropython-repl-over-serialport.png" height="700"></p>
+
+<p>Now you can access the micropython REPL using this GUI.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/javascript">#javascript</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/serialport">#serialport</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/esp8266">#ESP8266</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/electronjs">#Electronjs</a>
+      </div>
+    
+      <div class="tag">
+        <a href="http://girishjoshi.io/tags/nodejs">#nodejs</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Nov 8, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "girishjoshi-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:girish946@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/girish946" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/girish946" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/girish946" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="http://girishjoshi.io/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © 2015 - 2017 Girish Joshi, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
