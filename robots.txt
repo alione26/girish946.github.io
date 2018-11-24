@@ -1,0 +1,290 @@
+
+User-agent: *
+
+
+Allow: /post/access-serialport-from-electron-application-and-creating-gui-for-micropython-repl-on-esp8266/
+
+Allow: /post/setup-zephyr-development-env-on-manjaro-linux-and-building-sample-application-for-x86-qemu/
+
+Allow: /post/setup-your-own-git-server-on-raspberrypi/
+
+Allow: /post/esp8266-read-adc-values-micropython/
+
+Allow: /post/esp8266-using-mqtt/
+
+Allow: /post/esp8266-access-gpio-using-micropython/
+
+Allow: /post/esp8266-connecting-to-wifi-and-making-http-requests-micropython/
+
+Allow: /post/esp8266-deploying-micropython-and-using-repl/
+
+Allow: /post/implementing-http-basic-authentication-in-golang/
+
+Allow: /post/fabric-a-great-tool-to-automate-mundane-tasks/
+
+Allow: /post/raspberrypi-gpio-python/
+
+Allow: /post/linux-kernel-module-hello-world/
+
+Allow: /post/setup-personal-mediaserver-using-raspberrypi-and-minidlna/
+
+Allow: /post/compile-kernel-on-fedora-pune-kernel-meetup-assignment/
+
+Allow: /post/compile-featherpad-text-editor-on-fedora/
+
+Allow: /post/install-armbian-on-orange-pi-zero/
+
+Allow: /post/keepyourbashhistorycleanusingpython/
+
+Allow: /post/gettingstartedwithpyqt/
+
+Allow: /post/r305-fingerprint-module-with-python/
+
+Allow: /about-me/
+
+Allow: /post/ltc6802-2-python/
+
+Allow: /post/getting-started-with-raspberry-pi/
+
+Allow: /post/plotting-live-serial-input-from-arduino-microcontroller-using-python-matplotlib/
+
+Allow: /post/february-2016-frdora-meetup-pune/
+
+Allow: /post/introduction_to_python/
+
+Allow: /post/let-the-hacking-begin/
+
+Allow: /tags/.bashrc/
+
+Allow: /tags/101/
+
+Allow: /categories/101/
+
+Allow: /tags/about-me/
+
+Allow: /categories/about-me/
+
+Allow: /tags/adc/
+
+Allow: /categories/adc/
+
+Allow: /categories/api/
+
+Allow: /tags/armbian/
+
+Allow: /categories/armbian/
+
+Allow: /tags/authentication/
+
+Allow: /categories/authentication/
+
+Allow: /categories/automate/
+
+Allow: /tags/automation/
+
+Allow: /tags/bash/
+
+Allow: /categories/bash/
+
+Allow: /tags/basic-authentication/
+
+Allow: /categories/bio/
+
+Allow: /tags/c/
+
+Allow: /tags/c++/
+
+Allow: /categories/
+
+Allow: /tags/coding/
+
+Allow: /tags/compile/
+
+Allow: /categories/compile/
+
+Allow: /tags/debian/
+
+Allow: /tags/devops/
+
+Allow: /categories/devops/
+
+Allow: /tags/electronjs/
+
+Allow: /categories/electronjs/
+
+Allow: /tags/esp8266/
+
+Allow: /categories/esp8266/
+
+Allow: /categories/event-report/
+
+Allow: /tags/exit-trap/
+
+Allow: /tags/fabric/
+
+Allow: /categories/fabric/
+
+Allow: /tags/featherpad/
+
+Allow: /tags/fedora/
+
+Allow: /categories/fedora/
+
+Allow: /tags/fingerprint/
+
+Allow: /categories/getting-started/
+
+Allow: /categories/getting-started-with/
+
+Allow: /tags/git/
+
+Allow: /categories/git/
+
+Allow: /tags/goji-httpauth/
+
+Allow: /tags/golang/
+
+Allow: /categories/golang/
+
+Allow: /tags/gpio/
+
+Allow: /categories/gpio/
+
+Allow: /categories/hack/
+
+Allow: /tags/hardware/
+
+Allow: /tags/hello-world/
+
+Allow: /categories/hello-world/
+
+Allow: /categories/how-to/
+
+Allow: /tags/http/
+
+Allow: /tags/insallation/
+
+Allow: /tags/install/
+
+Allow: /tags/installation/
+
+Allow: /categories/installation/
+
+Allow: /tags/integer-overflow/
+
+Allow: /tags/iot/
+
+Allow: /categories/iot/
+
+Allow: /tags/javascript/
+
+Allow: /tags/kernel/
+
+Allow: /categories/kernel/
+
+Allow: /tags/kernel-module/
+
+Allow: /tags/linux/
+
+Allow: /categories/linux/
+
+Allow: /tags/ltc6802/
+
+Allow: /tags/media-server/
+
+Allow: /categories/mediaserver/
+
+Allow: /tags/meetup/
+
+Allow: /categories/micropython/
+
+Allow: /tags/minidlna/
+
+Allow: /tags/module/
+
+Allow: /categories/module/
+
+Allow: /tags/mqtt/
+
+Allow: /categories/mqtt/
+
+Allow: /tags/network/
+
+Allow: /categories/networking/
+
+Allow: /tags/nodejs/
+
+Allow: /categories/nodejs/
+
+Allow: /tags/nodemcu/
+
+Allow: /tags/orangepi/
+
+Allow: /categories/orangepi/
+
+Allow: /categories/package/
+
+Allow: /post/
+
+Allow: /tags/printk/
+
+Allow: /tags/programming/
+
+Allow: /tags/pyqt/
+
+Allow: /tags/python/
+
+Allow: /categories/python/
+
+Allow: /tags/qt/
+
+Allow: /categories/qt/
+
+Allow: /tags/r305/
+
+Allow: /tags/raspberrypi/
+
+Allow: /categories/raspberrypi/
+
+Allow: /tags/raspbian/
+
+Allow: /tags/readymedia/
+
+Allow: /tags/repl/
+
+Allow: /tags/rtos/
+
+Allow: /tags/serialport/
+
+Allow: /categories/serialport/
+
+Allow: /categories/setup/
+
+Allow: /tags/shell-scripting/
+
+Allow: /categories/shell-scripting/
+
+Allow: /tags/spi/
+
+Allow: /tags/ssh/
+
+Allow: /tags/
+
+Allow: /tags/texteditor/
+
+Allow: /categories/tutorial/
+
+Allow: /tags/ubuntu/
+
+Allow: /categories/ubuntu/
+
+Allow: /categories/web/
+
+Allow: /tags/wifi/
+
+Allow: /tags/zephyr/
+
+Allow: /categories/zephyr-dev/
+
+Allow: /
+
